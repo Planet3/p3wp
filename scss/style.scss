@@ -10,4 +10,10 @@ License URI: license.txt
 Tags:
 */
 
-@import "normalize"
+@import
+    "normalize",
+    "foundation-global",
+    "global",
+    "grid",
+    "block-grid",
+    "wp-core";
