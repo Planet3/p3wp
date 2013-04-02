@@ -1,10 +1,10 @@
 /*
 Theme Name: Planet3.0
-Theme URI: http://underscores.me/
+Theme URI: http://lanternlabs.ca
 Author: Dan Moutal
 Author URI: http://ofdan.ca
 Description: Version 3 of the Planet3.0 theme
-Version: 1.0
+Version: 3.0
 License: GNU General Public License
 License URI: license.txt
 Tags:
@@ -12,8 +12,17 @@ Tags:
 
 @import
     "normalize",
-    "foundation-global",
     "global",
     "grid",
     "block-grid",
-    "wp-core";
+    "wp-core",
+    "navigation";
+
+// Theme styles
+.entry-header {
+    padding: 0 2em 0 2em;
+}
+
+.entry-content {
+    padding: 0 2em 0 2em;
+}

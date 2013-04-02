@@ -1,10 +1,10 @@
 /*
 Theme Name: Planet3.0
-Theme URI: http://underscores.me/
+Theme URI: http://lanternlabs.ca
 Author: Dan Moutal
 Author URI: http://ofdan.ca
 Description: Version 3 of the Planet3.0 theme
-Version: 1.0
+Version: 3.0
 License: GNU General Public License
 License URI: license.txt
 Tags:
@@ -577,7 +577,7 @@ table {
   border-spacing: 0;
 }
 
-/* line 4, scss/_global.scss */
+/* line 204, scss/_global.scss */
 *,
 *:before,
 *:after {
@@ -586,13 +586,13 @@ table {
   box-sizing: border-box;
 }
 
-/* line 9, scss/_global.scss */
+/* line 209, scss/_global.scss */
 html,
 body {
   font-size: 16px;
 }
 
-/* line 12, scss/_global.scss */
+/* line 212, scss/_global.scss */
 body {
   background: white;
   color: #222222;
@@ -605,12 +605,12 @@ body {
   position: relative;
 }
 
-/* line 25, scss/_global.scss */
+/* line 225, scss/_global.scss */
 a:focus {
   outline: none;
 }
 
-/* line 30, scss/_global.scss */
+/* line 230, scss/_global.scss */
 img,
 object,
 embed {
@@ -618,18 +618,18 @@ embed {
   height: auto;
 }
 
-/* line 33, scss/_global.scss */
+/* line 233, scss/_global.scss */
 object,
 embed {
   height: 100%;
 }
 
-/* line 34, scss/_global.scss */
+/* line 234, scss/_global.scss */
 img {
   -ms-interpolation-mode: bicubic;
 }
 
-/* line 40, scss/_global.scss */
+/* line 240, scss/_global.scss */
 #map_canvas img,
 #map_canvas embed,
 #map_canvas object,
@@ -639,58 +639,58 @@ img {
   max-width: none !important;
 }
 
-/* line 45, scss/_global.scss */
+/* line 245, scss/_global.scss */
 .left {
   float: left !important;
 }
 
-/* line 46, scss/_global.scss */
+/* line 246, scss/_global.scss */
 .right {
   float: right !important;
 }
 
-/* line 47, scss/_global.scss */
+/* line 247, scss/_global.scss */
 .text-left {
   text-align: left !important;
 }
 
-/* line 48, scss/_global.scss */
+/* line 248, scss/_global.scss */
 .text-right {
   text-align: right !important;
 }
 
-/* line 49, scss/_global.scss */
+/* line 249, scss/_global.scss */
 .text-center {
   text-align: center !important;
 }
 
-/* line 50, scss/_global.scss */
+/* line 250, scss/_global.scss */
 .text-justify {
   text-align: justify !important;
 }
 
-/* line 51, scss/_global.scss */
+/* line 251, scss/_global.scss */
 .hide {
   display: none;
 }
 
-/* line 57, scss/_global.scss */
+/* line 257, scss/_global.scss */
 .antialiased {
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 60, scss/_global.scss */
+/* line 260, scss/_global.scss */
 img {
   display: inline-block;
 }
 
-/* line 67, scss/_global.scss */
+/* line 267, scss/_global.scss */
 textarea {
   height: auto;
   min-height: 50px;
 }
 
-/* line 70, scss/_global.scss */
+/* line 270, scss/_global.scss */
 select {
   width: 100%;
 }
@@ -706,12 +706,12 @@ select {
   max-width: 62.5em;
   *zoom: 1;
 }
-/* line 184, scss/_foundation-global.scss */
+/* line 184, scss/_global.scss */
 .row:before, .row:after {
   content: " ";
   display: table;
 }
-/* line 185, scss/_foundation-global.scss */
+/* line 185, scss/_global.scss */
 .row:after {
   clear: both;
 }
@@ -742,12 +742,12 @@ select {
   max-width: none;
   *zoom: 1;
 }
-/* line 184, scss/_foundation-global.scss */
+/* line 184, scss/_global.scss */
 .row .row:before, .row .row:after {
   content: " ";
   display: table;
 }
-/* line 185, scss/_foundation-global.scss */
+/* line 185, scss/_global.scss */
 .row .row:after {
   clear: both;
 }
@@ -758,12 +758,12 @@ select {
   max-width: none;
   *zoom: 1;
 }
-/* line 184, scss/_foundation-global.scss */
+/* line 184, scss/_global.scss */
 .row .row.collapse:before, .row .row.collapse:after {
   content: " ";
   display: table;
 }
-/* line 185, scss/_foundation-global.scss */
+/* line 185, scss/_global.scss */
 .row .row.collapse:after {
   clear: both;
 }
@@ -1297,12 +1297,12 @@ select {
     margin: 0 -10px;
     *zoom: 1;
   }
-  /* line 184, scss/_foundation-global.scss */
+  /* line 184, scss/_global.scss */
   [class*="block-grid-"]:before, [class*="block-grid-"]:after {
     content: " ";
     display: table;
   }
-  /* line 185, scss/_foundation-global.scss */
+  /* line 185, scss/_global.scss */
   [class*="block-grid-"]:after {
     clear: both;
   }
@@ -1666,4 +1666,26 @@ a img.aligncenter {
   /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute !important;
+}
+
+/* line 3, scss/_navigation.scss */
+.navigation-main {
+  width: 100%;
+  padding: 1em 2em 1em 2em;
+  background: black;
+  line-height: 1.5em;
+}
+/* line 8, scss/_navigation.scss */
+.navigation-main ul, .navigation-main li {
+  display: inline;
+}
+
+/* line 22, scss/style.scss */
+.entry-header {
+  padding: 0 2em 0 2em;
+}
+
+/* line 26, scss/style.scss */
+.entry-content {
+  padding: 0 2em 0 2em;
 }
