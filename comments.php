@@ -8,7 +8,7 @@
  * located in the inc/template-tags.php file.
  *
  * @package Planet3.0
- * @since Planet3.0 1.0
+ * @since Planet3.0 3.0
  */
 ?>
 

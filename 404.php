@@ -3,7 +3,7 @@
  * The template for displaying 404 pages (Not Found).
  *
  * @package Planet3.0
- * @since Planet3.0 1.0
+ * @since Planet3.0 3.0
  */
 
 get_header(); ?>

@@ -14,7 +14,7 @@
 
  *
  * @package Planet3.0
- * @since Planet3.0 1.0
+ * @since Planet3.0 3.0
  */
 
 /**
@@ -92,7 +92,7 @@ if ( ! function_exists( 'planet3_0_header_style' ) ) :
  *
  * @see planet3_0_custom_header_setup().
  *
- * @since Planet3.0 1.0
+ * @since Planet3.0 3.0
  */
 function planet3_0_header_style() {
 
@@ -133,7 +133,7 @@ if ( ! function_exists( 'planet3_0_admin_header_style' ) ) :
  *
  * @see planet3_0_custom_header_setup().
  *
- * @since Planet3.0 1.0
+ * @since Planet3.0 3.0
  */
 function planet3_0_admin_header_style() {
 ?>
@@ -163,7 +163,7 @@ if ( ! function_exists( 'planet3_0_admin_header_image' ) ) :
  *
  * @see planet3_0_custom_header_setup().
  *
- * @since Planet3.0 1.0
+ * @since Planet3.0 3.0
  */
 function planet3_0_admin_header_image() { ?>
 	<div id="headimg">

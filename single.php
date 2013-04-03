@@ -3,13 +3,13 @@
  * The Template for displaying all single posts.
  *
  * @package Planet3.0
- * @since Planet3.0 1.0
+ * @since Planet3.0 3.0
  */
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
+	<div id="primary" class="content-area row">
+		<div id="content" class="site-content large-12 columns" role="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
@@ -26,6 +26,7 @@ get_header(); ?>
 		<?php endwhile; // end of the loop. ?>
 
 		</div><!-- #content -->
+		<?php get_sidebar(); ?>
 	</div><!-- #primary -->
 
 <?php get_footer(); ?>

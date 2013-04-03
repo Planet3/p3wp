@@ -3,7 +3,7 @@
  * The template used for displaying page content in page.php
  *
  * @package Planet3.0
- * @since Planet3.0 1.0
+ * @since Planet3.0 3.0
  */
 ?>
 

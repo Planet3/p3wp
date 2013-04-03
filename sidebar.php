@@ -3,7 +3,7 @@
  * The Sidebar containing the main widget areas.
  *
  * @package Planet3.0
- * @since Planet3.0 1.0
+ * @since Planet3.0 3.0
  */
 ?>
 	<div id="secondary" class="widget-area" role="complementary">

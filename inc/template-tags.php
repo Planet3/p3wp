@@ -5,14 +5,14 @@
  * Eventually, some of the functionality here could be replaced by core features
  *
  * @package Planet3.0
- * @since Planet3.0 1.0
+ * @since Planet3.0 3.0
  */
 
 if ( ! function_exists( 'planet3_0_content_nav' ) ) :
 /**
  * Display navigation to next/previous pages when applicable
  *
- * @since Planet3.0 1.0
+ * @since Planet3.0 3.0
  */
 function planet3_0_content_nav( $nav_id ) {
 	global $wp_query, $post;
@@ -64,7 +64,7 @@ if ( ! function_exists( 'planet3_0_comment' ) ) :
  *
  * Used as a callback by wp_list_comments() for displaying the comments.
  *
- * @since Planet3.0 1.0
+ * @since Planet3.0 3.0
  */
 function planet3_0_comment( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
@@ -115,7 +115,7 @@ if ( ! function_exists( 'planet3_0_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  *
- * @since Planet3.0 1.0
+ * @since Planet3.0 3.0
  */
 function planet3_0_posted_on() {
 	printf( __( 'Posted on <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s">%4$s</time></a><span class="byline"> by <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>', 'planet3_0' ),
@@ -132,7 +132,7 @@ endif;
 /**
  * Returns true if a blog has more than 1 category
  *
- * @since Planet3.0 1.0
+ * @since Planet3.0 3.0
  */
 function planet3_0_categorized_blog() {
 	if ( false === ( $all_the_cool_cats = get_transient( 'all_the_cool_cats' ) ) ) {
@@ -159,7 +159,7 @@ function planet3_0_categorized_blog() {
 /**
  * Flush out the transients used in planet3_0_categorized_blog
  *
- * @since Planet3.0 1.0
+ * @since Planet3.0 3.0
  */
 function planet3_0_category_transient_flusher() {
 	// Like, beat it. Dig?

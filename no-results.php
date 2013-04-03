@@ -5,7 +5,7 @@
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
  * @package Planet3.0
- * @since Planet3.0 1.0
+ * @since Planet3.0 3.0
  */
 ?>
 

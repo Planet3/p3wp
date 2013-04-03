@@ -5,13 +5,13 @@
  * Eventually, some of the functionality here could be replaced by core features
  *
  * @package Planet3.0
- * @since Planet3.0 1.0
+ * @since Planet3.0 3.0
  */
 
 /**
  * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
  *
- * @since Planet3.0 1.0
+ * @since Planet3.0 3.0
  */
 function planet3_0_page_menu_args( $args ) {
 	$args['show_home'] = true;
@@ -22,7 +22,7 @@ add_filter( 'wp_page_menu_args', 'planet3_0_page_menu_args' );
 /**
  * Adds custom classes to the array of body classes.
  *
- * @since Planet3.0 1.0
+ * @since Planet3.0 3.0
  */
 function planet3_0_body_classes( $classes ) {
 	// Adds a class of group-blog to blogs with more than 1 published author
@@ -37,7 +37,7 @@ add_filter( 'body_class', 'planet3_0_body_classes' );
 /**
  * Filter in a link to a content ID attribute for the next/previous image links on image attachment pages
  *
- * @since Planet3.0 1.0
+ * @since Planet3.0 3.0
  */
 function planet3_0_enhanced_image_navigation( $url, $id ) {
 	if ( ! is_attachment() && ! wp_attachment_is_image( $id ) )

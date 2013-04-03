@@ -3,13 +3,13 @@
  * Planet3.0 functions and definitions
  *
  * @package Planet3.0
- * @since Planet3.0 1.0
+ * @since Planet3.0 3.0
  */
 
 /**
  * Set the content width based on the theme's design and stylesheet.
  *
- * @since Planet3.0 1.0
+ * @since Planet3.0 3.0
  */
 if ( ! isset( $content_width ) )
 	$content_width = 640; /* pixels */
@@ -27,7 +27,7 @@ if ( ! function_exists( 'planet3_0_setup' ) ) :
  * before the init hook. The init hook is too late for some features, such as indicating
  * support post thumbnails.
  *
- * @since Planet3.0 1.0
+ * @since Planet3.0 3.0
  */
 function planet3_0_setup() {
 
@@ -113,7 +113,7 @@ add_action( 'after_setup_theme', 'planet3_0_register_custom_background' );
 /**
  * Register widgetized area and update sidebar with default widgets
  *
- * @since Planet3.0 1.0
+ * @since Planet3.0 3.0
  */
 function planet3_0_widgets_init() {
 	register_sidebar( array(
