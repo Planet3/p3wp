@@ -14,8 +14,8 @@
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
-		<div class="row large-10 large-centered columns">
+	<div class="entry-content row">
+		<div class="large-10 large-centered columns">
 			<?php the_content(); ?>
 			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'planet3_0' ), 'after' => '</div>' ) ); ?>
 		</div>
