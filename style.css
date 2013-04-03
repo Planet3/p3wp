@@ -1668,6 +1668,18 @@ a img.aligncenter {
   position: absolute !important;
 }
 
+/* =Content Styles
+-------------------------------------------------------------- */
+/* line 5, scss/_content.scss */
+.entry-header {
+  padding: 0 2em 0 2em;
+}
+
+/* line 9, scss/_content.scss */
+.entry-content {
+  padding: 0 2em 0 2em;
+}
+
 /* line 3, scss/_navigation.scss */
 .navigation-main {
   width: 100%;
@@ -1678,14 +1690,4 @@ a img.aligncenter {
 /* line 8, scss/_navigation.scss */
 .navigation-main ul, .navigation-main li {
   display: inline;
-}
-
-/* line 22, scss/style.scss */
-.entry-header {
-  padding: 0 2em 0 2em;
-}
-
-/* line 26, scss/style.scss */
-.entry-content {
-  padding: 0 2em 0 2em;
 }
