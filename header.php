@@ -39,4 +39,4 @@
 
 	</header><!-- #masthead -->
 
-	<div id="main" class="site-main row">
+	<div id="main" class="site-main">
