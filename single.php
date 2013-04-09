@@ -26,7 +26,7 @@ get_header(); ?>
 		<?php endwhile; // end of the loop. ?>
 
 		</div><!-- #content -->
-		<div class="large-3 columns">
+		<div class="large-3 columns hide-for-small">
 			<?php get_sidebar(); ?>
 		</div>
 	</div><!-- #primary -->
