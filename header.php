@@ -31,7 +31,9 @@
 		<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 	</nav><!-- #site-navigation -->
 
-	<?php if (is_front_page()) { ?>
+
+	<?php  // if this is the front page display site title and description
+	if (is_front_page()) { ?>
 
 		<header id="masthead" class="site-header" role="banner">
 			<hgroup>
@@ -40,7 +42,8 @@
 			</hgroup>
 		</header><!-- #masthead -->
 
-	<?php } else { ?>
+	<?php } // else display page title instead and meta instead of site title and description
+	else { ?>
 
 		<header class="entry-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
@@ -50,6 +53,6 @@
 			</div><!-- .entry-meta -->
 		</header><!-- .entry-header -->
 
-	<?php } ?>
+	<?php } // endif ?>
 
 	<div id="main" class="site-main">
