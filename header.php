@@ -49,7 +49,7 @@
 			<?php } // endif ?>
 		</div><!-- .small-9 -->
 		<div class="header-logo small-3 columns">
-			<img src="<?php echo get_template_directory_uri(); ?>/logo.png" width="125">
+			<img src="<?php echo get_template_directory_uri(); ?>/logo.png" width="125" alt="Logo">
 		</div><!-- .small-3 -->
 	</header><!-- #masthead -->
 
