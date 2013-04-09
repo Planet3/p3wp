@@ -2102,15 +2102,18 @@ a img.aligncenter {
   position: absolute !important;
 }
 
-/* =Content Styles
+/* =Heading Styles
 -------------------------------------------------------------- */
-/* line 5, scss/_content.scss */
-.entry-header {
-  padding: 0 2em 0 2em;
+/* line 4, scss/_content.scss */
+.header-logo {
+  padding: 0.5em 2em 0.25em 2em;
+  text-align: center;
 }
 
-/* line 9, scss/_content.scss */
-.entry-content {
+/* =Content Styles
+-------------------------------------------------------------- */
+/* line 13, scss/_content.scss */
+.content-area {
   padding: 0 2em 0 2em;
 }
 

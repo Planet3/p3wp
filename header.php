@@ -31,28 +31,27 @@
 		<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 	</nav><!-- #site-navigation -->
 
+	<header id="masthead" class="page-header row" role="banner">
+		<div class="small-9 columns">
+			<?php  // if this is the front page display site title and description
+			if (is_front_page()) { ?>
+					<hgroup>
+						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+						<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+					</hgroup>
 
-	<?php  // if this is the front page display site title and description
-	if (is_front_page()) { ?>
+			<?php } // else display page title instead and meta instead of site title and description
+			else { ?>
+				<h1 class="entry-title"><?php the_title(); ?></h1>
+					<div class="entry-meta meta-above">
+						<?php planet3_0_posted_on(); ?>
+					</div><!-- .entry-meta -->
+			<?php } // endif ?>
+		</div><!-- .small-9 -->
+		<div class="header-logo small-3 columns">
+			<img src="<?php echo get_template_directory_uri(); ?>/logo.png" width="125">
+		</div><!-- .small-3 -->
+	</header><!-- #masthead -->
 
-		<header id="masthead" class="site-header" role="banner">
-			<hgroup>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-			</hgroup>
-		</header><!-- #masthead -->
-
-	<?php } // else display page title instead and meta instead of site title and description
-	else { ?>
-
-		<header class="entry-header">
-		<h1 class="entry-title"><?php the_title(); ?></h1>
-
-			<div class="entry-meta meta-above">
-				<?php planet3_0_posted_on(); ?>
-			</div><!-- .entry-meta -->
-		</header><!-- .entry-header -->
-
-	<?php } // endif ?>
 
 	<div id="main" class="site-main">
