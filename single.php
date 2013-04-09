@@ -8,8 +8,8 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<div id="content" class="" role="main">
+	<div id="primary" class="content-area row">
+		<div id="content" class="large-9 columns" role="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
@@ -26,7 +26,9 @@ get_header(); ?>
 		<?php endwhile; // end of the loop. ?>
 
 		</div><!-- #content -->
+		<div class="large-3 columns">
+			<?php get_sidebar(); ?>
+		</div>
 	</div><!-- #primary -->
 
-	<?php get_sidebar(); ?>
 	<?php get_footer(); ?>
