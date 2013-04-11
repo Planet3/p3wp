@@ -1,6 +1,6 @@
-
-
-
+body {
+    word-wrap: break-word;
+}
 
 /* =Heading Styles
 -------------------------------------------------------------- */
@@ -29,7 +29,7 @@
 .entry-content object,  
 .entry-content embed {
     max-width: 100%;
-    height: auto;
+    min-height: auto;
     width: auto9; /* ie8 */
 }
 

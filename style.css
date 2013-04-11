@@ -2102,6 +2102,11 @@ a img.aligncenter {
   position: absolute !important;
 }
 
+/* line 1, scss/_content.scss */
+body {
+  word-wrap: break-word;
+}
+
 /* =Heading Styles
 -------------------------------------------------------------- */
 /* line 7, scss/_content.scss */
@@ -2122,7 +2127,7 @@ a img.aligncenter {
 .entry-content object,
 .entry-content embed {
   max-width: 100%;
-  height: auto;
+  min-height: auto;
   width: auto9;
   /* ie8 */
 }

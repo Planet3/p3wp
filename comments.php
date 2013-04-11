@@ -73,7 +73,7 @@
 
 	<div class="row">
 		<div class="large-12 columns">
-			<?php comment_form(); ?>
+			<!-- <?php comment_form(); ?> -->
 		</div><!-- .large-12 -->
 	</div><!-- .row -->
 
