@@ -71,6 +71,10 @@
 		<p class="no-comments"><?php _e( 'Comments are closed.', 'planet3_0' ); ?></p>
 	<?php endif; ?>
 
-	<?php comment_form(); ?>
+	<div class="row">
+		<div class="large-12 columns">
+			<?php comment_form(); ?>
+		</div><!-- .large-12 -->
+	</div><!-- .row -->
 
 </div><!-- #comments -->
