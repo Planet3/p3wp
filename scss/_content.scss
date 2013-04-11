@@ -29,7 +29,7 @@ body {
 .entry-content object,  
 .entry-content embed {
     max-width: 100%;
-    min-height: auto;
+    max-height: auto;
     width: auto9; /* ie8 */
 }
 
