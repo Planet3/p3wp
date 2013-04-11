@@ -28,10 +28,9 @@
 .entry-content iframe,  
 .entry-content object,  
 .entry-content embed {
-    @include flex-video-container;
-    //max-width: 100%;
-    //height: auto;
-    //width: auto9; /* ie8 */
+    max-width: 100%;
+    height: auto;
+    width: auto9; /* ie8 */
 }
 
 .entry-meta {
