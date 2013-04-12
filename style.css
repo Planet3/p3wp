@@ -577,13 +577,13 @@ td {
 /* Default Link Styles */
 /* line 146, scss/_type.scss */
 a {
-  color: #2ba6cb;
+  color: #a90000;
   text-decoration: none;
   line-height: inherit;
 }
 /* line 152, scss/_type.scss */
 a:hover, a:focus {
-  color: #2795b6;
+  color: #8f0000;
 }
 /* line 154, scss/_type.scss */
 a img {
@@ -2440,13 +2440,13 @@ button, .button {
   padding-bottom: 0.8125em;
   padding-left: 1.5em;
   font-size: 1em;
-  background-color: #2ba6cb;
-  border-color: #2284a1;
+  background-color: #a90000;
+  border-color: #760000;
   color: white;
 }
 /* line 114, scss/_buttons.scss */
 button:hover, button:focus, .button:hover, .button:focus {
-  background-color: #2284a1;
+  background-color: #760000;
 }
 /* line 125, scss/_buttons.scss */
 button:hover, button:focus, .button:hover, .button:focus {
@@ -2538,8 +2538,8 @@ button.right-align, .button.right-align {
 }
 /* line 178, scss/_buttons.scss */
 button.disabled, button[disabled], .button.disabled, .button[disabled] {
-  background-color: #2ba6cb;
-  border-color: #2284a1;
+  background-color: #a90000;
+  border-color: #760000;
   color: white;
   cursor: default;
   opacity: 0.6;
@@ -2548,7 +2548,7 @@ button.disabled, button[disabled], .button.disabled, .button[disabled] {
 }
 /* line 114, scss/_buttons.scss */
 button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
-  background-color: #2284a1;
+  background-color: #760000;
 }
 /* line 125, scss/_buttons.scss */
 button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
@@ -2556,7 +2556,7 @@ button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[dis
 }
 /* line 136, scss/_buttons.scss */
 button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
-  background-color: #2ba6cb;
+  background-color: #a90000;
 }
 /* line 179, scss/_buttons.scss */
 button.disabled.secondary, button[disabled].secondary, .button.disabled.secondary, .button[disabled].secondary {
