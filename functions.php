@@ -128,9 +128,9 @@ function planet3_0_widgets_init() {
 		register_sidebar( array(
 		'name'          => __( 'Comment Widget Area', 'planet3_0' ),
 		'id'            => 'sidebar-2',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s, comment-widget">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
+		'before_title'  => '<h1 class="widget-title comment-widget-title">',
 		'after_title'   => '</h1>',
 	) );
 
