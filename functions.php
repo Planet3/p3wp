@@ -74,7 +74,7 @@ function planet3_0_setup() {
 	/**
 	 * Enable support for Post Formats
 	 */
-	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
+	// add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
 }
 endif; // planet3_0_setup
 add_action( 'after_setup_theme', 'planet3_0_setup' );
@@ -117,13 +117,23 @@ add_action( 'after_setup_theme', 'planet3_0_register_custom_background' );
  */
 function planet3_0_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'planet3_0' ),
+		'name'          => __( 'Main Widget Area', 'planet3_0' ),
 		'id'            => 'sidebar-1',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 	) );
+
+		register_sidebar( array(
+		'name'          => __( 'Comment Widget Area', 'planet3_0' ),
+		'id'            => 'sidebar-2',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
+
 }
 add_action( 'widgets_init', 'planet3_0_widgets_init' );
 

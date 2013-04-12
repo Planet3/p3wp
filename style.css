@@ -433,7 +433,7 @@ body {
 /* line 212, scss/_global.scss */
 body {
   background: white;
-  color: #222222;
+  color: #212121;
   padding: 0;
   margin: 0;
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
@@ -760,7 +760,7 @@ abbr,
 acronym {
   text-transform: uppercase;
   font-size: 90%;
-  color: #222222;
+  color: #212121;
   border-bottom: 1px dotted #dddddd;
   cursor: help;
 }
@@ -2377,7 +2377,7 @@ a img.aligncenter {
 .navigation-main {
   width: 100%;
   padding: 1em 2em 1em 2em;
-  background: black;
+  background: #212121;
   line-height: 1.5em;
 }
 /* line 8, scss/_navigation.scss */
