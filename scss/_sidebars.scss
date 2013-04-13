@@ -1,0 +1,19 @@
+/* =Sidebar styles
+-------------------------------------------------------------- */
+
+.widget-area {
+    font-size: emCacl(14px);
+    h1 {
+        font-size: emCalc(16px);
+        border-bottom: 1px solid $secondary-color;
+    }
+    ul, ol {
+        list-style-type: none;
+    }
+}
+
+.comment-widget-area {
+    h1 {
+        font-size: emCalc(27px);
+    }
+}

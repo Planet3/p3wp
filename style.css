@@ -2422,6 +2422,27 @@ body {
   height: 16em;
 }
 
+/* =Sidebar styles
+-------------------------------------------------------------- */
+/* line 4, scss/_sidebars.scss */
+.widget-area {
+  font-size: emCacl(14px);
+}
+/* line 6, scss/_sidebars.scss */
+.widget-area h1 {
+  font-size: 1em;
+  border-bottom: 1px solid #e9e9e9;
+}
+/* line 10, scss/_sidebars.scss */
+.widget-area ul, .widget-area ol {
+  list-style-type: none;
+}
+
+/* line 16, scss/_sidebars.scss */
+.comment-widget-area h1 {
+  font-size: 1.6875em;
+}
+
 /* line 161, scss/_buttons.scss */
 button, .button {
   border-style: solid;
