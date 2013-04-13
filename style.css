@@ -2398,14 +2398,29 @@ body {
   text-align: center;
 }
 
-/* =Content Styles
--------------------------------------------------------------- */
-/* line 16, scss/_content.scss */
-.content-area {
-  padding: 0 2em 0 2em;
+/* line 13, scss/_content.scss */
+.page-header h1 {
+  line-height: 1em;
 }
 
-/* line 30, scss/_content.scss */
+/* =Content Styles
+-------------------------------------------------------------- */
+/* line 23, scss/_content.scss */
+.content-area {
+  padding: 0.5em 0 2em 0;
+}
+
+/* line 28, scss/_content.scss */
+.entry-content {
+  padding-bottom: 2em;
+}
+
+/* line 32, scss/_content.scss */
+.entry-meta {
+  padding: 1em 0 1em 0;
+}
+
+/* line 38, scss/_content.scss */
 .entry-content iframe,
 .entry-content object,
 .entry-content embed {
@@ -2417,7 +2432,24 @@ body {
 
 /* =Comment Styles
 -------------------------------------------------------------- */
-/* line 4, scss/_comments.scss */
+/* line 3, scss/_comments.scss */
+.comment-list li {
+  list-style-type: none;
+  padding-left: 0.2em;
+}
+
+/* line 8, scss/_comments.scss */
+.comment-author img {
+  float: left;
+  margin-right: 1em;
+}
+
+/* line 13, scss/_comments.scss */
+.reply {
+  padding-bottom: 1em;
+}
+
+/* line 17, scss/_comments.scss */
 #comment {
   height: 16em;
 }

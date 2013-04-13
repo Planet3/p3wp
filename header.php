@@ -32,7 +32,7 @@
 	</nav><!-- #site-navigation -->
 
 	<header id="masthead" class="page-header row" role="banner">
-		<div class="small-9 columns">
+		<div class="large-9 columns">
 			<?php  // if this is the front page display site title and description
 			if (is_front_page()) { ?>
 					<hgroup>
@@ -48,9 +48,9 @@
 					</div><!-- .entry-meta -->
 			<?php } // endif ?>
 		</div><!-- .small-9 -->
-		<div class="header-logo small-3 columns">
+		<div class="header-logo large-3 columns">
 			<img src="<?php echo get_template_directory_uri(); ?>/logo.png" width="125" alt="Logo">
-		</div><!-- .small-3 -->
+		</div><!-- .header-logo .small-3 -->
 	</header><!-- #masthead -->
 
 
