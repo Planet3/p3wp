@@ -129,6 +129,56 @@ function planet3_0_posted_on() {
 	);
 }
 endif;
+
+
+
+
+if ( ! function_exists( 'planet3_0_posted_in' ) ) :
+/**
+ * Prints HTML with meta information post categories and tags.
+ *
+ * @since Planet3.0 3.0
+ */
+function planet3_0_posted_in() {
+
+	/* translators: used between list items, there is a space after the comma */
+	$category_list = get_the_category_list( __( ', ', 'planet3_0' ) );
+
+	/* translators: used between list items, there is a space after the comma */
+	$tag_list = get_the_tag_list( '', __( ', ', 'planet3_0' ) );
+
+	if ( ! planet3_0_categorized_blog() ) {
+		// This blog only has 1 category so we just need to worry about tags in the meta text
+		if ( '' != $tag_list ) {
+			$meta_text = __( 'This article was tagged %2$s.', 'planet3_0' );
+		} else {
+		}
+
+	} else {
+		// But this blog has loads of categories so we should probably display them here
+		if ( '' != $tag_list ) {
+			$meta_text = __( 'This article was posted in %1$s and tagged %2$s.', 'planet3_0' );
+		} else {
+			$meta_text = __( 'This article was posted in %1$s.', 'planet3_0' );
+		}
+
+	} // end check for categories on this blog
+
+	printf(
+		$meta_text,
+		$category_list,
+		$tag_list
+	);
+}
+endif;
+
+
+
+
+
+
+
+
 /**
  * Returns true if a blog has more than 1 category
  *
