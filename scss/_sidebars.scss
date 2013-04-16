@@ -10,10 +10,37 @@
     ul, ol {
         list-style-type: none;
     }
+    li {
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid $secondary-color;
+    }
+}
+
+.main-widget-area {
+    border-left: 1px solid $secondary-color;
+    padding-left: 1em;
+    font-size: 0.8em;
 }
 
 .comment-widget-area {
     h1 {
         font-size: emCalc(27px);
+    }
+}
+
+.textwidget {
+    ul {
+        list-style-type: disc;
+        padding-left: 1em;
+    }
+    ol {
+        list-style-type: decimal;
+        padding-left: 1em;
+    }
+    li {
+    padding-bottom: 0em;
+    margin-bottom: 0em;
+    border-bottom: 0px;
     }
 }
