@@ -130,9 +130,6 @@ function planet3_0_posted_on() {
 }
 endif;
 
-
-
-
 if ( ! function_exists( 'planet3_0_posted_in' ) ) :
 /**
  * Prints HTML with meta information post categories and tags.
@@ -171,13 +168,6 @@ function planet3_0_posted_in() {
 	);
 }
 endif;
-
-
-
-
-
-
-
 
 /**
  * Returns true if a blog has more than 1 category
