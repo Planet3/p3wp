@@ -2,4 +2,3 @@
 Forked from the _s theme with the added goodness of Foundation
 
 ##issues:
-* text widget lists do not work
