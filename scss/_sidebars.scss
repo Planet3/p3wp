@@ -11,9 +11,9 @@
         list-style-type: none;
     }
     li {
-    padding-bottom: 0.5em;
-    margin-bottom: 0.5em;
-    border-bottom: 1px solid $secondary-color;
+        padding-bottom: 0.5em;
+        margin-bottom: 0.5em;
+        border-bottom: 1px solid $secondary-color;
     }
 }
 
@@ -24,11 +24,14 @@
 }
 
 .comment-widget-area {
+    font-size: 1em;
     h1 {
         font-size: 1.6875em;
     }
     li { 
-        border-bottom: 0px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        border-bottom: 0;
     }
 }
 

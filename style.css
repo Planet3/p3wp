@@ -2503,26 +2503,32 @@ body {
   font-size: 0.8em;
 }
 
-/* line 27, scss/_sidebars.scss */
+/* line 26, scss/_sidebars.scss */
+.comment-widget-area {
+  font-size: 1em;
+}
+/* line 28, scss/_sidebars.scss */
 .comment-widget-area h1 {
   font-size: 1.6875em;
 }
-/* line 30, scss/_sidebars.scss */
+/* line 31, scss/_sidebars.scss */
 .comment-widget-area li {
-  border-bottom: 0px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: 0;
 }
 
-/* line 36, scss/_sidebars.scss */
+/* line 39, scss/_sidebars.scss */
 .textwidget ul {
   list-style-type: disc;
   padding-left: 1em;
 }
-/* line 40, scss/_sidebars.scss */
+/* line 43, scss/_sidebars.scss */
 .textwidget ol {
   list-style-type: decimal;
   padding-left: 1em;
 }
-/* line 44, scss/_sidebars.scss */
+/* line 47, scss/_sidebars.scss */
 .textwidget li {
   padding-bottom: 0em;
   margin-bottom: 0em;
