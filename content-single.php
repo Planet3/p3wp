@@ -14,12 +14,12 @@
 	<div class="row">
 
 		<div class="byline large-2 columns">
-			<h1><?php planet3_0_posted_by(); ?></h1>
 			<div class="author-avatar hide-for-small">
 				<?php if ( validate_gravatar( get_the_author_meta( 'user_email' ) ) ) :
 					echo get_avatar( get_the_author_meta( 'user_email' ), 256, $default, get_the_author() ); 
 				endif; ?>
 			</div>
+			<h1><?php planet3_0_posted_by(); ?></h1>
 			<div class="author-bio hide-for-small">
 				<p><?php the_author_meta('description')?></p>
 			</div><!-- .author-bio -->
