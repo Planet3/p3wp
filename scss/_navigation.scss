@@ -9,3 +9,8 @@
             display: inline;
         }
 }
+
+.site-footer {
+    @extend .navigation-main;
+    color: $secondary-color;
+}

@@ -533,13 +533,13 @@ select {
   width: 100%;
 }
 
-/* line 106, scss/_type.scss */
+/* line 107, scss/_type.scss */
 p.lead {
   font-size: 1.21875em;
   line-height: 1.6;
 }
 
-/* line 111, scss/_type.scss */
+/* line 112, scss/_type.scss */
 .subheader {
   line-height: 1.4;
   color: #6f6f6f;
@@ -549,7 +549,7 @@ p.lead {
 }
 
 /* Typography resets */
-/* line 139, scss/_type.scss */
+/* line 140, scss/_type.scss */
 div,
 dl,
 dt,
@@ -575,23 +575,23 @@ td {
 }
 
 /* Default Link Styles */
-/* line 146, scss/_type.scss */
+/* line 147, scss/_type.scss */
 a {
   color: #a90000;
   text-decoration: none;
   line-height: inherit;
 }
-/* line 152, scss/_type.scss */
+/* line 153, scss/_type.scss */
 a:hover, a:focus {
   color: #8f0000;
 }
-/* line 154, scss/_type.scss */
+/* line 155, scss/_type.scss */
 a img {
   border: none;
 }
 
 /* Default paragraph styles */
-/* line 158, scss/_type.scss */
+/* line 159, scss/_type.scss */
 p {
   font-family: inherit;
   font-weight: normal;
@@ -600,7 +600,7 @@ p {
   margin-bottom: 1.25em;
   text-rendering: optimizeLegibility;
 }
-/* line 168, scss/_type.scss */
+/* line 169, scss/_type.scss */
 p aside {
   font-size: 0.875em;
   line-height: 1.35;
@@ -608,7 +608,7 @@ p aside {
 }
 
 /* Default header styles */
-/* line 176, scss/_type.scss */
+/* line 177, scss/_type.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: bold;
@@ -619,44 +619,44 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5em;
   line-height: 1.2125em;
 }
-/* line 186, scss/_type.scss */
+/* line 187, scss/_type.scss */
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
   font-size: 60%;
   color: #6f6f6f;
   line-height: 0;
 }
 
-/* line 193, scss/_type.scss */
+/* line 194, scss/_type.scss */
 h1 {
   font-size: 2.125em;
 }
 
-/* line 194, scss/_type.scss */
+/* line 195, scss/_type.scss */
 h2 {
   font-size: 1.6875em;
 }
 
-/* line 195, scss/_type.scss */
+/* line 196, scss/_type.scss */
 h3 {
   font-size: 1.375em;
 }
 
-/* line 196, scss/_type.scss */
+/* line 197, scss/_type.scss */
 h4 {
   font-size: 1.125em;
 }
 
-/* line 197, scss/_type.scss */
+/* line 198, scss/_type.scss */
 h5 {
   font-size: 1.125em;
 }
 
-/* line 198, scss/_type.scss */
+/* line 199, scss/_type.scss */
 h6 {
   font-size: 1em;
 }
 
-/* line 202, scss/_type.scss */
+/* line 203, scss/_type.scss */
 hr {
   border: solid #dddddd;
   border-width: 1px 0 0;
@@ -666,27 +666,27 @@ hr {
 }
 
 /* Helpful Typography Defaults */
-/* line 212, scss/_type.scss */
+/* line 213, scss/_type.scss */
 em,
 i {
   font-style: italic;
   line-height: inherit;
 }
 
-/* line 218, scss/_type.scss */
+/* line 219, scss/_type.scss */
 strong,
 b {
   font-weight: bold;
   line-height: inherit;
 }
 
-/* line 223, scss/_type.scss */
+/* line 224, scss/_type.scss */
 small {
   font-size: 60%;
   line-height: inherit;
 }
 
-/* line 228, scss/_type.scss */
+/* line 229, scss/_type.scss */
 code {
   font-family: Consolas, "Liberation Mono", Courier, monospace;
   font-weight: bold;
@@ -694,7 +694,7 @@ code {
 }
 
 /* Lists */
-/* line 237, scss/_type.scss */
+/* line 238, scss/_type.scss */
 ul,
 ol,
 dl {
@@ -706,7 +706,7 @@ dl {
 }
 
 /* Unordered Lists */
-/* line 249, scss/_type.scss */
+/* line 250, scss/_type.scss */
 ul li ul,
 ul li ol {
   margin-left: 1.25em;
@@ -714,29 +714,29 @@ ul li ol {
   font-size: 1em;
   /* Override nested font-size change */
 }
-/* line 258, scss/_type.scss */
+/* line 259, scss/_type.scss */
 ul.square li ul, ul.circle li ul, ul.disc li ul {
   list-style: inherit;
 }
-/* line 261, scss/_type.scss */
+/* line 262, scss/_type.scss */
 ul.square {
   list-style-type: square;
 }
-/* line 262, scss/_type.scss */
+/* line 263, scss/_type.scss */
 ul.circle {
   list-style-type: circle;
 }
-/* line 263, scss/_type.scss */
+/* line 264, scss/_type.scss */
 ul.disc {
   list-style-type: disc;
 }
-/* line 264, scss/_type.scss */
+/* line 265, scss/_type.scss */
 ul.no-bullet {
   list-style: none;
 }
 
 /* Ordered Lists */
-/* line 271, scss/_type.scss */
+/* line 272, scss/_type.scss */
 ol li ul,
 ol li ol {
   margin-left: 1.25em;
@@ -744,18 +744,18 @@ ol li ol {
 }
 
 /* Definition Lists */
-/* line 280, scss/_type.scss */
+/* line 281, scss/_type.scss */
 dl dt {
   margin-bottom: 0.3em;
   font-weight: bold;
 }
-/* line 284, scss/_type.scss */
+/* line 285, scss/_type.scss */
 dl dd {
   margin-bottom: 0.75em;
 }
 
 /* Abbreviations */
-/* line 289, scss/_type.scss */
+/* line 290, scss/_type.scss */
 abbr,
 acronym {
   text-transform: uppercase;
@@ -765,35 +765,35 @@ acronym {
   cursor: help;
 }
 
-/* line 296, scss/_type.scss */
+/* line 297, scss/_type.scss */
 abbr {
   text-transform: none;
 }
 
 /* Blockquotes */
-/* line 301, scss/_type.scss */
+/* line 302, scss/_type.scss */
 blockquote {
-  margin: 0 0 1.25em;
+  margin: 0 0 1.25em 1.25em;
   padding: 0.5625em 1.25em 0 1.1875em;
   border-left: 1px solid #dddddd;
 }
-/* line 306, scss/_type.scss */
+/* line 307, scss/_type.scss */
 blockquote cite {
   display: block;
   font-size: 0.8125em;
   color: #555555;
 }
-/* line 310, scss/_type.scss */
+/* line 311, scss/_type.scss */
 blockquote cite:before {
   content: "\2014 \0020";
 }
-/* line 315, scss/_type.scss */
+/* line 316, scss/_type.scss */
 blockquote cite a,
 blockquote cite a:visited {
   color: #555555;
 }
 
-/* line 321, scss/_type.scss */
+/* line 322, scss/_type.scss */
 blockquote,
 blockquote p {
   line-height: 1.6;
@@ -801,7 +801,7 @@ blockquote p {
 }
 
 /* Microformats */
-/* line 327, scss/_type.scss */
+/* line 328, scss/_type.scss */
 .vcard {
   /*
     display: inline-block;
@@ -821,11 +821,11 @@ blockquote p {
   */
 }
 
-/* line 347, scss/_type.scss */
+/* line 348, scss/_type.scss */
 .vevent .summary {
   font-weight: bold;
 }
-/* line 349, scss/_type.scss */
+/* line 350, scss/_type.scss */
 .vevent abbr {
   cursor: default;
   text-decoration: none;
@@ -835,27 +835,27 @@ blockquote p {
 }
 
 @media only screen and (min-width: 48em) {
-  /* line 360, scss/_type.scss */
+  /* line 361, scss/_type.scss */
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.4;
   }
 
-  /* line 361, scss/_type.scss */
+  /* line 362, scss/_type.scss */
   h1 {
     font-size: 2.75em;
   }
 
-  /* line 362, scss/_type.scss */
+  /* line 363, scss/_type.scss */
   h2 {
     font-size: 2.3125em;
   }
 
-  /* line 363, scss/_type.scss */
+  /* line 364, scss/_type.scss */
   h3 {
     font-size: 1.6875em;
   }
 
-  /* line 364, scss/_type.scss */
+  /* line 365, scss/_type.scss */
   h4 {
     font-size: 1.4375em;
   }
@@ -866,13 +866,13 @@ blockquote p {
  * Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
  * Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com)
 */
-/* line 375, scss/_type.scss */
+/* line 376, scss/_type.scss */
 .print-only {
   display: none !important;
 }
 
 @media print {
-  /* line 377, scss/_type.scss */
+  /* line 378, scss/_type.scss */
   * {
     background: transparent !important;
     color: black !important;
@@ -881,49 +881,49 @@ blockquote p {
     text-shadow: none !important;
   }
 
-  /* line 385, scss/_type.scss */
+  /* line 386, scss/_type.scss */
   a,
   a:visited {
     text-decoration: underline;
   }
 
-  /* line 386, scss/_type.scss */
+  /* line 387, scss/_type.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 388, scss/_type.scss */
+  /* line 389, scss/_type.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
 
-  /* line 393, scss/_type.scss */
+  /* line 394, scss/_type.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
   }
 
-  /* line 396, scss/_type.scss */
+  /* line 397, scss/_type.scss */
   pre,
   blockquote {
     border: 1px solid #999999;
     page-break-inside: avoid;
   }
 
-  /* line 401, scss/_type.scss */
+  /* line 402, scss/_type.scss */
   thead {
     display: table-header-group;
     /* h5bp.com/t */
   }
 
-  /* line 404, scss/_type.scss */
+  /* line 405, scss/_type.scss */
   tr,
   img {
     page-break-inside: avoid;
   }
 
-  /* line 406, scss/_type.scss */
+  /* line 407, scss/_type.scss */
   img {
     max-width: 100% !important;
   }
@@ -932,7 +932,7 @@ blockquote p {
     margin: 0.5cm;
 }
 
-  /* line 412, scss/_type.scss */
+  /* line 413, scss/_type.scss */
   p,
   h2,
   h3 {
@@ -940,28 +940,28 @@ blockquote p {
     widows: 3;
   }
 
-  /* line 418, scss/_type.scss */
+  /* line 419, scss/_type.scss */
   h2,
   h3 {
     page-break-after: avoid;
   }
 
-  /* line 420, scss/_type.scss */
+  /* line 421, scss/_type.scss */
   .hide-on-print {
     display: none !important;
   }
 
-  /* line 421, scss/_type.scss */
+  /* line 422, scss/_type.scss */
   .print-only {
     display: block !important;
   }
 
-  /* line 422, scss/_type.scss */
+  /* line 423, scss/_type.scss */
   .hide-for-print {
     display: none !important;
   }
 
-  /* line 423, scss/_type.scss */
+  /* line 424, scss/_type.scss */
   .show-for-print {
     display: inherit !important;
   }
@@ -2374,15 +2374,20 @@ a img.aligncenter {
 }
 
 /* line 3, scss/_navigation.scss */
-.navigation-main {
+.navigation-main, .site-footer {
   width: 100%;
   padding: 1em 2em 1em 2em;
   background: #212121;
   line-height: 1.5em;
 }
 /* line 8, scss/_navigation.scss */
-.navigation-main ul, .navigation-main li {
+.navigation-main ul, .site-footer ul, .navigation-main li, .site-footer li {
   display: inline;
+}
+
+/* line 13, scss/_navigation.scss */
+.site-footer {
+  color: #e9e9e9;
 }
 
 /* line 1, scss/_content.scss */
