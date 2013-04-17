@@ -118,13 +118,25 @@ if ( ! function_exists( 'planet3_0_posted_on' ) ) :
  * @since Planet3.0 3.0
  */
 function planet3_0_posted_on() {
-	printf( __( 'Posted on <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s">%4$s</time></a><span class="byline"> by <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>', 'planet3_0' ),
+	printf( __( 'Publshed on <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s">%4$s</time></a>', 'planet3_0' ),
 		esc_url( get_permalink() ),
 		esc_attr( get_the_time() ),
 		esc_attr( get_the_date( 'c' ) ),
-		esc_html( get_the_date() ),
+		esc_html( get_the_date() )
+	);
+}
+endif;
+
+if ( ! function_exists( 'planet3_0_posted_by' ) ) :
+/**
+ * Prints HTML with meta information for the current author.
+ *
+ * @since Planet3.0 3.0
+ */
+function planet3_0_posted_by() {
+	printf( __( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>', 'planet3_0' ),
 		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-		esc_attr( sprintf( __( 'View all posts by %s', 'planet3_0' ), get_the_author() ) ),
+		esc_attr( sprintf( __( 'View all articles by %s', 'planet3_0' ), get_the_author() ) ),
 		get_the_author()
 	);
 }

@@ -808,24 +808,24 @@ blockquote p {
     margin: $microformat-margin;
     border: $microformat-border-width $microformat-border-style $microformat-border-color;
     padding: $microformat-padding;
+  
+  
+    li {
+      margin: 0;
+      display: block;
+    }
+    .fn {
+      font-weight: $microformat-fullname-font-weight;
+      font-size: $microformat-fullname-font-size;
+    }
   */
 }
-/* line 335, scss/_type.scss */
-.vcard li {
-  margin: 0;
-  display: block;
-}
-/* line 339, scss/_type.scss */
-.vcard .fn {
-  font-weight: bold;
-  font-size: 0.9375em;
-}
 
-/* line 346, scss/_type.scss */
+/* line 347, scss/_type.scss */
 .vevent .summary {
   font-weight: bold;
 }
-/* line 348, scss/_type.scss */
+/* line 349, scss/_type.scss */
 .vevent abbr {
   cursor: default;
   text-decoration: none;
@@ -835,27 +835,27 @@ blockquote p {
 }
 
 @media only screen and (min-width: 48em) {
-  /* line 359, scss/_type.scss */
+  /* line 360, scss/_type.scss */
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.4;
   }
 
-  /* line 360, scss/_type.scss */
+  /* line 361, scss/_type.scss */
   h1 {
     font-size: 2.75em;
   }
 
-  /* line 361, scss/_type.scss */
+  /* line 362, scss/_type.scss */
   h2 {
     font-size: 2.3125em;
   }
 
-  /* line 362, scss/_type.scss */
+  /* line 363, scss/_type.scss */
   h3 {
     font-size: 1.6875em;
   }
 
-  /* line 363, scss/_type.scss */
+  /* line 364, scss/_type.scss */
   h4 {
     font-size: 1.4375em;
   }
@@ -866,13 +866,13 @@ blockquote p {
  * Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
  * Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com)
 */
-/* line 374, scss/_type.scss */
+/* line 375, scss/_type.scss */
 .print-only {
   display: none !important;
 }
 
 @media print {
-  /* line 376, scss/_type.scss */
+  /* line 377, scss/_type.scss */
   * {
     background: transparent !important;
     color: black !important;
@@ -881,49 +881,49 @@ blockquote p {
     text-shadow: none !important;
   }
 
-  /* line 384, scss/_type.scss */
+  /* line 385, scss/_type.scss */
   a,
   a:visited {
     text-decoration: underline;
   }
 
-  /* line 385, scss/_type.scss */
+  /* line 386, scss/_type.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 387, scss/_type.scss */
+  /* line 388, scss/_type.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
 
-  /* line 392, scss/_type.scss */
+  /* line 393, scss/_type.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
   }
 
-  /* line 395, scss/_type.scss */
+  /* line 396, scss/_type.scss */
   pre,
   blockquote {
     border: 1px solid #999999;
     page-break-inside: avoid;
   }
 
-  /* line 400, scss/_type.scss */
+  /* line 401, scss/_type.scss */
   thead {
     display: table-header-group;
     /* h5bp.com/t */
   }
 
-  /* line 403, scss/_type.scss */
+  /* line 404, scss/_type.scss */
   tr,
   img {
     page-break-inside: avoid;
   }
 
-  /* line 405, scss/_type.scss */
+  /* line 406, scss/_type.scss */
   img {
     max-width: 100% !important;
   }
@@ -932,7 +932,7 @@ blockquote p {
     margin: 0.5cm;
 }
 
-  /* line 411, scss/_type.scss */
+  /* line 412, scss/_type.scss */
   p,
   h2,
   h3 {
@@ -940,28 +940,28 @@ blockquote p {
     widows: 3;
   }
 
-  /* line 417, scss/_type.scss */
+  /* line 418, scss/_type.scss */
   h2,
   h3 {
     page-break-after: avoid;
   }
 
-  /* line 419, scss/_type.scss */
+  /* line 420, scss/_type.scss */
   .hide-on-print {
     display: none !important;
   }
 
-  /* line 420, scss/_type.scss */
+  /* line 421, scss/_type.scss */
   .print-only {
     display: block !important;
   }
 
-  /* line 421, scss/_type.scss */
+  /* line 422, scss/_type.scss */
   .hide-for-print {
     display: none !important;
   }
 
-  /* line 422, scss/_type.scss */
+  /* line 423, scss/_type.scss */
   .show-for-print {
     display: inherit !important;
   }
@@ -2393,34 +2393,50 @@ body {
 /* =Heading Styles
 -------------------------------------------------------------- */
 /* line 7, scss/_content.scss */
+#masthead {
+  border-bottom: 1px solid #e9e9e9;
+}
+
+/* line 11, scss/_content.scss */
 .header-logo {
-  padding: 0.5em 2em 0.25em 2em;
+  padding: 1em 2em 1em 2em;
   text-align: center;
 }
 
-/* line 13, scss/_content.scss */
+/* line 17, scss/_content.scss */
 .page-header h1 {
   line-height: 1em;
 }
 
-/* =Content Styles
+/* =Byline Styles
 -------------------------------------------------------------- */
-/* line 23, scss/_content.scss */
-.content-area {
-  padding: 0.5em 0 2em 0;
+/* line 28, scss/_content.scss */
+.byline {
+  font-size: 0.8em;
+}
+/* line 30, scss/_content.scss */
+.byline h1 {
+  font-size: 1.2em;
 }
 
-/* line 28, scss/_content.scss */
+/* =Content Styles
+-------------------------------------------------------------- */
+/* line 45, scss/_content.scss */
+.content-area {
+  padding: 2em 0 2em 0;
+}
+
+/* line 50, scss/_content.scss */
 .entry-content {
   padding-bottom: 2em;
 }
 
-/* line 32, scss/_content.scss */
+/* line 54, scss/_content.scss */
 .entry-meta {
-  padding: 1em 0 1em 0;
+  padding: 0em 0 1em 0;
 }
 
-/* line 38, scss/_content.scss */
+/* line 60, scss/_content.scss */
 .entry-content iframe,
 .entry-content object,
 .entry-content embed {
@@ -2458,11 +2474,11 @@ body {
 -------------------------------------------------------------- */
 /* line 4, scss/_sidebars.scss */
 .widget-area {
-  font-size: emCacl(14px);
+  font-size: 0.8em;
 }
 /* line 6, scss/_sidebars.scss */
 .widget-area h1 {
-  font-size: 1em;
+  font-size: 1.2em;
   border-bottom: 1px solid #e9e9e9;
 }
 /* line 10, scss/_sidebars.scss */

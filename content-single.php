@@ -9,32 +9,41 @@
 	<header class="entry-header assistive-text">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 
-		<div class="entry-meta meta-above">
-			<?php planet3_0_posted_on(); ?>
-		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
-			<?php the_content(); ?>
-			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'planet3_0' ), 'after' => '</div>' ) ); ?>
-	</div><!-- .entry-content -->
+	<div class="row">
 
-	<hr />
+		<div class="byline large-2 columns">
+			<h1><?php planet3_0_posted_by(); ?></h1>
+			<div class="author-avatar hide-for-small">
+				<?php if ( validate_gravatar( get_the_author_meta( 'user_email' ) ) ) :
+					echo get_avatar( get_the_author_meta( 'user_email' ), 256, $default, get_the_author() ); 
+				endif; ?>
+			</div>
+			<div class="author-bio hide-for-small">
+				<p><?php the_author_meta('description')?></p>
+			</div><!-- .author-bio -->
+		</div><!-- .byline -->
 
-	<footer class="entry-meta meta-bellow" >
+		<div class=" large-10 columns">
+			<div class="entry-content">
+				<div class="entry-meta meta-above">
+					<?php planet3_0_posted_on(); ?>
+				</div><!-- .entry-meta -->
+				<?php the_content(); ?>
+				<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'planet3_0' ), 'after' => '</div>' ) ); ?>
+			</div><!-- .entry-content -->
 
-		<?php // If a user has filled out their decscription show a bio on their entries
-		if ( get_the_author_meta('description') ) : ?>
-				<div class="author-bio">
-					<?php echo get_avatar( get_the_author_meta( 'user_email' ), 100, $default, get_the_author() ); ?>
-					<h2>About the author</h2>
-					<p><?php the_author_meta('description')?></p>
-				</div><!-- .author-bio -->
-		<?php endif; ?>
+			<hr />
 
-		<?php planet3_0_posted_in(); ?>
+			<footer class="entry-meta meta-bellow" >
 
-		<?php edit_post_link( __( 'Edit', 'planet3_0' ), '<span class="edit-link">', '</span>' ); ?>
-	</footer><!-- .entry-meta -->
+				<?php planet3_0_posted_in(); ?>
+
+				<?php edit_post_link( __( 'Edit', 'planet3_0' ), '<span class="edit-link">', '</span>' ); ?>
+			</footer><!-- .entry-meta -->
+		</div><!-- . large-9 columns -->
+
+	</div><!-- .row -->
 
 </article><!-- #post-## -->

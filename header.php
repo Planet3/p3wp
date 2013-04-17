@@ -31,8 +31,8 @@
 		<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 	</nav><!-- #site-navigation -->
 
-	<header id="masthead" class="page-header row" role="banner">
-		<div class="large-9 columns">
+	<header id="masthead" class="row" role="banner">
+		<div class="page-header large-9 columns">
 			<?php  // if this is the front page display site title and description
 			if (is_front_page()) { ?>
 					<hgroup>
@@ -43,12 +43,9 @@
 			<?php } // else display page title instead and meta instead of site title and description
 			else { ?>
 				<h1 class="entry-title"><?php the_title(); ?></h1>
-					<div class="entry-meta meta-above">
-						<?php planet3_0_posted_on(); ?>
-					</div><!-- .entry-meta -->
 			<?php } // endif ?>
-		</div><!-- .small-9 -->
-		<div class="header-logo large-3 columns">
+		</div><!-- .page-header -->
+		<div class="header-logo large-3 columns hide-for-small">
 			<img src="<?php echo get_template_directory_uri(); ?>/logo.png" width="125" alt="Logo">
 		</div><!-- .header-logo .small-3 -->
 	</header><!-- #masthead -->
