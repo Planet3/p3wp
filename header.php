@@ -34,7 +34,7 @@
 	<header id="masthead" class="row" role="banner">
 		<div class="page-header large-9 columns">
 			<?php  // if this is a single post/page display title
-				if ( !is_single() && !is_page() ) { ?>
+				if ( !is_single() && !is_page() or is_attachment() ) { ?>
 
 					<hgroup>
 						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>

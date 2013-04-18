@@ -10,13 +10,13 @@ get_header();
 ?>
 
 	<div id="primary" class="content-area image-attachment row">
-		<div id="content" class="site-content large-12 columns" role="main">
+		<div id="content" class="site-content large-10 large-centered columns" role="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<header class="entry-header">
-					<h1 class="entry-title"><?php the_title(); ?></h1>
+					<h1 class="entry-title "><?php the_title(); ?></h1>
 
 					<div class="entry-meta">
 						<?php
@@ -35,10 +35,6 @@ get_header();
 						<?php edit_post_link( __( 'Edit', 'planet3_0' ), '<span class="sep"> | </span> <span class="edit-link">', '</span>' ); ?>
 					</div><!-- .entry-meta -->
 
-					<nav id="image-navigation" class="navigation-image">
-						<span class="previous"><?php previous_image_link( false, __( '&larr; Previous', 'planet3_0' ) ); ?></span>
-						<span class="next"><?php next_image_link( false, __( 'Next &rarr;', 'planet3_0' ) ); ?></span>
-					</nav><!-- #image-navigation -->
 				</header><!-- .entry-header -->
 
 				<div class="entry-content">
@@ -109,11 +105,11 @@ get_header();
 				</footer><!-- .entry-meta -->
 			</article><!-- #post-<?php the_ID(); ?> -->
 
-			<?php
+			<?php/*
 				// If comments are open or we have at least one comment, load up the comment template
 				if ( comments_open() || '0' != get_comments_number() )
 					comments_template();
-			?>
+			*/?>
 
 		<?php endwhile; // end of the loop. ?>
 
