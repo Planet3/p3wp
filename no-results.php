@@ -14,21 +14,23 @@
 		<h1 class="entry-title"><?php _e( 'Nothing Found', 'planet3_0' ); ?></h1>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
-		<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
+	<div class="row">
+		<div class="entry-content large-10 large-centered columns">
+			<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
-			<p><?php printf( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'planet3_0' ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
+				<p><?php printf( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'planet3_0' ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
 
-		<?php elseif ( is_search() ) : ?>
+			<?php elseif ( is_search() ) : ?>
 
-			<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'planet3_0' ); ?></p>
-			<?php get_search_form(); ?>
+				<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'planet3_0' ); ?></p>
+				<?php get_search_form(); ?>
 
-		<?php else : ?>
+			<?php else : ?>
 
-			<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'planet3_0' ); ?></p>
-			<?php get_search_form(); ?>
+				<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'planet3_0' ); ?></p>
+				<?php get_search_form(); ?>
 
-		<?php endif; ?>
-	</div><!-- .entry-content -->
+			<?php endif; ?>
+		</div><!-- .entry-content -->
+	</div><!-- .row -->
 </article><!-- #post-0 .post .no-results .not-found -->

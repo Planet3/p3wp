@@ -14,3 +14,16 @@
 .site-footer {
     @extend .navigation-main;
 }
+
+#nav-below {
+    padding: 1em;
+    border-top: 2px solid $secondary-color;
+}
+
+.previous {
+    float: left;
+}
+
+.next {
+    float: right;
+}

@@ -25,7 +25,7 @@
 			</div><!-- .author-bio -->
 		</div><!-- .byline -->
 
-		<div class=" large-10 columns">
+		<div class="large-10 columns">
 			<div class="entry-content">
 				<div class="entry-meta meta-above">
 					<?php planet3_0_posted_on(); ?>
@@ -36,12 +36,12 @@
 
 			<hr />
 
-			<footer class="entry-meta meta-bellow" >
-
-				<?php planet3_0_posted_in(); ?>
-
-				<?php edit_post_link( __( 'Edit', 'planet3_0' ), '<span class="edit-link">', '</span>' ); ?>
-			</footer><!-- .entry-meta -->
+			<div class="row">
+				<footer class="entry-meta meta-bellow large-12 columns" >
+					<?php planet3_0_posted_in(); ?>
+					<?php edit_post_link( __( 'Edit', 'planet3_0' ), '<span class="edit-link">', '</span>' ); ?>
+				</footer><!-- .entry-meta -->
+			</div><!-- .row -->
 		</div><!-- . large-9 columns -->
 
 	</div><!-- .row -->

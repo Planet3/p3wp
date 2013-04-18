@@ -13,8 +13,8 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
+	<div id="primary" class="content-area row">
+		<div id="content" class="site-content large-12 columns" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
@@ -31,5 +31,4 @@ get_header(); ?>
 		</div><!-- #content -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

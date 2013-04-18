@@ -34,7 +34,7 @@ function planet3_0_content_nav( $nav_id ) {
 
 	?>
 	<nav role="navigation" id="<?php echo esc_attr( $nav_id ); ?>" class="<?php echo $nav_class; ?>">
-		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'planet3_0' ); ?></h1>
+		<h1 class="assistive-text"><?php _e( 'Post navigation', 'planet3_0' ); ?></h1>
 
 	<?php if ( is_single() ) : // navigation links for single posts ?>
 
