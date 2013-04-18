@@ -29,6 +29,7 @@
 	<nav id="site-navigation" class="navigation-main" role="navigation">
 
 		<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+		<?php //get_search_form(); ?>
 	</nav><!-- #site-navigation -->
 
 	<header id="masthead" class="row" role="banner">
