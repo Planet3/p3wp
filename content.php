@@ -11,7 +11,7 @@
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
-			<p><?php planet3_0_posted_on() ?> by <?php planet3_0_posted_by() ?></p>
+			<p><?php planet3_0_posted_on(); ?> by <?php planet3_0_posted_by(); ?></p>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->

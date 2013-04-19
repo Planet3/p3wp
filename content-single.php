@@ -21,7 +21,7 @@
 			</div>
 			<h1><?php planet3_0_posted_by(); ?></h1>
 			<div class="author-bio hide-for-small">
-				<p><?php the_author_meta('description')?></p>
+				<p><?php the_author_meta('description'); ?></p>
 			</div><!-- .author-bio -->
 		</div><!-- .byline -->
 
