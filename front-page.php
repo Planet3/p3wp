@@ -10,7 +10,6 @@ get_header(); ?>
 
 	<div id="primary" class="content-area row">
 
-		<?php if ( have_posts() ) : ?>
 			<div class="row">
 				<div id="lede" class="large-10 large-centered columns" role="main">
 					<h1>Lede</h1>
@@ -26,11 +25,9 @@ get_header(); ?>
 					<?php endwhile; ?>
 				</div><!-- #lede -->
 			</div><!-- row -->
-		<?php endif; ?>
-		<?php wp_reset_query(); ?>
+		<?php wp_reset_postdata(); ?>
 
 
-		<?php if ( have_posts() ) : ?>
 			<div class="row">
 				<div id="featured" class="large-10 large-centered columns" role="main">
 					<h1>Featured</h1>
@@ -39,7 +36,6 @@ get_header(); ?>
 						'category__not_in' => planet3_0_cat_slug_to_id('media'),
 						'posts_per_page' => 4
 						); ?>
-
 					<?php /* Start the featured Loop */ 
 					$featured_query = new WP_Query( $args );
 					while ( $featured_query -> have_posts() ) : $featured_query -> the_post();
@@ -48,28 +44,24 @@ get_header(); ?>
 					<?php endwhile; ?>
 				</div><!-- #featured -->
 			</div><!-- row -->
-		<?php endif; ?>
-		<?php wp_reset_query(); ?>
+		<?php wp_reset_postdata(); ?>
 
 
-		<?php if ( have_posts() ) : ?>
 			<div class="row">
 				<div id="beyond" class="large-10 large-centered columns" role="main">
-					<h1>Beyond</h1>
+					<h1>Beyond Planet Three</h1>
 					<?php $args = array(
 						'category__in' => planet3_0_cat_slug_to_id('beyond-planet-three'),
 						'posts_per_page' => 5
 						); ?>
 					<?php /* Start the beyond Loop */ 
-					rewind_posts();
-					query_posts( $args );
-					while ( have_posts() ) : the_post(); ?>
+					$beyond_query = new WP_Query( $args );
+					while ( $beyond_query -> have_posts() ) : $beyond_query -> the_post(); ?>
 						<?php get_template_part( 'content', 'fp' ); ?>
 					<?php endwhile; ?>
 				</div><!-- #featured -->
 			</div><!-- row -->
-		<?php endif; ?>
-		<?php wp_reset_query(); ?>
+		<?php wp_reset_postdata(); ?>
 
 
 	</div><!-- #primary -->
