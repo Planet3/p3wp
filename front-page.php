@@ -8,9 +8,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area row">
-
-
+	<div id="primary" class="content-area row" role="main">
 
 		<?php $args = array(
 			'category__in' => planet3_0_cat_slug_to_id('lede'),
@@ -20,7 +18,7 @@ get_header(); ?>
 		$lede_query = new WP_Query( $args );
 		if ( $lede_query -> have_posts() ) : ?>
 			<div class="row">
-				<div id="lede" class="large-10 large-centered columns" role="main">
+				<div id="lede" class="large-12 columns">
 					<h1>Lede</h1>
 					<?php while ( $lede_query -> have_posts() ) : $lede_query -> the_post();
 						$do_not_duplicate[] = $post->ID; ?>
@@ -31,6 +29,7 @@ get_header(); ?>
 			<?php wp_reset_postdata(); ?>
 		<?php endif; ?>
 
+
 		<?php $args = array(
 			'category__in' => planet3_0_cat_slug_to_id('featured'),
 			'category__not_in' => planet3_0_cat_slug_to_id('media'),
@@ -39,8 +38,8 @@ get_header(); ?>
 		/* Start the featured Loop */ 
 		$featured_query = new WP_Query( $args ); 
 		if ( $featured_query -> have_posts() ) : ?>
-			<div class="row">
-				<div id="featured" class="large-10 large-centered columns" role="main">
+			<div id="featured" class="row">
+				<ul class="large-block-grid-3">
 					<h1>Featured</h1>
 					<?php while ( $featured_query -> have_posts() ) : $featured_query -> the_post();
 						if ( isset($do_not_duplicate) ) {
@@ -48,12 +47,10 @@ get_header(); ?>
 						} ?>
 						<?php get_template_part( 'content', 'fp' ); ?>
 					<?php endwhile; ?>
-				</div><!-- #featured -->
-			</div><!-- row -->
+				</ul><!-- large-block-grid-3 -->
+			</div><!-- #featured .row -->
 			<?php wp_reset_postdata(); ?>
 		<?php endif; ?>
-
-
 
 
 		<?php $args = array(
@@ -63,14 +60,14 @@ get_header(); ?>
 		/* Start the beyond Loop */ 
 		$beyond_query = new WP_Query( $args );
 		if ( $beyond_query -> have_posts() ) : ?>
-			<div class="row">
-				<div id="beyond" class="large-10 large-centered columns" role="main">
+			<div id="beyond" class="row">
+				<ul class="large-block-grid-3">
 					<h1>Beyond Planet Three</h1>
 					<?php while ( $beyond_query -> have_posts() ) : $beyond_query -> the_post(); ?>
 						<?php get_template_part( 'content', 'fp' ); ?>
 					<?php endwhile; ?>
-				</div><!-- #featured -->
-			</div><!-- row -->
+				</ul><!-- .large-block-grid-3 -->
+			</div><!-- # beyond .row -->
 			<?php wp_reset_postdata(); ?>
 		<?php endif; ?>
 

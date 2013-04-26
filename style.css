@@ -2444,7 +2444,7 @@ body {
 -------------------------------------------------------------- */
 /* line 46, scss/_content.scss */
 .content-area {
-  padding: 2em 0 2em 0;
+  padding: 2em 1em 2em 1em;
 }
 
 /* line 50, scss/_content.scss */
