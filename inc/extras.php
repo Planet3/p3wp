@@ -54,7 +54,7 @@ add_filter( 'attachment_link', 'planet3_0_enhanced_image_navigation', 10, 2 );
 /**
  * Filters wp_title to print a neat <title> tag based on what is being viewed.
  *
- * @since Planet3.0 1.1
+ * @since Planet3.0 3.0
  */
 function planet3_0_wp_title( $title, $sep ) {
 	global $page, $paged;
@@ -77,3 +77,16 @@ function planet3_0_wp_title( $title, $sep ) {
 	return $title;
 }
 add_filter( 'wp_title', 'planet3_0_wp_title', 10, 2 );
+
+/**
+ * Get category ID when from the slug
+ *
+ * @since Planet3.0 3.0
+ */
+function planet3_0_cat_slug_to_id( $slug ) {
+
+	$cat_id = get_term_by( 'slug', $slug, 'category' );
+	$cat_id = $cat_id->term_id;
+
+	return $cat_id;
+}
