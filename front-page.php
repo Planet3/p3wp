@@ -69,6 +69,7 @@ get_header(); ?>
 				</div><!-- #featured -->
 			</div><!-- row -->
 		<?php endif; ?>
+		<?php wp_reset_query(); ?>
 
 
 	</div><!-- #primary -->
