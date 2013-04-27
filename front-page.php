@@ -72,7 +72,7 @@ get_header(); ?>
 				<?php endif; ?>
 			</div><!-- large-9 -->
 
-			<div class="large-3 columns">
+			<div class="large-3 columns hide-for-small">
 				<?php get_sidebar(); ?>
 			</div><!-- large-3 -->
 		</div><!-- row -->
