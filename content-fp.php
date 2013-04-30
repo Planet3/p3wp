@@ -8,7 +8,9 @@
 <li>
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-		<?php the_post_thumbnail( 'medium' ); ?> 
+		<div class="text-center">
+			<?php the_post_thumbnail( 'home-thumb' ); ?> 
+		</div><!-- text-center -->
 
 		<header class="entry-header">
 			<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'planet3_0' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
