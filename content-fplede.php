@@ -29,7 +29,7 @@
 	</div><!-- row -->
 
 	<div class="row">
-		<footer class="entry-meta meta-bellow large-12 large-offset-6 columns">
+		<footer class="entry-meta meta-bellow large-6 large-offset-6 columns">
 
 			<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
 			<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'planet3_0' ), __( '1 Comment', 'planet3_0' ), __( '% Comments', 'planet3_0' ) ); ?></span>

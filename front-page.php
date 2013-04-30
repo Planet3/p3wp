@@ -18,7 +18,6 @@ get_header(); ?>
 			if ( $lede_query -> have_posts() ) : ?>
 				<div class="row">
 					<div id="lede" class="large-12 columns">
-						<h1>Lede</h1>
 						<?php while ( $lede_query -> have_posts() ) : $lede_query -> the_post();
 							$do_not_duplicate[] = $post->ID; ?>
 							<?php get_template_part( 'content', 'fplede' ); ?>
@@ -29,7 +28,7 @@ get_header(); ?>
 			<?php endif; ?>
 
 		<div class="row" >
-			<div class="large-9 columns">
+			<div class="posts-area large-9 columns">
 				<?php $args = array(
 					'category__in' => planet3_0_cat_slug_to_id('featured'),
 					'category__not_in' => planet3_0_cat_slug_to_id('media'),
@@ -38,8 +37,7 @@ get_header(); ?>
 				/* Start the featured Loop */ 
 				$featured_query = new WP_Query( $args ); 
 				if ( $featured_query -> have_posts() ) : ?>
-					<div id="featured" class="row">
-						<h1>Featured</h1>
+					<div id="featured" class="row hide-for-small">
 						<ul class="large-block-grid-3">
 							<?php while ( $featured_query -> have_posts() ) : $featured_query -> the_post();
 								if ( isset($do_not_duplicate) ) {
@@ -61,7 +59,9 @@ get_header(); ?>
 				$beyond_query = new WP_Query( $args );
 				if ( $beyond_query -> have_posts() ) : ?>
 					<div id="beyond" class="row">
-					<h1>Beyond Planet Three</h1>
+						<div class="section-title">
+							<h1><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?></h1>
+						</div><!-- section-title -->
 						<ul class="large-block-grid-3">
 							<?php while ( $beyond_query -> have_posts() ) : $beyond_query -> the_post(); ?>
 								<?php get_template_part( 'content', 'fp' ); ?>
@@ -70,7 +70,7 @@ get_header(); ?>
 					</div><!-- # beyond row -->
 					<?php wp_reset_postdata(); ?>
 				<?php endif; ?>
-			</div><!-- large-9 -->
+			</div><!-- posts-area large-9 -->
 
 			<div class="large-3 columns hide-for-small">
 				<?php get_sidebar(); ?>

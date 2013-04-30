@@ -19,7 +19,7 @@ $block-grid-media-queries: true !default;
 
   @if $base-style {
     display: block;
-    padding: 0;
+    padding: 0 1em 0 1em;
     margin: 0 (-$spacing);
     @include clearfix;
 

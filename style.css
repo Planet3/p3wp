@@ -1564,7 +1564,7 @@ blockquote p {
   /* line 48, scss/_block-grid.scss */
   [class*="block-grid-"] {
     display: block;
-    padding: 0;
+    padding: 0 1em 0 1em;
     margin: 0 -10px;
     *zoom: 1;
   }
@@ -2429,41 +2429,64 @@ body {
   line-height: 1em;
 }
 
+/* =Front Page Styles
+-------------------------------------------------------------- */
+/* line 28, scss/_content.scss */
+.posts-area {
+  font-size: 0.75em;
+}
+/* line 30, scss/_content.scss */
+.posts-area h1 {
+  font-size: 1.3em;
+}
+
+/* line 36, scss/_content.scss */
+.section-title {
+  padding: 0.2em 1em 0.2em 1em;
+  margin-bottom: 1em;
+  background-color: #e9e9e9;
+}
+
+/* line 43, scss/_content.scss */
+#beyond {
+  border: 2px solid #e9e9e9;
+}
+
 /* =Byline Styles
 -------------------------------------------------------------- */
-/* line 29, scss/_content.scss */
+/* line 51, scss/_content.scss */
 .byline {
   font-size: 0.8em;
 }
-/* line 31, scss/_content.scss */
+/* line 53, scss/_content.scss */
 .byline h1 {
   font-size: 1.2em;
 }
 
 /* =Content Styles
 -------------------------------------------------------------- */
-/* line 46, scss/_content.scss */
+/* line 68, scss/_content.scss */
 .content-area {
   padding: 2em 1em 2em 1em;
 }
 
-/* line 50, scss/_content.scss */
+/* line 72, scss/_content.scss */
 .entry-title {
   font-size: 2em;
   line-height: 1.2em;
 }
 
-/* line 55, scss/_content.scss */
+/* line 77, scss/_content.scss */
 .entry-content {
   padding-bottom: 2em;
 }
 
-/* line 59, scss/_content.scss */
+/* line 81, scss/_content.scss */
 .entry-meta {
   padding: 0em 0 1em 0;
 }
 
-/* line 65, scss/_content.scss */
+/* line 87, scss/_content.scss */
 .entry-content iframe,
 .entry-content object,
 .entry-content embed {

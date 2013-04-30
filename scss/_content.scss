@@ -23,6 +23,28 @@ padding-top: 2em;
 .meta-above {
 }
 
+/* =Front Page Styles
+-------------------------------------------------------------- */
+.posts-area {
+    font-size: 0.75em;
+    h1 {
+        font-size: 1.3em;
+    }
+}
+
+
+.section-title{
+    padding: 0.2em 1em 0.2em 1em;
+    margin-bottom: 1em;
+    background-color: $secondary-color;
+}
+
+
+#beyond {
+    border: 2px solid $secondary-color;
+}
+
+
 /* =Byline Styles
 -------------------------------------------------------------- */
 
