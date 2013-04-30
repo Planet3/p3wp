@@ -19,7 +19,7 @@
 	<div class="row">
 
 		<div class="entry-thumbnail text-center large-6 columns">
-			 <?php the_post_thumbnail( 'home-thumb' ); ?> 
+			 <?php the_post_thumbnail(); ?> 
 		</div><!-- entry-thumbnail -->
 
 		<div class="entry-summary large-6 columns">

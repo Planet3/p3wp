@@ -9,7 +9,7 @@
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 		<div class="text-center">
-			<?php the_post_thumbnail( 'home-thumb' ); ?> 
+			<?php the_post_thumbnail(); ?> 
 		</div><!-- text-center -->
 
 		<header class="entry-header">
