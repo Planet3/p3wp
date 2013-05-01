@@ -8,20 +8,12 @@ body {
     border-bottom: 1px solid $secondary-color;
 }
 
+
 .header-logo {
     padding: 1em 2em 1em 2em;
     text-align: center;
 }
 
-.page-header {
-padding-top: 2em;
-    h1 {
-        line-height: 1em;
-    }
-}
-
-.meta-above {
-}
 
 /* =Front Page Styles
 -------------------------------------------------------------- */
@@ -77,6 +69,9 @@ padding-top: 2em;
 .entry-title {
     font-size: 2em;
     line-height: 1.2em;
+}
+
+.meta-above {
 }
 
 .entry-content {

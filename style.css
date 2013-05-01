@@ -2414,85 +2414,76 @@ body {
   border-bottom: 1px solid #e9e9e9;
 }
 
-/* line 11, scss/_content.scss */
+/* line 12, scss/_content.scss */
 .header-logo {
   padding: 1em 2em 1em 2em;
   text-align: center;
 }
 
-/* line 16, scss/_content.scss */
-.page-header {
-  padding-top: 2em;
-}
-/* line 18, scss/_content.scss */
-.page-header h1 {
-  line-height: 1em;
-}
-
 /* =Front Page Styles
 -------------------------------------------------------------- */
-/* line 28, scss/_content.scss */
+/* line 20, scss/_content.scss */
 #lede {
   margin-bottom: 1em;
   border-bottom: 2px solid #e9e9e9;
 }
 
-/* line 33, scss/_content.scss */
+/* line 25, scss/_content.scss */
 .posts-area {
   font-size: 0.75em;
 }
-/* line 35, scss/_content.scss */
+/* line 27, scss/_content.scss */
 .posts-area h1 {
   font-size: 1.3em;
 }
 
-/* line 41, scss/_content.scss */
+/* line 33, scss/_content.scss */
 .section-title {
   padding: 0.2em 1em 0.2em 1em;
   margin-bottom: 1em;
   background-color: #e9e9e9;
 }
 
-/* line 48, scss/_content.scss */
+/* line 40, scss/_content.scss */
 #beyond {
   border: 2px solid #e9e9e9;
 }
 
 /* =Byline Styles
 -------------------------------------------------------------- */
-/* line 56, scss/_content.scss */
+/* line 48, scss/_content.scss */
 .byline {
   font-size: 0.8em;
 }
-/* line 58, scss/_content.scss */
+/* line 50, scss/_content.scss */
 .byline h1 {
   font-size: 1.2em;
 }
 
 /* =Content Styles
 -------------------------------------------------------------- */
-/* line 73, scss/_content.scss */
+/* line 65, scss/_content.scss */
 .content-area {
   padding: 2em 1em 2em 1em;
 }
 
-/* line 77, scss/_content.scss */
+/* line 69, scss/_content.scss */
 .entry-title {
   font-size: 2em;
   line-height: 1.2em;
 }
 
-/* line 82, scss/_content.scss */
+/* line 77, scss/_content.scss */
 .entry-content {
   padding-bottom: 2em;
 }
 
-/* line 86, scss/_content.scss */
+/* line 81, scss/_content.scss */
 .entry-meta {
   padding: 0em 0 1em 0;
 }
 
-/* line 92, scss/_content.scss */
+/* line 87, scss/_content.scss */
 .entry-content iframe,
 .entry-content object,
 .entry-content embed {

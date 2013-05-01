@@ -34,15 +34,15 @@
 
 	<header id="masthead" class="row" role="banner">
 		<div class="page-header large-9 columns">
-			<?php  // if this is a single post/page display title
+			<?php  // if this is not a single post/page site title and description
 				if ( !is_single() && !is_page() or is_attachment() ) { ?>
 
-					<hgroup>
+					<hgroup class="site-masthead">
 						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 						<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 					</hgroup>
 
-				<?php } // else display site title and description
+				<?php } // else display post/page title
 				else { ?>
 
 					<h1 class="entry-title"><?php the_title(); ?></h1>
