@@ -25,6 +25,11 @@ padding-top: 2em;
 
 /* =Front Page Styles
 -------------------------------------------------------------- */
+#lede {
+    margin-bottom: 1em;
+    border-bottom: 2px solid $secondary-color;
+}
+
 .posts-area {
     font-size: 0.75em;
     h1 {
