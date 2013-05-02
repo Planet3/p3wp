@@ -52,22 +52,38 @@ get_header(); ?>
 				<?php endif; ?>
 
 
-				<?php $args = array(
-					'category__in' => planet3_0_cat_slug_to_id('media'),
-					'posts_per_page' => 2
-					);
-				/* Start the media Loop */ 
-				$media_query = new WP_Query( $args );
-				if ( $media_query -> have_posts() ) : ?>
-					<div id="media" class="row">
-						<ul class="large-block-grid-2">
-							<?php while ( $media_query -> have_posts() ) : $media_query -> the_post(); ?>
-								<?php get_template_part( 'content', 'fpmedia' ); ?>
-							<?php endwhile; ?>
-						</ul><!-- .large-block-grid-3 -->
-					</div><!-- #media row -->
-					<?php wp_reset_postdata(); ?>
-				<?php endif; ?>
+
+			<div id="media" class="row">
+				<ul class="large-block-grid-2">
+
+					<?php $args = array(
+						'category__in' => planet3_0_cat_slug_to_id('video'),
+						'posts_per_page' => 1
+						);
+					/* Start the video media Loop */ 
+					$video_query = new WP_Query( $args );
+					if ( $video_query -> have_posts() ) : ?>
+						<?php while ( $video_query -> have_posts() ) : $video_query -> the_post(); ?>
+							<?php get_template_part( 'content', 'fpmedia' ); ?>
+						<?php endwhile; ?>
+						<?php wp_reset_postdata(); ?>
+					<?php endif; ?>
+
+					<?php $args = array(
+						'category__in' => planet3_0_cat_slug_to_id('image'),
+						'posts_per_page' => 1
+						);
+					/* Start the image media Loop */ 
+					$image_query = new WP_Query( $args );
+					if ( $image_query -> have_posts() ) : ?>
+						<?php while ( $image_query -> have_posts() ) : $image_query -> the_post(); ?>
+							<?php get_template_part( 'content', 'fpmedia' ); ?>
+						<?php endwhile; ?>
+						<?php wp_reset_postdata(); ?>
+					<?php endif; ?>
+
+				</ul><!-- .large-block-grid-3 -->
+			</div><!-- #media row -->
 
 
 				<?php $args = array(
