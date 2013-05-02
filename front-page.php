@@ -29,6 +29,7 @@ get_header(); ?>
 
 		<div class="row" >
 			<div class="posts-area large-9 columns">
+
 				<?php $args = array(
 					'category__in' => planet3_0_cat_slug_to_id('featured'),
 					'category__not_in' => planet3_0_cat_slug_to_id('media'),
@@ -37,7 +38,7 @@ get_header(); ?>
 				/* Start the featured Loop */ 
 				$featured_query = new WP_Query( $args ); 
 				if ( $featured_query -> have_posts() ) : ?>
-					<div id="featured" class="row hide-for-small">
+					<div id="featured">
 						<ul class="large-block-grid-3">
 							<?php while ( $featured_query -> have_posts() ) : $featured_query -> the_post();
 								if ( isset($do_not_duplicate) ) {
@@ -47,6 +48,24 @@ get_header(); ?>
 							<?php endwhile; ?>
 						</ul><!-- large-block-grid-3 -->
 					</div><!-- #featured row -->
+					<?php wp_reset_postdata(); ?>
+				<?php endif; ?>
+
+
+				<?php $args = array(
+					'category__in' => planet3_0_cat_slug_to_id('media'),
+					'posts_per_page' => 2
+					);
+				/* Start the media Loop */ 
+				$media_query = new WP_Query( $args );
+				if ( $media_query -> have_posts() ) : ?>
+					<div id="media" class="row">
+						<ul class="large-block-grid-2">
+							<?php while ( $media_query -> have_posts() ) : $media_query -> the_post(); ?>
+								<?php get_template_part( 'content', 'fpmedia' ); ?>
+							<?php endwhile; ?>
+						</ul><!-- .large-block-grid-3 -->
+					</div><!-- #media row -->
 					<?php wp_reset_postdata(); ?>
 				<?php endif; ?>
 
@@ -67,16 +86,17 @@ get_header(); ?>
 								<?php get_template_part( 'content', 'fp' ); ?>
 							<?php endwhile; ?>
 						</ul><!-- .large-block-grid-3 -->
-					</div><!-- # beyond row -->
+					</div><!-- #beyond row -->
 					<?php wp_reset_postdata(); ?>
 				<?php endif; ?>
+
 			</div><!-- posts-area large-9 -->
 
 			<div class="large-3 columns hide-for-small">
 				<?php get_sidebar(); ?>
 			</div><!-- large-3 -->
-		</div><!-- row -->
 
+		</div><!-- row -->
 	</div><!-- #primary -->
 
 <?php get_footer(); ?>
