@@ -82,9 +82,9 @@ body {
     padding: 0em 0 1em 0;
 }
 
-.entry-content iframe,  
-.entry-content object,  
-.entry-content embed {
+iframe,  
+object,  
+embed {
     max-width: 100%;
     max-height: auto;
     width: auto9; /* ie8 */

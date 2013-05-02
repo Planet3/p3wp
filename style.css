@@ -2484,9 +2484,9 @@ body {
 }
 
 /* line 87, scss/_content.scss */
-.entry-content iframe,
-.entry-content object,
-.entry-content embed {
+iframe,
+object,
+embed {
   max-width: 100%;
   max-height: auto;
   width: auto9;
