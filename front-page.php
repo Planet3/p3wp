@@ -99,7 +99,7 @@ get_header(); ?>
 						</div><!-- section-title -->
 						<ul class="large-block-grid-3">
 							<?php while ( $beyond_query -> have_posts() ) : $beyond_query -> the_post(); ?>
-								<?php get_template_part( 'content', 'fp' ); ?>
+								<?php get_template_part( 'content', 'fpbeyond' ); ?>
 							<?php endwhile; ?>
 						</ul><!-- .large-block-grid-3 -->
 					</div><!-- #beyond row -->

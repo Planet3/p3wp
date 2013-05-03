@@ -11,11 +11,6 @@
 		<header class="entry-header">
 			<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'planet3_0' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
-			<?php if ( 'post' == get_post_type() ) : ?>
-			<div class="entry-meta">
-				<p><?php planet3_0_posted_on(); ?> by <?php planet3_0_posted_by(); ?></p>
-			</div><!-- .entry-meta -->
-			<?php endif; ?>
 		</header><!-- .entry-header -->
 
 		<div class="entry-summary">
