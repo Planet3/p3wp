@@ -26,11 +26,22 @@
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
 
+		<div class="top-bar-container">
+			<nav id="site-navigation" class="navigation-main top-bar" role="navivation">
+				<ul class="title-area">
+					<li class="name">
+						<h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+					</li><!-- .name -->
+					<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+				</ul><!-- .title-area -->
+				<section class="top-bar-section">
+					<?php foundation_top_bar_l(); ?>
 
-	<nav id="nav" class="navigation-main" role="navigation">
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-			<?php //get_search_form(); ?>
-	</nav><!-- #site-navigation -->
+					<?php foundation_top_bar_r(); ?>
+					<?php //get_search_form(); ?>
+				</section><!-- .top-bar-section -->
+			</nav><!-- #site-navigation -->
+		</div>
 
 	<header id="masthead" class="row" role="banner">
 		<div class="page-header large-9 columns">
