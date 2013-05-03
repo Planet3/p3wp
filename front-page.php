@@ -44,7 +44,7 @@ get_header(); ?>
 								if ( isset($do_not_duplicate) ) {
 									if (in_array($post->ID, $do_not_duplicate)) continue; 
 								} ?>
-								<?php get_template_part( 'content', 'fp' ); ?>
+								<?php get_template_part( 'content', 'fpfeatured' ); ?>
 							<?php endwhile; ?>
 						</ul><!-- large-block-grid-3 -->
 					</div><!-- #featured row -->
