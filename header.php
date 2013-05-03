@@ -23,21 +23,13 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="outer-wrap">
-<div id="inner-wrap">
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
 
 
-	<div id="top" class="block">
-		<a class="nav-btn" id="nav-open-btn" href="#nav">Navigation Menu</a>
-	</div>
 	<nav id="nav" class="navigation-main" role="navigation">
-		<div class="block">
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			<?php //get_search_form(); ?>
-			<a class="close-btn" id="nav-close-btn" href="#top">Close Navigation Menu</a>
-		</div><!-- .block -->
 	</nav><!-- #site-navigation -->
 
 	<header id="masthead" class="row" role="banner">

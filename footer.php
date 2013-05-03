@@ -22,7 +22,5 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-</div><!-- #outer-wrap -->
-</div><!-- #inner-wrap -->
 </body>
 </html>
