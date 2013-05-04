@@ -2873,7 +2873,7 @@ a:hover {
 
 /* line 16, scss/_content.scss */
 .header-logo {
-  padding: 1em 2em 1em 2em;
+  padding: 0 2em 1em 2em;
   text-align: center;
 }
 
