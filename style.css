@@ -2930,24 +2930,17 @@ a:hover {
   padding: 2em 1em 2em 1em;
 }
 
-/* line 74, scss/_content.scss */
-.entry-title {
-  padding-top: 1em;
-  font-size: 2em;
-  line-height: 1.2em;
-}
-
-/* line 83, scss/_content.scss */
+/* line 80, scss/_content.scss */
 .entry-content {
   padding-bottom: 2em;
 }
 
-/* line 87, scss/_content.scss */
+/* line 84, scss/_content.scss */
 .entry-meta {
   padding: 0em 0 1em 0;
 }
 
-/* line 93, scss/_content.scss */
+/* line 90, scss/_content.scss */
 iframe,
 object,
 embed {
