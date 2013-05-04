@@ -18,7 +18,11 @@
 	<!--[if lt IE 9]>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 	<![endif]-->
-
+	<?php if ( is_admin_bar_showing() ) {?>
+		<style>
+			.top-bar-container { top: 28px !important; }
+		</style>
+	<?php }?>
 	<?php wp_head(); ?>
 </head>
 
@@ -26,11 +30,11 @@
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
 
-		<div class="top-bar-container">
+		<div class="top-bar-container antialiased fixed">
 			<nav id="site-navigation" class="navigation-main top-bar" role="navivation">
 				<ul class="title-area">
 					<li class="name">
-						<h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+						<h1><a href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 					</li><!-- .name -->
 					<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
 				</ul><!-- .title-area -->

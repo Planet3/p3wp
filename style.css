@@ -2829,7 +2829,12 @@ a img.aligncenter {
     right: 100%;
   }
 }
-/* line 6, scss/_navigation.scss */
+/* line 3, scss/_navigation.scss */
+.navigation-main {
+  box-shadow: 0 0 10px #3f3f3f;
+}
+
+/* line 7, scss/_navigation.scss */
 .site-footer {
   width: 100%;
   padding: 1em 2em 1em 2em;
@@ -2838,18 +2843,18 @@ a img.aligncenter {
   line-height: 1.5em;
 }
 
-/* line 14, scss/_navigation.scss */
+/* line 15, scss/_navigation.scss */
 #nav-below {
   padding: 1em;
   border-top: 2px solid #e9e9e9;
 }
 
-/* line 19, scss/_navigation.scss */
+/* line 20, scss/_navigation.scss */
 .previous {
   float: left;
 }
 
-/* line 23, scss/_navigation.scss */
+/* line 24, scss/_navigation.scss */
 .next {
   float: right;
 }
@@ -2873,7 +2878,7 @@ a:hover {
 
 /* line 16, scss/_content.scss */
 .header-logo {
-  padding: 0 2em 1em 2em;
+  padding: 1em 2em 1em 2em;
   text-align: center;
 }
 
@@ -2927,21 +2932,22 @@ a:hover {
 
 /* line 74, scss/_content.scss */
 .entry-title {
+  padding-top: 1em;
   font-size: 2em;
   line-height: 1.2em;
 }
 
-/* line 82, scss/_content.scss */
+/* line 83, scss/_content.scss */
 .entry-content {
   padding-bottom: 2em;
 }
 
-/* line 86, scss/_content.scss */
+/* line 87, scss/_content.scss */
 .entry-meta {
   padding: 0em 0 1em 0;
 }
 
-/* line 92, scss/_content.scss */
+/* line 93, scss/_content.scss */
 iframe,
 object,
 embed {
