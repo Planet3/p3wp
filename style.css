@@ -2927,7 +2927,7 @@ a:hover {
 -------------------------------------------------------------- */
 /* line 70, scss/_content.scss */
 .content-area {
-  padding: 2em 1em 2em 1em;
+  padding: 2em 0em 2em 0em;
 }
 
 /* line 80, scss/_content.scss */
@@ -2937,7 +2937,7 @@ a:hover {
 
 /* line 84, scss/_content.scss */
 .entry-meta {
-  padding: 0em 0 1em 0;
+  padding: 0em 0 1em 0em;
 }
 
 /* line 90, scss/_content.scss */
