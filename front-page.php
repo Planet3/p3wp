@@ -8,7 +8,8 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area row" role="main">
+	<div id="primary" class="content-area" role="main">
+
 			<?php $args = array(
 				'category__in' => planet3_0_cat_slug_to_id('lede'),
 				'posts_per_page' => 1

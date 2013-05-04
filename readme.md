@@ -11,3 +11,4 @@ Forked from the _s theme with the added goodness of Foundation
 ## Things to do on the live server before applying theme
 * Split featured media category into images and video
 * regenerate thumbnails
+* WordPress Access Control overides the custom menu walker needed for the responsive nav menu. If we want to keep this functionality we need to find a replacement
