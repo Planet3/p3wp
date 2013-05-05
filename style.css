@@ -1632,7 +1632,7 @@ blockquote p {
   /* line 47, scss/_block-grid.scss */
   [class*="block-grid-"] {
     display: block;
-    padding: 0;
+    padding: 0 0.5em;
     margin: 0 -10px;
     *zoom: 1;
   }
