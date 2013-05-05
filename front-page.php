@@ -39,7 +39,7 @@ get_header(); ?>
 				/* Start the featured Loop */ 
 				$featured_query = new WP_Query( $args ); 
 				if ( $featured_query -> have_posts() ) : ?>
-					<div id="featured">
+					<div id="featured" class="row">
 						<ul class="large-block-grid-3">
 							<?php while ( $featured_query -> have_posts() ) : $featured_query -> the_post();
 								if ( isset($do_not_duplicate) ) {
