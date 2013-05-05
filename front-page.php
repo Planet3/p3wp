@@ -39,7 +39,7 @@ get_header(); ?>
 				/* Start the featured Loop */ 
 				$featured_query = new WP_Query( $args ); 
 				if ( $featured_query -> have_posts() ) : ?>
-					<div id="featured" class="row">
+					<div id="featured" >
 						<ul class="large-block-grid-3">
 							<?php while ( $featured_query -> have_posts() ) : $featured_query -> the_post();
 								if ( isset($do_not_duplicate) ) {
@@ -48,13 +48,13 @@ get_header(); ?>
 								<?php get_template_part( 'content', 'fpfeatured' ); ?>
 							<?php endwhile; ?>
 						</ul><!-- large-block-grid-3 -->
-					</div><!-- #featured row -->
+					</div><!-- #featured -->
 					<?php wp_reset_postdata(); ?>
 				<?php endif; ?>
 
 
 
-			<div id="media" class="row">
+			<div id="media">
 				<ul class="large-block-grid-2">
 
 					<?php $args = array(
@@ -84,7 +84,7 @@ get_header(); ?>
 					<?php endif; ?>
 
 				</ul><!-- .large-block-grid-3 -->
-			</div><!-- #media row -->
+			</div><!-- #media -->
 
 
 				<?php $args = array(
@@ -94,8 +94,8 @@ get_header(); ?>
 				/* Start the beyond Loop */ 
 				$beyond_query = new WP_Query( $args );
 				if ( $beyond_query -> have_posts() ) : ?>
-					<div id="beyond" class="row">
-						<div class="section-title">
+					<div id="beyond">
+						<div id="beyond" class="section-title">
 							<h1><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?></h1>
 						</div><!-- section-title -->
 						<ul class="large-block-grid-3">
@@ -103,7 +103,7 @@ get_header(); ?>
 								<?php get_template_part( 'content', 'fpbeyond' ); ?>
 							<?php endwhile; ?>
 						</ul><!-- .large-block-grid-3 -->
-					</div><!-- #beyond row -->
+					</div><!-- #beyond -->
 					<?php wp_reset_postdata(); ?>
 				<?php endif; ?>
 
