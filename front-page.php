@@ -49,7 +49,7 @@ get_header(); ?>
 							<?php endwhile; ?>
 						</ul><!-- large-block-grid-3 -->
 					<div class="archive-button">
-						<a class="small button" href="<?php echo get_category_link( $args['category__in'] ); ?>"><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?> Archives</a>
+						<a class="radius small button" href="<?php echo get_category_link( $args['category__in'] ); ?>"><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?> Archives</a>
 					</div>
 					</div><!-- #featured -->
 					<?php wp_reset_postdata(); ?>
@@ -85,7 +85,7 @@ get_header(); ?>
 						<?php endwhile; ?>
 						<?php wp_reset_postdata(); ?>
 						<div class="archive-button">
-							<a class="small button" href="<?php echo get_category_link( $args['category__in'] ); ?>"><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?> Archives</a>
+							<a class="radius small button" href="<?php echo get_category_link( $args['category__in'] ); ?>"><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?> Archives</a>
 						</div>
 					<?php endif; ?>
 
@@ -111,7 +111,7 @@ get_header(); ?>
 							<?php endwhile; ?>
 						</ul><!-- .large-block-grid-3 -->
 						<div class="archive-button">
-							<a class="small button" href="<?php echo get_category_link( $args['category__in'] ); ?>"><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?> Archives</a>
+							<a class="radius small button" href="<?php echo get_category_link( $args['category__in'] ); ?>"><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?> Archives</a>
 						</div>
 					</div><!-- #beyond -->
 					<?php wp_reset_postdata(); ?>
