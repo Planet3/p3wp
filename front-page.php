@@ -48,6 +48,9 @@ get_header(); ?>
 								<?php get_template_part( 'content', 'fpfeatured' ); ?>
 							<?php endwhile; ?>
 						</ul><!-- large-block-grid-3 -->
+					<div class="archive-button">
+						<a class="small button" href="<?php echo get_category_link( $args['category__in'] ); ?>"><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?> Archives</a>
+					</div>
 					</div><!-- #featured -->
 					<?php wp_reset_postdata(); ?>
 				<?php endif; ?>
@@ -81,6 +84,9 @@ get_header(); ?>
 							<?php get_template_part( 'content', 'fpmedia' ); ?>
 						<?php endwhile; ?>
 						<?php wp_reset_postdata(); ?>
+						<div class="archive-button">
+							<a class="small button" href="<?php echo get_category_link( $args['category__in'] ); ?>"><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?> Archives</a>
+						</div>
 					<?php endif; ?>
 
 				</ul><!-- .large-block-grid-3 -->
@@ -97,12 +103,16 @@ get_header(); ?>
 					<div id="beyond">
 						<div id="beyond" class="section-title">
 							<h1><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?></h1>
+							<?php echo category_description( $args['category__in'] ); ?>
 						</div><!-- section-title -->
 						<ul class="large-block-grid-3">
 							<?php while ( $beyond_query -> have_posts() ) : $beyond_query -> the_post(); ?>
 								<?php get_template_part( 'content', 'fpbeyond' ); ?>
 							<?php endwhile; ?>
 						</ul><!-- .large-block-grid-3 -->
+						<div class="archive-button">
+							<a class="small button" href="<?php echo get_category_link( $args['category__in'] ); ?>"><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?> Archives</a>
+						</div>
 					</div><!-- #beyond -->
 					<?php wp_reset_postdata(); ?>
 				<?php endif; ?>

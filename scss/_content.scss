@@ -14,7 +14,7 @@ a:hover {
 
 
 .header-logo {
-    padding: 1em 2em 1em 2em;
+    padding: 1em 2em;
     text-align: center;
 }
 
@@ -30,7 +30,7 @@ a:hover {
 #lede {
     padding-bottom: 0.5em;
     margin-bottom: 1em;
-    border-bottom: 2px solid $secondary-color;
+    //border-bottom: 1px solid $secondary-color;
 }
 
 .posts-area {
@@ -42,7 +42,7 @@ a:hover {
 
 
 .section-title{
-    padding: 0.2em 1em 0.2em 1em;
+    padding: 0.2em 1em;
     margin-bottom: 1em;
     background-color: $secondary-color;
 }
@@ -50,6 +50,11 @@ a:hover {
 
 #beyond {
     border: 2px solid $secondary-color;
+}
+
+.archive-button {
+    padding: 0 0.5em;
+    text-align: right;
 }
 
 
@@ -74,7 +79,7 @@ a:hover {
 /* =Content Styles
 -------------------------------------------------------------- */
 .content-area {
-    padding: 2em 0em 2em 0em;
+    padding: 2em 0em;
 }
 
 .entry-title {
@@ -88,7 +93,7 @@ a:hover {
 }
 
 .entry-meta {
-    padding: 0em 0 1em 0em;
+    padding: 0 0 1em 0;
 }
 
 iframe,  

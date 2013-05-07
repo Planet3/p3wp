@@ -36,8 +36,7 @@
 					<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
 				</ul><!-- .title-area -->
 				<section class="top-bar-section">
-					<?php foundation_top_bar_l(); ?>
-					<?php foundation_top_bar_r(); ?>
+					<?php foundation_top_bar(); ?>
 					<?php //get_search_form(); ?>
 				</section><!-- .top-bar-section -->
 			</nav><!-- #site-navigation -->
