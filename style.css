@@ -3110,62 +3110,68 @@ a:hover {
   margin-bottom: 1em;
 }
 
-/* line 36, scss/_content.scss */
+/* line 35, scss/_content.scss */
 .posts-area {
   font-size: 0.75em;
 }
-/* line 38, scss/_content.scss */
+/* line 37, scss/_content.scss */
 .posts-area h1 {
   font-size: 1.3em;
 }
 
-/* line 44, scss/_content.scss */
+/* line 43, scss/_content.scss */
 .section-title {
   padding: 0.2em 1em;
   margin-bottom: 1em;
   background-color: #e9e9e9;
 }
 
-/* line 51, scss/_content.scss */
+/* line 49, scss/_content.scss */
+#featured {
+  border-bottom: 1px solid #e9e9e9;
+  margin-bottom: 1em;
+}
+
+/* line 57, scss/_content.scss */
 #beyond {
   border: 2px solid #e9e9e9;
 }
 
-/* line 55, scss/_content.scss */
+/* line 61, scss/_content.scss */
 .archive-button {
-  padding: 0 0.5em;
+  padding: 0 2em;
   text-align: right;
 }
 
 /* =Byline Styles
 -------------------------------------------------------------- */
-/* line 64, scss/_content.scss */
+/* line 70, scss/_content.scss */
 .byline {
   font-size: 0.8em;
 }
-/* line 66, scss/_content.scss */
+/* line 72, scss/_content.scss */
 .byline h1 {
   font-size: 1.2em;
 }
 
 /* =Content Styles
 -------------------------------------------------------------- */
-/* line 81, scss/_content.scss */
+/* line 87, scss/_content.scss */
 .content-area {
   padding: 2em 0em;
 }
 
-/* line 91, scss/_content.scss */
+/* line 97, scss/_content.scss */
 .entry-content {
   padding-bottom: 2em;
 }
 
-/* line 95, scss/_content.scss */
+/* line 101, scss/_content.scss */
 .entry-meta {
   padding: 0 0 1em 0;
 }
 
-/* line 101, scss/_content.scss */
+/* line 107, scss/_content.scss */
 iframe,
 object,
 embed {

@@ -48,9 +48,11 @@ get_header(); ?>
 								<?php get_template_part( 'content', 'fpfeatured' ); ?>
 							<?php endwhile; ?>
 						</ul><!-- large-block-grid-3 -->
-					<div class="archive-button">
-						<a class="radius small button" href="<?php echo get_category_link( $args['category__in'] ); ?>"><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?> Archives</a>
-					</div>
+						<div class="row">
+							<div class="archive-button large-12 columns">
+								<a class="radius small button" href="<?php echo get_category_link( $args['category__in'] ); ?>"><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?> Archives</a>
+							</div><!-- .archive-button -->
+						</div><!-- row -->
 					</div><!-- #featured -->
 					<?php wp_reset_postdata(); ?>
 				<?php endif; ?>
@@ -84,9 +86,11 @@ get_header(); ?>
 							<?php get_template_part( 'content', 'fpmedia' ); ?>
 						<?php endwhile; ?>
 						<?php wp_reset_postdata(); ?>
-						<div class="archive-button">
-							<a class="radius small button" href="<?php echo get_category_link( $args['category__in'] ); ?>"><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?> Archives</a>
-						</div>
+						<div class="row">
+							<div class="archive-button large-12 columns">
+								<a class="radius small button" href="<?php echo get_category_link( $args['category__in'] ); ?>"><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?> Archives</a>
+							</div><!-- .archive-button -->
+						</div><!-- row -->
 					<?php endif; ?>
 
 				</ul><!-- .large-block-grid-3 -->
@@ -110,9 +114,11 @@ get_header(); ?>
 								<?php get_template_part( 'content', 'fpbeyond' ); ?>
 							<?php endwhile; ?>
 						</ul><!-- .large-block-grid-3 -->
-						<div class="archive-button">
-							<a class="radius small button" href="<?php echo get_category_link( $args['category__in'] ); ?>"><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?> Archives</a>
-						</div>
+						<div class="row">
+							<div class="archive-button large-12 columns">
+								<a class="radius small button" href="<?php echo get_category_link( $args['category__in'] ); ?>"><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?> Archives</a>
+							</div><!-- .archive-button -->
+						</div><!-- row -->
 					</div><!-- #beyond -->
 					<?php wp_reset_postdata(); ?>
 				<?php endif; ?>

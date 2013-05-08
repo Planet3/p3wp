@@ -30,7 +30,6 @@ a:hover {
 #lede {
     padding-bottom: 0.5em;
     margin-bottom: 1em;
-    //border-bottom: 1px solid $secondary-color;
 }
 
 .posts-area {
@@ -47,13 +46,20 @@ a:hover {
     background-color: $secondary-color;
 }
 
+#featured {
+    border-bottom: 1px solid $secondary-color;
+    margin-bottom: 1em;
+}
+
+#media {
+}
 
 #beyond {
     border: 2px solid $secondary-color;
 }
 
 .archive-button {
-    padding: 0 0.5em;
+    padding: 0 2em;
     text-align: right;
 }
 
