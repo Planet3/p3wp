@@ -70,11 +70,10 @@ function planet3_0_setup() {
 	 * This theme uses wp_nav_menu() in one location.
 	 */
 	register_nav_menus(array(
-		'top-bar-l' => 'Left Top Bar', // registers the menu in the WordPress admin menu editor
-		'top-bar-r' => 'Right Top Bar'
+		'top-bar' => 'Top Bar' // registers the menu in the WordPress admin menu editor
 	));
 
-	// the left top bar
+	// the top bar
 function foundation_top_bar() {
 	wp_nav_menu(array( 
 		'container' => false,                           // remove nav container
@@ -90,7 +89,7 @@ function foundation_top_bar() {
 		'fallback_cb' => false,                         // fallback function (see below)
 		'walker' => new top_bar_walker()
 	));
-} // end left top bar
+} // end top bar
 
 //Customize the output of menus for Foundation top bar classes
 class top_bar_walker extends Walker_Nav_Menu {
