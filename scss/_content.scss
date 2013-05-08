@@ -27,10 +27,12 @@ a:hover {
 
 /* =Front Page Styles
 -------------------------------------------------------------- */
-#lede {
-    padding-bottom: 2em;
-    margin-bottom: 1em;
+.top-area {
     border-bottom: 2px solid $primary-color;
+    margin-bottom: 1em;
+}
+
+#lede {
     h1 {
         font-size: 2em;
         line-height: 1.25em;
