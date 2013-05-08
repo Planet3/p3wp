@@ -3093,7 +3093,7 @@ a:hover {
 -------------------------------------------------------------- */
 /* line 11, scss/_content.scss */
 #masthead {
-  border-bottom: 1px solid #e9e9e9;
+  border-bottom: 2px solid #a90000;
 }
 
 /* line 16, scss/_content.scss */
@@ -3106,38 +3106,45 @@ a:hover {
 -------------------------------------------------------------- */
 /* line 30, scss/_content.scss */
 #lede {
-  padding-bottom: 0.5em;
+  padding-bottom: 2em;
   margin-bottom: 1em;
+  border-bottom: 2px solid #a90000;
+}
+/* line 34, scss/_content.scss */
+#lede h1 {
+  font-size: 2em;
+  line-height: 1.25em;
 }
 
-/* line 35, scss/_content.scss */
+/* line 40, scss/_content.scss */
 .posts-area {
   font-size: 0.75em;
 }
-/* line 37, scss/_content.scss */
+/* line 42, scss/_content.scss */
 .posts-area h1 {
   font-size: 1.3em;
 }
 
-/* line 43, scss/_content.scss */
+/* line 48, scss/_content.scss */
 .section-title {
   padding: 0.2em 1em;
   margin-bottom: 1em;
   background-color: #e9e9e9;
 }
 
-/* line 49, scss/_content.scss */
+/* line 54, scss/_content.scss */
 #featured {
-  border-bottom: 1px solid #e9e9e9;
+  padding-top: 1em;
+  border-bottom: 2px solid #a90000;
   margin-bottom: 1em;
 }
 
-/* line 57, scss/_content.scss */
+/* line 63, scss/_content.scss */
 #beyond {
   border: 2px solid #e9e9e9;
 }
 
-/* line 61, scss/_content.scss */
+/* line 67, scss/_content.scss */
 .archive-button {
   padding: 0 2em;
   text-align: right;
@@ -3145,33 +3152,33 @@ a:hover {
 
 /* =Byline Styles
 -------------------------------------------------------------- */
-/* line 70, scss/_content.scss */
+/* line 76, scss/_content.scss */
 .byline {
   font-size: 0.8em;
 }
-/* line 72, scss/_content.scss */
+/* line 78, scss/_content.scss */
 .byline h1 {
   font-size: 1.2em;
 }
 
 /* =Content Styles
 -------------------------------------------------------------- */
-/* line 87, scss/_content.scss */
+/* line 93, scss/_content.scss */
 .content-area {
   padding: 2em 0em;
 }
 
-/* line 97, scss/_content.scss */
+/* line 103, scss/_content.scss */
 .entry-content {
   padding-bottom: 2em;
 }
 
-/* line 101, scss/_content.scss */
+/* line 107, scss/_content.scss */
 .entry-meta {
   padding: 0 0 1em 0;
 }
 
-/* line 107, scss/_content.scss */
+/* line 113, scss/_content.scss */
 iframe,
 object,
 embed {

@@ -9,7 +9,7 @@ a:hover {
 /* =Heading Styles
 -------------------------------------------------------------- */
 #masthead {
-    border-bottom: 1px solid $secondary-color;
+    border-bottom: 2px solid $primary-color;
 }
 
 
@@ -21,15 +21,20 @@ a:hover {
 .site-title {
 }
 
-.site-description {
+.site-description { 
 }
 
 
 /* =Front Page Styles
 -------------------------------------------------------------- */
 #lede {
-    padding-bottom: 0.5em;
+    padding-bottom: 2em;
     margin-bottom: 1em;
+    border-bottom: 2px solid $primary-color;
+    h1 {
+        font-size: 2em;
+        line-height: 1.25em;
+    }
 }
 
 .posts-area {
@@ -47,7 +52,8 @@ a:hover {
 }
 
 #featured {
-    border-bottom: 1px solid $secondary-color;
+    padding-top: 1em;
+    border-bottom: 2px solid $primary-color;
     margin-bottom: 1em;
 }
 
