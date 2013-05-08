@@ -106,7 +106,7 @@ get_header(); ?>
 					</ul><!-- .large-block-grid-3 -->
 				</div><!-- #media -->
 
-			</div><!-- posts-area large-5 -->
+			</div><!-- posts-area large-6 -->
 
 			<div class="posts-area large-6 columns">
 				<?php $args = array(
@@ -134,7 +134,7 @@ get_header(); ?>
 					</div><!-- #beyond -->
 					<?php wp_reset_postdata(); ?>
 				<?php endif; ?>
-			</div><!-- posts-area large-4 columns -->
+			</div><!-- posts-area large-6 columns -->
 
 		</div><!-- row -->
 	</div><!-- #primary -->
