@@ -13,8 +13,11 @@
 
 		</header><!-- .entry-header -->
 
+		<div class="entry-thumbnail text-center">
+			 <?php the_post_thumbnail(); ?> 
+		</div><!-- entry-thumbnail -->
+
 		<div class="entry-summary">
-			<?php the_post_thumbnail(); ?> 
 			<?php the_excerpt(); ?>
 		</div><!-- .entry-summary -->
 

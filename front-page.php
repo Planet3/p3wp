@@ -18,7 +18,7 @@ get_header(); ?>
 			/* Start the lede Loop */ 
 			$lede_query = new WP_Query( $args );
 			if ( $lede_query -> have_posts() ) : ?>
-					<div id="lede" class="large-9 columns">
+					<div id="lede" class="large-8 columns">
 						<?php while ( $lede_query -> have_posts() ) : $lede_query -> the_post();
 							$do_not_duplicate[] = $post->ID; ?>
 							<?php get_template_part( 'content', 'fplede' ); ?>
@@ -27,15 +27,7 @@ get_header(); ?>
 				<?php wp_reset_postdata(); ?>
 			<?php endif; ?>
 
-			<div class="large-3 columns hide-for-small">
-				<?php get_sidebar(); ?>
-			</div><!-- large-3 -->
-
-		</div><!-- row -->
-
-		<div class="row">
-			<div class="posts-area large-6 columns">
-
+			<div class="large-4 columns hide-for-small">
 				<?php $args = array(
 					'category__in' => planet3_0_cat_slug_to_id('featured'),
 					'category__not_in' => planet3_0_cat_slug_to_id('media'),
@@ -44,8 +36,8 @@ get_header(); ?>
 				/* Start the featured Loop */ 
 				$featured_query = new WP_Query( $args ); 
 				if ( $featured_query -> have_posts() ) : ?>
-					<div id="featured" >
-						<ul class="large-block-grid-2">
+					<div id="featured">
+						<ul class="large-block-grid-1">
 							<?php while ( $featured_query -> have_posts() ) : $featured_query -> the_post();
 								if ( isset($do_not_duplicate) ) {
 									if (in_array($post->ID, $do_not_duplicate)) continue; 
@@ -53,14 +45,21 @@ get_header(); ?>
 								<?php get_template_part( 'content', 'fpfeatured' ); ?>
 							<?php endwhile; ?>
 						</ul><!-- large-block-grid-3 -->
-						<div class="row">
-							<div class="archive-button large-12 columns">
-								<a class="radius small button" href="<?php echo get_category_link( $args['category__in'] ); ?>"><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?> Archives</a>
-							</div><!-- .archive-button -->
-						</div><!-- row -->
 					</div><!-- #featured -->
 					<?php wp_reset_postdata(); ?>
 				<?php endif; ?>
+			</div><!-- large-3 -->
+
+			<div class="row">
+				<div class="archive-button large-12 columns">
+					<a class="radius small button" href="<?php echo get_category_link( $args['category__in'] ); ?>"><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?> Archives</a>
+				</div><!-- .archive-button -->
+			</div><!-- row -->
+
+		</div><!-- row -->
+
+		<div class="row">
+			<div class="posts-area large-6 columns">
 
 
 

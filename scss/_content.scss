@@ -39,6 +39,19 @@ a:hover {
     }
 }
 
+#featured {
+    font-size: 0.75em;
+    border-left: 1px solid $secondary-color;
+    margin-bottom: 1em;
+    h1, h2 {
+        font-size: 1.3em;
+    }
+}
+
+.entry-thumbnail {
+    padding-bottom: 1em;
+}
+
 .posts-area {
     font-size: 0.75em;
     h1, h2 {
@@ -53,11 +66,6 @@ a:hover {
     background-color: $secondary-color;
 }
 
-#featured {
-    padding-top: 1em;
-    border-bottom: 2px solid $primary-color;
-    margin-bottom: 1em;
-}
 
 #media {
 }

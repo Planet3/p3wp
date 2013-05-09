@@ -16,13 +16,13 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<div class="row">
 
-		<div class="entry-thumbnail text-center large-6 columns">
+		<div class="entry-thumbnail text-center">
 			 <?php the_post_thumbnail(); ?> 
 		</div><!-- entry-thumbnail -->
 
-		<div class="entry-summary large-6 columns">
+
+		<div class="entry-summary">
 			<?php the_excerpt(); ?>
 
 			<footer class="entry-meta meta-bellow">
@@ -35,6 +35,4 @@
 			</footer><!-- .entry-meta -->
 		</div><!-- .entry-summary -->
 
-
-	</div><!-- row -->
 </article><!-- #post-## -->
