@@ -424,7 +424,7 @@ table {
   border-spacing: 0;
 }
 
-/* line 211, scss/_global.scss */
+/* line 209, scss/_global.scss */
 *,
 *:before,
 *:after {
@@ -433,16 +433,16 @@ table {
   box-sizing: border-box;
 }
 
-/* line 216, scss/_global.scss */
+/* line 214, scss/_global.scss */
 html,
 body {
   font-size: 100%;
 }
 
-/* line 219, scss/_global.scss */
+/* line 217, scss/_global.scss */
 body {
   background: white;
-  color: #333332;
+  color: #222222;
   padding: 0;
   margin: 0;
   font-family: "Roboto Slab", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
@@ -452,12 +452,12 @@ body {
   position: relative;
 }
 
-/* line 232, scss/_global.scss */
+/* line 230, scss/_global.scss */
 a:focus {
   outline: none;
 }
 
-/* line 237, scss/_global.scss */
+/* line 235, scss/_global.scss */
 img,
 object,
 embed {
@@ -465,18 +465,18 @@ embed {
   height: auto;
 }
 
-/* line 240, scss/_global.scss */
+/* line 238, scss/_global.scss */
 object,
 embed {
   height: 100%;
 }
 
-/* line 241, scss/_global.scss */
+/* line 239, scss/_global.scss */
 img {
   -ms-interpolation-mode: bicubic;
 }
 
-/* line 247, scss/_global.scss */
+/* line 245, scss/_global.scss */
 #map_canvas img,
 #map_canvas embed,
 #map_canvas object,
@@ -486,59 +486,59 @@ img {
   max-width: none !important;
 }
 
-/* line 252, scss/_global.scss */
+/* line 250, scss/_global.scss */
 .left {
   float: left !important;
 }
 
-/* line 253, scss/_global.scss */
+/* line 251, scss/_global.scss */
 .right {
   float: right !important;
 }
 
-/* line 254, scss/_global.scss */
+/* line 252, scss/_global.scss */
 .text-left {
   text-align: left !important;
 }
 
-/* line 255, scss/_global.scss */
+/* line 253, scss/_global.scss */
 .text-right {
   text-align: right !important;
 }
 
-/* line 256, scss/_global.scss */
+/* line 254, scss/_global.scss */
 .text-center {
   text-align: center !important;
 }
 
-/* line 257, scss/_global.scss */
+/* line 255, scss/_global.scss */
 .text-justify {
   text-align: justify !important;
 }
 
-/* line 258, scss/_global.scss */
+/* line 256, scss/_global.scss */
 .hide {
   display: none;
 }
 
-/* line 264, scss/_global.scss */
+/* line 262, scss/_global.scss */
 .antialiased {
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 267, scss/_global.scss */
+/* line 265, scss/_global.scss */
 img {
   display: inline-block;
   vertical-align: middle;
 }
 
-/* line 277, scss/_global.scss */
+/* line 275, scss/_global.scss */
 textarea {
   height: auto;
   min-height: 50px;
 }
 
-/* line 280, scss/_global.scss */
+/* line 278, scss/_global.scss */
 select {
   width: 100%;
 }
@@ -770,7 +770,7 @@ abbr,
 acronym {
   text-transform: uppercase;
   font-size: 90%;
-  color: #333332;
+  color: #222222;
   border-bottom: 1px dotted #dddddd;
   cursor: help;
 }
@@ -811,21 +811,21 @@ blockquote p {
 }
 
 /* Microformats */
-/*  .vcard {
-    display: inline-block;
-    margin: $microformat-margin;
-    border: $microformat-border-width $microformat-border-style $microformat-border-color;
-    padding: $microformat-padding;
-  
-    li {
-      margin: 0;
-      display: block;
-    }
-    .fn {
-      font-weight: $microformat-fullname-font-weight;
-      font-size: $microformat-fullname-font-size;
-    }
-  } */
+/*.vcard {
+  display: inline-block;
+  margin: $microformat-margin;
+  border: $microformat-border-width $microformat-border-style $microformat-border-color;
+  padding: $microformat-padding;
+
+  li {
+    margin: 0;
+    display: block;
+  }
+  .fn {
+    font-weight: $microformat-fullname-font-weight;
+    font-size: $microformat-fullname-font-size;
+  }
+}*/
 /* line 346, scss/_type.scss */
 .vevent .summary {
   font-weight: bold;
@@ -3686,7 +3686,7 @@ a img.aligncenter {
     right: 100%;
   }
 }
-/* line 6, scss/_navigation.scss */
+/* line 9, scss/_navigation.scss */
 .site-footer {
   width: 100%;
   padding: 1em 2em 1em 2em;
@@ -3695,18 +3695,18 @@ a img.aligncenter {
   line-height: 1.5em;
 }
 
-/* line 14, scss/_navigation.scss */
+/* line 17, scss/_navigation.scss */
 #nav-below {
   padding: 1em;
   border-top: 2px solid #e9e9e9;
 }
 
-/* line 19, scss/_navigation.scss */
+/* line 22, scss/_navigation.scss */
 .previous {
   float: left;
 }
 
-/* line 23, scss/_navigation.scss */
+/* line 26, scss/_navigation.scss */
 .next {
   float: right;
 }
