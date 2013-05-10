@@ -10,6 +10,7 @@ Forked from the _s theme with the added goodness of Foundation
 * More button
 * https://www.subtome.com/
 * Add if statements to the_post_thumbnail()
+* Develop full font stack
 
 ## Things to do on the live server before applying theme
 * Split featured media category into images and video

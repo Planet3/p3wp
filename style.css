@@ -445,7 +445,7 @@ body {
   color: #333332;
   padding: 0;
   margin: 0;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Roboto Slab", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   line-height: 1;
@@ -620,7 +620,7 @@ p aside {
 /* Default header styles */
 /* line 178, scss/_type.scss */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: bold;
   font-style: normal;
   color: #333332;
@@ -3751,42 +3751,41 @@ a:hover {
 /* line 42, scss/_content.scss */
 #featured {
   font-size: 0.75em;
-  border-left: 1px solid #e9e9e9;
   margin: 1.5em 0 1em;
 }
-/* line 46, scss/_content.scss */
+/* line 45, scss/_content.scss */
 #featured h1, #featured h2 {
   font-size: 1.3em;
 }
 
-/* line 51, scss/_content.scss */
+/* line 50, scss/_content.scss */
 .entry-thumbnail {
   padding-bottom: 1em;
 }
 
-/* line 55, scss/_content.scss */
+/* line 54, scss/_content.scss */
 .posts-area {
   font-size: 0.75em;
 }
-/* line 57, scss/_content.scss */
+/* line 56, scss/_content.scss */
 .posts-area h1, .posts-area h2 {
   font-size: 1.3em;
 }
 
-/* line 63, scss/_content.scss */
+/* line 62, scss/_content.scss */
 .section-title {
   padding: 0.2em 1em;
   margin-bottom: 1em;
   background-color: #e9e9e9;
 }
 
-/* line 73, scss/_content.scss */
+/* line 72, scss/_content.scss */
 #beyond {
   padding-bottom: 3em;
   border: 2px solid #e9e9e9;
 }
 
-/* line 78, scss/_content.scss */
+/* line 77, scss/_content.scss */
 .archive-button {
   padding: 0 2em;
   text-align: right;
@@ -3794,33 +3793,33 @@ a:hover {
 
 /* =Byline Styles
 -------------------------------------------------------------- */
-/* line 87, scss/_content.scss */
+/* line 86, scss/_content.scss */
 .byline {
   font-size: 0.8em;
 }
-/* line 89, scss/_content.scss */
+/* line 88, scss/_content.scss */
 .byline h1 {
   font-size: 1.2em;
 }
 
 /* =Content Styles
 -------------------------------------------------------------- */
-/* line 104, scss/_content.scss */
+/* line 103, scss/_content.scss */
 .content-area {
   padding: 2em 0em;
 }
 
-/* line 114, scss/_content.scss */
+/* line 113, scss/_content.scss */
 .entry-content {
   padding-bottom: 2em;
 }
 
-/* line 118, scss/_content.scss */
+/* line 117, scss/_content.scss */
 .entry-meta {
   padding: 0 0 1em 0;
 }
 
-/* line 124, scss/_content.scss */
+/* line 123, scss/_content.scss */
 iframe,
 object,
 embed {

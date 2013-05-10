@@ -170,7 +170,7 @@ add_action( 'after_setup_theme', 'planet3_0_register_custom_background' );
  */
 function planet3_0_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Main Widget Area', 'planet3_0' ),
+		'name'          => __( 'Footer Widget Area', 'planet3_0' ),
 		'id'            => 'sidebar-1',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -194,6 +194,9 @@ add_action( 'widgets_init', 'planet3_0_widgets_init' );
  * Enqueue scripts and styles
  */
 function planet3_0_scripts() {
+	wp_enqueue_style('googleFonts', 'http://fonts.googleapis.com/css?family=Roboto:400,700,400italic|Roboto+Slab:400,700');
+
+
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'foundation_modernizr', get_template_directory_uri() . '/js/custom.modernizr.js', array(), false, false );
