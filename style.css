@@ -3752,7 +3752,7 @@ a:hover {
 #featured {
   font-size: 0.75em;
   border-left: 1px solid #e9e9e9;
-  margin-bottom: 1em;
+  margin: 1.5em 0 1em;
 }
 /* line 46, scss/_content.scss */
 #featured h1, #featured h2 {
