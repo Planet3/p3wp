@@ -17,7 +17,7 @@
 	</header><!-- .entry-header -->
 
 
-		<div class="entry-thumbnail text-center">
+		<div class="entry-thumbnail">
 			 <?php the_post_thumbnail(); ?> 
 		</div><!-- entry-thumbnail -->
 
