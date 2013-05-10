@@ -110,7 +110,7 @@ get_header(); ?>
 				$beyond_query = new WP_Query( $args );
 				if ( $beyond_query -> have_posts() ) : ?>
 					<div id="beyond">
-						<div id="beyond" class="section-title">
+						<div class="section-title">
 							<h1><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?></h1>
 							<?php echo category_description( $args['category__in'] ); ?>
 						</div><!-- section-title -->
