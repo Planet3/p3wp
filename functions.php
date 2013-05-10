@@ -226,3 +226,6 @@ require( get_template_directory() . '/inc/gravitar.php' );
  * Implement the Custom Header feature
  */
 //require( get_template_directory() . '/inc/custom-header.php' );
+
+// disable the admin bar
+show_admin_bar(false);
