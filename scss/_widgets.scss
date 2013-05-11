@@ -17,12 +17,6 @@
     }
 }
 
-/*.main-widget-area {
-    border-left: 1px solid $secondary-color;
-    padding-left: 1em;
-    font-size: 0.8em;
-}*/
-
 .comment-widget-area {
     font-size: 1em;
     line-height: 1.25em;
@@ -33,6 +27,27 @@
         padding-bottom: 0;
         margin-bottom: 0;
         border-bottom: 0;
+    }
+}
+
+.site-footer {
+    width: 100%;
+    padding: 1em 2em 1em 2em;
+    background: $nav-color;
+    color: $secondary-color;
+    line-height: 1.5em;
+    a {
+        color: $secondary-color;
+        :hover {text-decoration: underline;}
+    }
+    h1, h2, h3, h3, h5, h6
+    {
+        color: $secondary-color;
+    }
+    ul, ol {
+    }
+    li {
+        border-bottom: 0 !important;
     }
 }
 

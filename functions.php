@@ -171,16 +171,16 @@ add_action( 'after_setup_theme', 'planet3_0_register_custom_background' );
 function planet3_0_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Footer Widget Area', 'planet3_0' ),
-		'id'            => 'sidebar-1',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
+		'id'            => 'footer-widgets',
+		'before_widget' => '<li id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</li>',
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 	) );
 
 		register_sidebar( array(
 		'name'          => __( 'Comment Widget Area', 'planet3_0' ),
-		'id'            => 'sidebar-2',
+		'id'            => 'comments-widgets',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s, comment-widget">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h1 class="widget-title comment-widget-title">',

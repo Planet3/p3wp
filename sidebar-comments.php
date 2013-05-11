@@ -7,6 +7,5 @@
  */
 ?>
     <div id="secondary" class="widget-area comment-widget-area" role="complementary">
-        <?php dynamic_sidebar( 'sidebar-2' ); ?>
-
+        <?php dynamic_sidebar( 'comments-widgets' ); ?>
     </div><!-- #secondary -->
