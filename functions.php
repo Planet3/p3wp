@@ -227,5 +227,8 @@ require( get_template_directory() . '/inc/gravitar.php' );
  */
 //require( get_template_directory() . '/inc/custom-header.php' );
 
-// disable the admin bar
-show_admin_bar(false);
+
+// show admin bar only for admins and editors
+if (!current_user_can('edit_others_posts')) {
+ add_filter('show_admin_bar', '__return_false');
+}
