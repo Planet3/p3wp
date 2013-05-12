@@ -3,14 +3,19 @@ Forked from the _s theme with the added goodness of Foundation
 
 ##List of things
 * make alingleft/alignright not float on narrow screens
-* vertical align centre is not working for the page-header. Flexbox might be a solution, though the spec might not be finalized yet. Need to investigate
 * Byline code `<?php planet3_0_posted_on(); ?> by <?php planet3_0_posted_by(); ?>` needs to be fixed
-*pullquote
+* pullquote
 * Author page
+* Beyond Page
 * More button
 * https://www.subtome.com/
 * Add if statements to the_post_thumbnail()
 * Develop full font stack
+* Code clean up including removing legacy support for `planet3_0_register_custom_background()`
+* Contributors page
+* Best of Category page
+* Media section on front page title and description.
+* Make topbar not sticky for landscape on small screens
 
 ## Things to do on the live server before applying theme
 * Split featured media category into images and video
