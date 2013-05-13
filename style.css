@@ -3120,61 +3120,77 @@ small.error {
 
 /* =WordPress Core
 -------------------------------------------------------------- */
-/* line 3, scss/_wp-core.scss */
+/* line 9, scss/_wp-core.scss */
+.alignright,
+.alignleft,
+a img.alignright,
+a img.alignleft,
+.wp-caption.alignleft,
+.wp-caption.alignright {
+  display: block;
+  margin: 5px auto 5px auto;
+}
+
+@media only screen and (min-width: 48em) {
+  /* line 17, scss/_wp-core.scss */
+  .alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+  }
+
+  /* line 22, scss/_wp-core.scss */
+  .alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+  }
+
+  /* line 27, scss/_wp-core.scss */
+  a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+  }
+
+  /* line 32, scss/_wp-core.scss */
+  a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+  }
+
+  /* line 37, scss/_wp-core.scss */
+  .wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+  }
+
+  /* line 41, scss/_wp-core.scss */
+  .wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+  }
+}
+/* line 47, scss/_wp-core.scss */
 .alignnone {
   margin: 5px 20px 20px 0;
 }
 
-/* line 8, scss/_wp-core.scss */
+/* line 52, scss/_wp-core.scss */
 .aligncenter,
 div.aligncenter {
   display: block;
   margin: 5px auto 5px auto;
 }
 
-/* line 13, scss/_wp-core.scss */
-.alignright {
-  float: right;
-  margin: 5px 0 20px 20px;
-}
-
-/* line 18, scss/_wp-core.scss */
-.alignleft {
-  float: left;
-  margin: 5px 20px 20px 0;
-}
-
-/* line 23, scss/_wp-core.scss */
-.aligncenter {
-  display: block;
-  margin: 5px auto 5px auto;
-}
-
-/* line 28, scss/_wp-core.scss */
-a img.alignright {
-  float: right;
-  margin: 5px 0 20px 20px;
-}
-
-/* line 33, scss/_wp-core.scss */
+/* line 57, scss/_wp-core.scss */
 a img.alignnone {
   margin: 5px 20px 20px 0;
 }
 
-/* line 37, scss/_wp-core.scss */
-a img.alignleft {
-  float: left;
-  margin: 5px 20px 20px 0;
-}
-
-/* line 42, scss/_wp-core.scss */
+/* line 61, scss/_wp-core.scss */
 a img.aligncenter {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 48, scss/_wp-core.scss */
+/* line 67, scss/_wp-core.scss */
 .wp-caption {
   background: #fff;
   border: 1px solid #f0f0f0;
@@ -3184,22 +3200,12 @@ a img.aligncenter {
   text-align: center;
 }
 
-/* line 56, scss/_wp-core.scss */
+/* line 75, scss/_wp-core.scss */
 .wp-caption.alignnone {
   margin: 5px 20px 20px 0;
 }
 
-/* line 60, scss/_wp-core.scss */
-.wp-caption.alignleft {
-  margin: 5px 20px 20px 0;
-}
-
-/* line 64, scss/_wp-core.scss */
-.wp-caption.alignright {
-  margin: 5px 0 20px 20px;
-}
-
-/* line 68, scss/_wp-core.scss */
+/* line 81, scss/_wp-core.scss */
 .wp-caption img {
   border: 0 none;
   height: auto;
@@ -3209,7 +3215,7 @@ a img.aligncenter {
   width: auto;
 }
 
-/* line 77, scss/_wp-core.scss */
+/* line 90, scss/_wp-core.scss */
 .wp-caption p.wp-caption-text {
   font-size: 11px;
   line-height: 17px;
@@ -3217,7 +3223,7 @@ a img.aligncenter {
   padding: 0 4px 5px;
 }
 
-/* line 84, scss/_wp-core.scss */
+/* line 97, scss/_wp-core.scss */
 .assistive-text {
   clip: rect(1px 1px 1px 1px);
   /* IE6, IE7 */

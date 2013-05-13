@@ -1,5 +1,49 @@
 /* =WordPress Core
 -------------------------------------------------------------- */
+//mobile first alignment is centered
+.alignright,
+.alignleft,
+a img.alignright,
+a img.alignleft,
+.wp-caption.alignleft,
+.wp-caption.alignright {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+// On larger screens we apply the proper left/right alignment
+@media #{$small} {
+
+    .alignright {
+        float: right;
+        margin: 5px 0 20px 20px;
+    }
+
+    .alignleft {
+        float: left;
+        margin: 5px 20px 20px 0;
+    }
+
+    a img.alignright {
+        float: right;
+        margin: 5px 0 20px 20px;
+    }
+
+    a img.alignleft {
+        float: left;
+        margin: 5px 20px 20px 0;
+    }
+
+    .wp-caption.alignleft {
+        margin: 5px 20px 20px 0;
+    }
+
+    .wp-caption.alignright {
+        margin: 5px 0 20px 20px;
+    }
+
+}
+
 .alignnone {
     margin: 5px 20px 20px 0;
 }
@@ -10,32 +54,7 @@ div.aligncenter {
     margin: 5px auto 5px auto;
 }
 
-.alignright {
-    float: right;
-    margin: 5px 0 20px 20px;
-}
-
-.alignleft {
-    float: left;
-    margin: 5px 20px 20px 0;
-}
-
-.aligncenter {
-    display: block;
-    margin: 5px auto 5px auto;
-}
-
-a img.alignright {
-    float: right;
-    margin: 5px 0 20px 20px;
-}
-
 a img.alignnone {
-    margin: 5px 20px 20px 0;
-}
-
-a img.alignleft {
-    float: left;
     margin: 5px 20px 20px 0;
 }
 
@@ -57,13 +76,7 @@ a img.aligncenter {
     margin: 5px 20px 20px 0;
 }
 
-.wp-caption.alignleft {
-    margin: 5px 20px 20px 0;
-}
 
-.wp-caption.alignright {
-    margin: 5px 0 20px 20px;
-}
 
 .wp-caption img {
     border: 0 none;

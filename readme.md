@@ -2,7 +2,6 @@
 Forked from the _s theme with the added goodness of Foundation
 
 ##List of things
-* make alingleft/alignright not float on narrow screens
 * Byline code `<?php planet3_0_posted_on(); ?> by <?php planet3_0_posted_by(); ?>` needs to be fixed
 * pullquote
 * Author page
