@@ -228,7 +228,32 @@ require( get_template_directory() . '/inc/gravitar.php' );
 //require( get_template_directory() . '/inc/custom-header.php' );
 
 
+function planet3_0_custom_contact_information($contactmethods) {
+	// Remove these fields
+	unset($contactmethods['aim']);
+	unset($contactmethods['yim']);
+	unset($contactmethods['jabber']);
+
+	// Add these fields
+	$contactmethods['facebook'] = 'Facebook';
+	$contactmethods['twitter'] = 'Twitter';
+	$contactmethods['gplus'] = 'Google+';
+
+return $contactmethods;
+}
+add_filter('user_contactmethods', 'planet3_0_custom_contact_information');
+
+
+
 // show admin bar only for admins and editors
 if (!current_user_can('edit_others_posts')) {
  add_filter('show_admin_bar', '__return_false');
+}
+
+/* Moderate subscribers
+	filter for the Never Moderate Registered Users plugin */
+add_filter( 'c2c_never_moderate_registered_users_caps', 'dont_moderate_contributors' );
+function dont_moderate_contributors( $caps ) {
+    $caps[] = 'contributor';
+    return $caps;
 }

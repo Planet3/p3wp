@@ -3,6 +3,7 @@ Forked from the _s theme with the added goodness of Foundation
 
 ##List of things
 * Author page
+    * Enable Google Authorship
 * Beyond Page
 * More button
 * Add if statements to the_post_thumbnail()
@@ -24,4 +25,4 @@ Forked from the _s theme with the added goodness of Foundation
 * Split featured media category into images and video
 * regenerate thumbnails
 * WordPress Access Control overides the custom menu walker needed for the responsive nav menu. If we want to keep this functionality we need to find a replacement
-* Disable About the Author Advanced (if I can get aditional author fields to work properly)
+* Disable About the Author Advanced
