@@ -231,14 +231,20 @@ require( get_template_directory() . '/inc/gravitar.php' );
 
 function planet3_0_custom_contact_information($contactmethods) {
 	// Remove these fields
-	unset($contactmethods['aim']);
-	unset($contactmethods['yim']);
-	unset($contactmethods['jabber']);
+	if ( isset( $contactmethods['yim'] ) ) 
+	unset( $contactmethods['yim'] ); 
+	if ( isset( $contactmethods['aim'] ) ) 
+	unset( $contactmethods['aim'] ); 
+	if ( isset( $contactmethods['jabber'] ) ) 
+	unset( $contactmethods['jabber'] ); 
 
 	// Add these fields
+	if ( !isset( $contactmethods['twitter'] ) ) 
+	$contactmethods['twitter'] = 'Twitter'; 
+	if ( !isset( $contactmethods['facebook'] ) ) 
 	$contactmethods['facebook'] = 'Facebook';
-	$contactmethods['twitter'] = 'Twitter';
-	$contactmethods['gplus'] = 'Google+';
+	if ( !isset( $contactmethods['gplus'] ) ) 
+	$contactmethods['gplus'] = 'Google+'; 
 
 return $contactmethods;
 }
