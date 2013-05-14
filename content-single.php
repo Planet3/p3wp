@@ -14,6 +14,9 @@
 	<div class="row">
 
 		<div class="byline large-2 columns">
+			<div class="entry-meta meta-above">
+				<?php planet3_0_posted_on(); ?>
+			</div><!-- .entry-meta -->
 			<div class="author-avatar hide-for-small">
 				<?php if ( validate_gravatar( get_the_author_meta( 'user_email' ) ) ) :
 					echo get_avatar( get_the_author_meta( 'user_email' ), 256, $default, get_the_author() ); 
@@ -27,9 +30,6 @@
 
 		<div class="large-10 columns">
 			<div class="entry-content">
-				<div class="entry-meta meta-above">
-					<?php planet3_0_posted_on(); ?>
-				</div><!-- .entry-meta -->
 				<?php the_content(); ?>
 				<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'planet3_0' ), 'after' => '</div>' ) ); ?>
 			</div><!-- .entry-content -->

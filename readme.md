@@ -2,7 +2,6 @@
 Forked from the _s theme with the added goodness of Foundation
 
 ##List of things
-* Single Page layout for authors without gravitars
 * Author page
     * Enable Google Authorship
 * Beyond Page

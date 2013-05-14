@@ -118,7 +118,7 @@ if ( ! function_exists( 'planet3_0_posted_on' ) ) :
  * @since Planet3.0 3.0
  */
 function planet3_0_posted_on() {
-	printf( __( 'Publshed on <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s">%4$s</time></a>', 'planet3_0' ),
+	printf( __( '<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s">%4$s</time></a>', 'planet3_0' ),
 		esc_url( get_permalink() ),
 		esc_attr( get_the_time() ),
 		esc_attr( get_the_date( 'c' ) ),
