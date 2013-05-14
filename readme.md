@@ -2,6 +2,7 @@
 Forked from the _s theme with the added goodness of Foundation
 
 ##List of things
+* Single Page layout for authors without gravitars
 * Author page
     * Enable Google Authorship
 * Beyond Page
@@ -13,6 +14,7 @@ Forked from the _s theme with the added goodness of Foundation
 
 ###List of less important things
 * Contributors page
+* Allow admins to overwrite author meta and avatar
 * pullquote
 * https://www.subtome.com/
 * Make topbar not sticky for landscape on small screens
