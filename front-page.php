@@ -27,32 +27,56 @@ get_header(); ?>
 				<?php wp_reset_postdata(); ?>
 			<?php endif; ?>
 
+				<!-- <div class="archive-button large-8 columns">
+					<a class="radius small button" href="<?php echo get_category_link( $args['category__in'] ); ?>"><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?> Archives</a>
+				</div><!-- .archive-button -->
+
+
 			<div class="large-4 columns hide-for-small">
+
 				<?php $args = array(
-					'category__in' => planet3_0_cat_slug_to_id('featured'),
-					'category__not_in' => planet3_0_cat_slug_to_id('media'),
-					'posts_per_page' => 3
+					'category__in' => planet3_0_cat_slug_to_id('bleg'),
+					'posts_per_page' => 1
 					);
 				/* Start the featured Loop */ 
 				$featured_query = new WP_Query( $args ); 
 				if ( $featured_query -> have_posts() ) : ?>
-					<div id="featured">
+					<div id="bleg">
 						<ul class="large-block-grid-1">
 							<?php while ( $featured_query -> have_posts() ) : $featured_query -> the_post();
 								if ( isset($do_not_duplicate) ) {
 									if (in_array($post->ID, $do_not_duplicate)) continue; 
 								} ?>
-								<?php get_template_part( 'content', 'fpfeatured' ); ?>
+								<?php get_template_part( 'content', 'fpmedia' ); ?>
 							<?php endwhile; ?>
 						</ul><!-- large-block-grid-3 -->
 					</div><!-- #featured -->
 					<?php wp_reset_postdata(); ?>
 				<?php endif; ?>
-			</div><!-- large-3 -->
 
-				<div class="archive-button large-12 columns">
-					<a class="radius small button" href="<?php echo get_category_link( $args['category__in'] ); ?>"><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?> Archives</a>
-				</div><!-- .archive-button -->
+
+				<?php $args = array(
+					'category__in' => planet3_0_cat_slug_to_id('quote'),
+					'posts_per_page' => 1
+					);
+				/* Start the featured Loop */ 
+				$featured_query = new WP_Query( $args ); 
+				if ( $featured_query -> have_posts() ) : ?>
+					<div id="quote">
+						<ul class="large-block-grid-1">
+							<?php while ( $featured_query -> have_posts() ) : $featured_query -> the_post();
+								if ( isset($do_not_duplicate) ) {
+									if (in_array($post->ID, $do_not_duplicate)) continue; 
+								} ?>
+								<?php get_template_part( 'content', 'fpmedia' ); ?>
+							<?php endwhile; ?>
+						</ul><!-- large-block-grid-3 -->
+					</div><!-- #featured -->
+					<?php wp_reset_postdata(); ?>
+				<?php endif; ?>
+
+
+			</div><!-- large-4 -->
 
 		</div><!-- row -->
 
@@ -126,6 +150,31 @@ get_header(); ?>
 					<?php wp_reset_postdata(); ?>
 				<?php endif; ?>
 			</div><!-- posts-area large-6 columns -->
+
+			<?php $args = array(
+				'category__in' => planet3_0_cat_slug_to_id('featured'),
+				'category__not_in' => planet3_0_cat_slug_to_id('media'),
+				'posts_per_page' => 4
+				);
+			/* Start the featured Loop */ 
+			$featured_query = new WP_Query( $args ); 
+			if ( $featured_query -> have_posts() ) : ?>
+				<div id="featured" class="posts-area">
+					<ul class="large-block-grid-3">
+						<?php while ( $featured_query -> have_posts() ) : $featured_query -> the_post();
+							if ( isset($do_not_duplicate) ) {
+								if (in_array($post->ID, $do_not_duplicate)) continue; 
+							} ?>
+							<?php get_template_part( 'content', 'fpfeatured' ); ?>
+						<?php endwhile; ?>
+					</ul><!-- large-block-grid-3 -->
+				</div><!-- #featured -->
+				<?php wp_reset_postdata(); ?>
+				<?php endif; ?>
+				<div class="archive-button posts-area large-12 columns">
+					<a class="radius small button" href="<?php echo get_category_link( $args['category__in'] ); ?>"><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?> Archives</a>
+				</div><!-- .archive-button -->
+
 
 		</div><!-- row -->
 	</div><!-- #primary -->
