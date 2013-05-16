@@ -30,6 +30,7 @@ a:hover {
 .top-area {
     border-bottom: 2px solid $primary-color;
     margin-bottom: 1em;
+    padding-bottom: 1em;
 }
 
 #lede {
@@ -41,18 +42,21 @@ a:hover {
 
 #bleg,
 #quote {
-    h2 {
-        font-size: 1.5em;
+    border-left: 2px solid $secondary-color;
+    blockquote {
+        border-left: 0;
+        padding-left: 0;
+    }
+    h1, h2 {
+        font-size: 1.25em;
         line-height: 1em;
     }
 }
 
 #featured {
-    font-size: 0.75em;
+    border-top: 2px solid $primary-color;
     margin: 1.5em 0 1em;
-    h1, h2 {
-        font-size: 1.3em;
-    }
+    padding-top: 1em;
 }
 
 .entry-thumbnail {
@@ -60,7 +64,7 @@ a:hover {
 }
 
 .posts-area {
-    font-size: 0.75em;
+    font-size: 0.8em;
     h1, h2 {
         font-size: 1.3em;
     }
@@ -123,7 +127,7 @@ a:hover {
 }
 
 .entry-meta {
-    padding: 0 0 1em 0;
+    padding: 0 0 0em 0;
 }
 
 iframe,  

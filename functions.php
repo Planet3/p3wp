@@ -195,7 +195,7 @@ add_action( 'widgets_init', 'planet3_0_widgets_init' );
  */
 function planet3_0_scripts() {
 
-	wp_enqueue_style('googleFonts', 'http://fonts.googleapis.com/css?family=Roboto:400,700,400italic|Roboto+Slab:400,700');
+	wp_enqueue_style('googleFonts', 'http://fonts.googleapis.com/css?family=Roboto:400,700,400italic|Roboto+Slab:400,700|Lato:300,400,700,900,400italic');
 
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 

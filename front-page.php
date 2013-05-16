@@ -35,13 +35,13 @@ get_header(); ?>
 			<div class="large-4 columns hide-for-small">
 
 				<?php $args = array(
-					'category__in' => planet3_0_cat_slug_to_id('bleg'),
+					'category__in' => planet3_0_cat_slug_to_id('quote'),
 					'posts_per_page' => 1
 					);
 				/* Start the featured Loop */ 
 				$featured_query = new WP_Query( $args ); 
 				if ( $featured_query -> have_posts() ) : ?>
-					<div id="bleg">
+					<div id="quote">
 						<ul class="large-block-grid-1">
 							<?php while ( $featured_query -> have_posts() ) : $featured_query -> the_post();
 								if ( isset($do_not_duplicate) ) {
@@ -56,13 +56,13 @@ get_header(); ?>
 
 
 				<?php $args = array(
-					'category__in' => planet3_0_cat_slug_to_id('quote'),
+					'category__in' => planet3_0_cat_slug_to_id('bleg'),
 					'posts_per_page' => 1
 					);
 				/* Start the featured Loop */ 
 				$featured_query = new WP_Query( $args ); 
 				if ( $featured_query -> have_posts() ) : ?>
-					<div id="quote">
+					<div id="bleg">
 						<ul class="large-block-grid-1">
 							<?php while ( $featured_query -> have_posts() ) : $featured_query -> the_post();
 								if ( isset($do_not_duplicate) ) {
@@ -159,7 +159,7 @@ get_header(); ?>
 			/* Start the featured Loop */ 
 			$featured_query = new WP_Query( $args ); 
 			if ( $featured_query -> have_posts() ) : ?>
-				<div id="featured" class="posts-area">
+				<div id="featured" class="posts-area large-12 columns">
 					<ul class="large-block-grid-3">
 						<?php while ( $featured_query -> have_posts() ) : $featured_query -> the_post();
 							if ( isset($do_not_duplicate) ) {

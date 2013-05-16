@@ -10,6 +10,7 @@ Forked from the _s theme with the added goodness of Foundation
 * Develop full font stack
 * Media section on front page needs title and description.
 * Finalize thumbnail size
+* Minimize js files
 
 ###List of less important things
 * Contributors page
@@ -27,5 +28,6 @@ Forked from the _s theme with the added goodness of Foundation
 * Create quote and bleg categories
 * Split featured media category into images and video
 * regenerate thumbnails
+* Create Nav bar
 * WordPress Access Control overides the custom menu walker needed for the responsive nav menu. If we want to keep this functionality we need to find a replacement
 * Disable About the Author Advanced
