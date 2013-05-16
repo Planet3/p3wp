@@ -53,10 +53,10 @@
 			<?php  // if this is not a single post/page site title and description
 				if ( !is_single() && !is_page() or is_attachment() ) { ?>
 
-					<hgroup class="site-masthead">
+					<div class="site-masthead">
 						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?> <small class="hide-for-small"><span class="site-description"><?php bloginfo( 'description' ); ?></span></small></a></h1>
 						<div class="hide-for-small"><p>ENGAGE THE FUTURE: Honest, wide-ranging, scientifically informed conversation about sustainable technologies and cultures, toward a thriving future</p></div>
-					</hgroup>
+					</div>
 
 				<?php } // else display post/page title
 				else { ?>
