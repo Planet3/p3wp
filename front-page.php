@@ -27,9 +27,6 @@ get_header(); ?>
 				<?php wp_reset_postdata(); ?>
 			<?php endif; ?>
 
-				<!-- <div class="archive-button large-8 columns">
-					<a class="radius small button" href="<?php echo get_category_link( $args['category__in'] ); ?>"><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?> Archives</a>
-				</div><!-- .archive-button -->
 
 
 			<div class="large-4 columns hide-for-small">
@@ -47,7 +44,7 @@ get_header(); ?>
 								if ( isset($do_not_duplicate) ) {
 									if (in_array($post->ID, $do_not_duplicate)) continue; 
 								} ?>
-								<?php get_template_part( 'content', 'fpmedia' ); ?>
+								<?php get_template_part( 'content', 'fpcontent' ); ?>
 							<?php endwhile; ?>
 						</ul><!-- large-block-grid-3 -->
 					</div><!-- #featured -->
@@ -68,7 +65,7 @@ get_header(); ?>
 								if ( isset($do_not_duplicate) ) {
 									if (in_array($post->ID, $do_not_duplicate)) continue; 
 								} ?>
-								<?php get_template_part( 'content', 'fpmedia' ); ?>
+								<?php get_template_part( 'content', 'fpcontent' ); ?>
 							<?php endwhile; ?>
 						</ul><!-- large-block-grid-3 -->
 					</div><!-- #featured -->
@@ -96,7 +93,7 @@ get_header(); ?>
 						$video_query = new WP_Query( $args );
 						if ( $video_query -> have_posts() ) : ?>
 							<?php while ( $video_query -> have_posts() ) : $video_query -> the_post(); ?>
-								<?php get_template_part( 'content', 'fpmedia' ); ?>
+								<?php get_template_part( 'content', 'fpcontent' ); ?>
 							<?php endwhile; ?>
 								<div class="archive-button large-12 columns">
 									<a class="radius small button" href="<?php echo get_category_link( $args['category__in'] ); ?>"><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?> Archives</a>
@@ -112,7 +109,7 @@ get_header(); ?>
 						$image_query = new WP_Query( $args );
 						if ( $image_query -> have_posts() ) : ?>
 							<?php while ( $image_query -> have_posts() ) : $image_query -> the_post(); ?>
-								<?php get_template_part( 'content', 'fpmedia' ); ?>
+								<?php get_template_part( 'content', 'fpcontent' ); ?>
 							<?php endwhile; ?>
 								<div class="archive-button large-12 columns">
 									<a class="radius small button" href="<?php echo get_category_link( $args['category__in'] ); ?>"><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?> Archives</a>

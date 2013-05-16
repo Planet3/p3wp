@@ -14,7 +14,11 @@
 		</header><!-- .entry-header -->
 
 		<div class="entry-summary">
-			<?php the_content(); ?>
+			<?php if( $post->post_excerpt ) {
+				the_excerpt();
+			} else {
+				the_content();
+			} ?>
 		</div><!-- .entry-summary -->
 
 		<footer class="entry-meta meta-bellow">
