@@ -58,7 +58,6 @@ a:hover {
     margin: 1.5em 0 1em;
     padding-top: 1em;
 }
-
 .entry-thumbnail {
     padding-bottom: 1em;
 }
@@ -78,19 +77,16 @@ a:hover {
 }
 
 
-#media {
-}
-
-#beyond {
-    padding-bottom: 3em;
+#beyond, #media {
+    padding-bottom: 0em;
     border: 2px solid $secondary-color;
 }
 
 .archive-button {
-    padding: 0 2em;
     text-align: right;
+    margin-bottom: 0;
+    padding-right: 2em;
 }
-
 
 /* =Byline Styles
 -------------------------------------------------------------- */

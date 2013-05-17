@@ -35,7 +35,7 @@ get_header(); ?>
 					'category__in' => planet3_0_cat_slug_to_id('quote'),
 					'posts_per_page' => 1
 					);
-				/* Start the featured Loop */ 
+				/* Start the quote Loop */ 
 				$featured_query = new WP_Query( $args ); 
 				if ( $featured_query -> have_posts() ) : ?>
 					<div id="quote">
@@ -56,7 +56,7 @@ get_header(); ?>
 					'category__in' => planet3_0_cat_slug_to_id('bleg'),
 					'posts_per_page' => 1
 					);
-				/* Start the featured Loop */ 
+				/* Start the bleg Loop */ 
 				$featured_query = new WP_Query( $args ); 
 				if ( $featured_query -> have_posts() ) : ?>
 					<div id="bleg">
@@ -80,11 +80,9 @@ get_header(); ?>
 		<div class="row">
 			<div class="posts-area large-6 columns">
 
-
-
 				<div id="media">
-					<ul class="large-block-grid-1">
 
+					<div class="video">
 						<?php $args = array(
 							'category__in' => planet3_0_cat_slug_to_id('video'),
 							'posts_per_page' => 1
@@ -92,15 +90,23 @@ get_header(); ?>
 						/* Start the video media Loop */ 
 						$video_query = new WP_Query( $args );
 						if ( $video_query -> have_posts() ) : ?>
-							<?php while ( $video_query -> have_posts() ) : $video_query -> the_post(); ?>
-								<?php get_template_part( 'content', 'fpcontent' ); ?>
-							<?php endwhile; ?>
-								<div class="archive-button large-12 columns">
-									<a class="radius small button" href="<?php echo get_category_link( $args['category__in'] ); ?>"><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?> Archives</a>
-								</div><!-- .archive-button -->
+						<header class="section-title">
+							<h1><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?></h1>
+							<?php echo category_description( $args['category__in'] ); ?>
+						</header><!-- section-title -->
+							<ul class="large-block-grid-1">
+								<?php while ( $video_query -> have_posts() ) : $video_query -> the_post(); ?>
+									<?php get_template_part( 'content', 'fpcontent' ); ?>
+								<?php endwhile; ?>
+							</ul><!-- .large-block-grid-1 -->
+							<div>
+							<p class="archive-button"><a class="radius small button" href="<?php echo get_category_link( $args['category__in'] ); ?>"><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?> Archives</a></p>
+							</div>
 							<?php wp_reset_postdata(); ?>
 						<?php endif; ?>
+					</div><!-- .video -->
 
+					<div class="image">
 						<?php $args = array(
 							'category__in' => planet3_0_cat_slug_to_id('image'),
 							'posts_per_page' => 1
@@ -108,16 +114,20 @@ get_header(); ?>
 						/* Start the image media Loop */ 
 						$image_query = new WP_Query( $args );
 						if ( $image_query -> have_posts() ) : ?>
+						<header class="section-title">
+							<h1><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?></h1>
+							<?php echo category_description( $args['category__in'] ); ?>
+						</header><!-- section-title -->
+						<ul class="large-block-grid-1">
 							<?php while ( $image_query -> have_posts() ) : $image_query -> the_post(); ?>
 								<?php get_template_part( 'content', 'fpcontent' ); ?>
 							<?php endwhile; ?>
-								<div class="archive-button large-12 columns">
-									<a class="radius small button" href="<?php echo get_category_link( $args['category__in'] ); ?>"><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?> Archives</a>
-								</div><!-- .archive-button -->
-							<?php wp_reset_postdata(); ?>
+						</ul><!-- .large-block-grid-1 -->
+						<p class="archive-button"><a class="radius small button" href="<?php echo get_category_link( $args['category__in'] ); ?>"><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?> Archives</a></p>
+						<?php wp_reset_postdata(); ?>
 						<?php endif; ?>
+					</div><!-- .image -->
 
-					</ul><!-- .large-block-grid-3 -->
 				</div><!-- #media -->
 
 			</div><!-- posts-area large-6 -->
@@ -131,18 +141,16 @@ get_header(); ?>
 				$beyond_query = new WP_Query( $args );
 				if ( $beyond_query -> have_posts() ) : ?>
 					<div id="beyond">
-						<div class="section-title">
+						<header class="section-title">
 							<h1><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?></h1>
 							<?php echo category_description( $args['category__in'] ); ?>
-						</div><!-- section-title -->
+						</header><!-- section-title -->
 						<ul class="large-block-grid-1">
 							<?php while ( $beyond_query -> have_posts() ) : $beyond_query -> the_post(); ?>
 								<?php get_template_part( 'content', 'fpbeyond' ); ?>
 							<?php endwhile; ?>
 						</ul><!-- .large-block-grid-3 -->
-							<div class="archive-button large-12 columns">
-								<a class="radius small button" href="<?php echo get_category_link( $args['category__in'] ); ?>"><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?> Archives</a>
-							</div><!-- .archive-button -->
+						<p class="archive-button"><a class="radius small button" href="<?php echo get_category_link( $args['category__in'] ); ?>"><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?> Archives</a></p>
 					</div><!-- #beyond -->
 					<?php wp_reset_postdata(); ?>
 				<?php endif; ?>
@@ -165,12 +173,10 @@ get_header(); ?>
 							<?php get_template_part( 'content', 'fpfeatured' ); ?>
 						<?php endwhile; ?>
 					</ul><!-- large-block-grid-3 -->
+					<p class="archive-button"><a class="radius small button" href="<?php echo get_category_link( $args['category__in'] ); ?>"><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?> Archives</a></p>
 				</div><!-- #featured -->
 				<?php wp_reset_postdata(); ?>
 				<?php endif; ?>
-				<div class="archive-button posts-area large-12 columns">
-					<a class="radius small button" href="<?php echo get_category_link( $args['category__in'] ); ?>"><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?> Archives</a>
-				</div><!-- .archive-button -->
 
 
 		</div><!-- row -->
