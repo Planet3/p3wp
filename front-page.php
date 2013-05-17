@@ -27,8 +27,6 @@ get_header(); ?>
 				<?php wp_reset_postdata(); ?>
 			<?php endif; ?>
 
-
-
 			<div class="large-4 columns hide-for-small">
 
 				<?php $args = array(
@@ -51,7 +49,6 @@ get_header(); ?>
 					<?php wp_reset_postdata(); ?>
 				<?php endif; ?>
 
-
 				<?php $args = array(
 					'category__in' => planet3_0_cat_slug_to_id('bleg'),
 					'posts_per_page' => 1
@@ -72,16 +69,13 @@ get_header(); ?>
 					<?php wp_reset_postdata(); ?>
 				<?php endif; ?>
 
-
 			</div><!-- large-4 -->
-
 		</div><!-- row -->
 
 		<div class="row">
 			<div class="posts-area large-6 columns">
 
 				<div id="media">
-
 					<div class="video">
 						<?php $args = array(
 							'category__in' => planet3_0_cat_slug_to_id('video'),
@@ -127,7 +121,6 @@ get_header(); ?>
 						<?php wp_reset_postdata(); ?>
 						<?php endif; ?>
 					</div><!-- .image -->
-
 				</div><!-- #media -->
 
 			</div><!-- posts-area large-6 -->
@@ -159,7 +152,7 @@ get_header(); ?>
 			<?php $args = array(
 				'category__in' => planet3_0_cat_slug_to_id('featured'),
 				'category__not_in' => planet3_0_cat_slug_to_id('media'),
-				'posts_per_page' => 4
+				'posts_per_page' => 7
 				);
 			/* Start the featured Loop */ 
 			$featured_query = new WP_Query( $args ); 
@@ -176,8 +169,7 @@ get_header(); ?>
 					<p class="archive-button"><a class="radius small button" href="<?php echo get_category_link( $args['category__in'] ); ?>"><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?> Archives</a></p>
 				</div><!-- #featured -->
 				<?php wp_reset_postdata(); ?>
-				<?php endif; ?>
-
+			<?php endif; ?>
 
 		</div><!-- row -->
 	</div><!-- #primary -->

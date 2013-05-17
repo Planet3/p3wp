@@ -7,10 +7,8 @@
 
 <li>
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
 		<header class="entry-header">
 			<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'planet3_0' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-
 		</header><!-- .entry-header -->
 
 		<div class="entry-summary">
@@ -27,6 +25,5 @@
 			<?php endif; ?>
 			<?php edit_post_link( __( 'Edit', 'planet3_0' ), '<span class="sep"> | </span><span class="edit-link">', '</span>' ); ?>
 		</footer><!-- .entry-meta -->
-
 	</article><!-- #post-## -->
 </li>

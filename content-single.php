@@ -8,11 +8,9 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header assistive-text">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
-
 	</header><!-- .entry-header -->
 
 	<div class="row">
-
 		<div class="byline large-2 columns">
 			<div class="entry-meta meta-above">
 				<?php planet3_0_posted_on(); ?>
@@ -33,9 +31,7 @@
 				<?php the_content(); ?>
 				<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'planet3_0' ), 'after' => '</div>' ) ); ?>
 			</div><!-- .entry-content -->
-
 			<hr />
-
 			<div class="row">
 				<footer class="entry-meta meta-bellow large-12 columns" >
 					<?php planet3_0_posted_in(); ?>
@@ -43,7 +39,6 @@
 				</footer><!-- .entry-meta -->
 			</div><!-- .row -->
 		</div><!-- . large-9 columns -->
-
 	</div><!-- .row -->
 
 </article><!-- #post-## -->
