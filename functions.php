@@ -191,6 +191,21 @@ function planet3_0_widgets_init() {
 add_action( 'widgets_init', 'planet3_0_widgets_init' );
 
 /**
+ * Make all thumbnails link to post 
+ *
+ * @since Planet3.0 3.0
+ */
+add_filter( 'post_thumbnail_html', 'planet3_0_thumbnail_link', 10, 3 );
+
+function planet3_0_thumbnail_link ( $html, $post_id, $post_image_id ) {
+
+  $html = '<a href="' . get_permalink( $post_id ) . '" title="' . esc_attr( get_post_field( 'post_title', $post_id ) ) . '">' . $html . '</a>';
+  return $html;
+
+}
+
+
+/**
  * Enqueue scripts and styles
  */
 function planet3_0_scripts() {
