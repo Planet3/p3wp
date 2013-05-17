@@ -6,9 +6,7 @@ Forked from the _s theme with the added goodness of Foundation
     * Enable Google Authorship
 * Beyond Page
 * More button
-* Add if statements to the_post_thumbnail()
 * Develop full font stack
-* Media section on front page needs title and description.
 * Finalize thumbnail size
 * Minimize js files
 

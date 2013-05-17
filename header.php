@@ -27,7 +27,7 @@
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
 
-		<div class="top-bar-container antialiased fixed">
+		<div class="top-bar-container antialiased">
 			<nav id="site-navigation" class="navigation-main top-bar" role="navivation">
 				<ul class="title-area">
 					<li class="name">

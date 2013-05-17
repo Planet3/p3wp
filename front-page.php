@@ -73,8 +73,32 @@ get_header(); ?>
 		</div><!-- row -->
 
 		<div class="row">
-			<div class="posts-area large-6 columns">
 
+			<div class="posts-area push-6 large-6 columns">
+				<?php $args = array(
+					'category__in' => planet3_0_cat_slug_to_id('beyond-planet-three'),
+					'posts_per_page' => 5
+					);
+				/* Start the beyond Loop */ 
+				$beyond_query = new WP_Query( $args );
+				if ( $beyond_query -> have_posts() ) : ?>
+					<div id="beyond">
+						<header class="section-title">
+							<h1><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?></h1>
+							<?php echo category_description( $args['category__in'] ); ?>
+						</header><!-- section-title -->
+						<ul class="large-block-grid-1">
+							<?php while ( $beyond_query -> have_posts() ) : $beyond_query -> the_post(); ?>
+								<?php get_template_part( 'content', 'fpbeyond' ); ?>
+							<?php endwhile; ?>
+						</ul><!-- .large-block-grid-3 -->
+						<p class="archive-button"><a class="radius small button" href="<?php echo get_category_link( $args['category__in'] ); ?>"><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?> Archives</a></p>
+					</div><!-- #beyond -->
+					<?php wp_reset_postdata(); ?>
+				<?php endif; ?>
+			</div><!-- posts-area large-6 columns -->
+
+			<div class="posts-area large-6 pull-6 columns">
 				<div id="media">
 					<div class="video">
 						<?php $args = array(
@@ -122,37 +146,12 @@ get_header(); ?>
 						<?php endif; ?>
 					</div><!-- .image -->
 				</div><!-- #media -->
-
 			</div><!-- posts-area large-6 -->
-
-			<div class="posts-area large-6 columns">
-				<?php $args = array(
-					'category__in' => planet3_0_cat_slug_to_id('beyond-planet-three'),
-					'posts_per_page' => 5
-					);
-				/* Start the beyond Loop */ 
-				$beyond_query = new WP_Query( $args );
-				if ( $beyond_query -> have_posts() ) : ?>
-					<div id="beyond">
-						<header class="section-title">
-							<h1><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?></h1>
-							<?php echo category_description( $args['category__in'] ); ?>
-						</header><!-- section-title -->
-						<ul class="large-block-grid-1">
-							<?php while ( $beyond_query -> have_posts() ) : $beyond_query -> the_post(); ?>
-								<?php get_template_part( 'content', 'fpbeyond' ); ?>
-							<?php endwhile; ?>
-						</ul><!-- .large-block-grid-3 -->
-						<p class="archive-button"><a class="radius small button" href="<?php echo get_category_link( $args['category__in'] ); ?>"><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?> Archives</a></p>
-					</div><!-- #beyond -->
-					<?php wp_reset_postdata(); ?>
-				<?php endif; ?>
-			</div><!-- posts-area large-6 columns -->
 
 			<?php $args = array(
 				'category__in' => planet3_0_cat_slug_to_id('featured'),
 				'category__not_in' => planet3_0_cat_slug_to_id('media'),
-				'posts_per_page' => 7
+				'posts_per_page' => 4
 				);
 			/* Start the featured Loop */ 
 			$featured_query = new WP_Query( $args ); 
