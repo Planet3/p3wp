@@ -1632,7 +1632,7 @@ blockquote p {
   /* line 47, scss/_block-grid.scss */
   [class*="block-grid-"] {
     display: block;
-    padding: 0 0.5em;
+    padding: 0;
     margin: 0 -10px;
     *zoom: 1;
   }
@@ -3800,48 +3800,41 @@ a:hover {
   text-align: left;
 }
 
-/* line 90, scss/_content.scss */
-#beyond, #media {
-  padding-bottom: 0em;
-  border: 2px solid #e9e9e9;
-}
-
-/* line 95, scss/_content.scss */
+/* line 93, scss/_content.scss */
 .archive-button {
   text-align: right;
   margin-bottom: 0;
-  padding-right: 2em;
 }
 
 /* =Byline Styles
 -------------------------------------------------------------- */
-/* line 104, scss/_content.scss */
+/* line 101, scss/_content.scss */
 .byline {
   font-size: 0.8em;
 }
-/* line 106, scss/_content.scss */
+/* line 103, scss/_content.scss */
 .byline h1 {
   font-size: 1.2em;
 }
 
 /* =Content Styles
 -------------------------------------------------------------- */
-/* line 121, scss/_content.scss */
+/* line 118, scss/_content.scss */
 .content-area {
   padding: 2em 0em;
 }
 
-/* line 131, scss/_content.scss */
+/* line 128, scss/_content.scss */
 .entry-content {
   padding-bottom: 2em;
 }
 
-/* line 135, scss/_content.scss */
+/* line 132, scss/_content.scss */
 .entry-meta {
   padding: 0 0 0em 0;
 }
 
-/* line 141, scss/_content.scss */
+/* line 138, scss/_content.scss */
 iframe,
 object,
 embed {
