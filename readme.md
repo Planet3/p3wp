@@ -5,7 +5,6 @@ Forked from the _s theme with the added goodness of Foundation
 * Author page
     * Enable Google Authorship
 * Beyond Page
-* More button
 * Develop full font stack
 * Finalize thumbnail size
 * Minimize js files

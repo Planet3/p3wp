@@ -17,7 +17,7 @@ if ( ! isset( $content_width ) )
 /*
  * Load Jetpack compatibility file.
  */
-require( get_template_directory() . '/inc/jetpack.php' );
+//require( get_template_directory() . '/inc/jetpack.php' );
 
 if ( ! function_exists( 'planet3_0_setup' ) ) :
 /**
@@ -191,6 +191,27 @@ function planet3_0_widgets_init() {
 add_action( 'widgets_init', 'planet3_0_widgets_init' );
 
 /**
+ * Replaces the auto-generated excerpt "more" text by a link
+ */
+function planet3_0_excerpt_more($more) {
+	return ' <a class="moretag" href="'. get_permalink($post->ID) . '">[more]</a>';
+}
+add_filter( 'excerpt_more', 'planet3_0_excerpt_more' );
+
+/**
+ * Adds a "more link to the custom excerpts
+ */
+function planet3_0_custom_excerpt_more( $output ) {
+	if ( has_excerpt() && ! is_attachment() ) {
+		$output .= ' <a class="moretag" href="'. get_permalink($post->ID) . '">[more]</a>';
+	}
+	return $output;
+}
+add_filter( 'get_the_excerpt', 'planet3_0_custom_excerpt_more' );
+
+
+
+/**
  * Make all thumbnails link to post 
  *
  * @since Planet3.0 3.0
@@ -198,10 +219,8 @@ add_action( 'widgets_init', 'planet3_0_widgets_init' );
 add_filter( 'post_thumbnail_html', 'planet3_0_thumbnail_link', 10, 3 );
 
 function planet3_0_thumbnail_link ( $html, $post_id, $post_image_id ) {
-
-  $html = '<a href="' . get_permalink( $post_id ) . '" title="' . esc_attr( get_post_field( 'post_title', $post_id ) ) . '">' . $html . '</a>';
-  return $html;
-
+	$html = '<a href="' . get_permalink( $post_id ) . '" title="' . esc_attr( get_post_field( 'post_title', $post_id ) ) . '">' . $html . '</a>';
+	return $html;
 }
 
 
