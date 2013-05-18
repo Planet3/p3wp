@@ -19,6 +19,10 @@ get_header(); ?>
 			$lede_query = new WP_Query( $args );
 			if ( $lede_query -> have_posts() ) : ?>
 					<div id="lede" class="large-8 columns">
+						<header class="section-header hide-for-small">
+							<h1><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?></h1>
+							<?php echo category_description( $args['category__in'] ); ?>
+						</header><!-- section-header -->
 						<?php while ( $lede_query -> have_posts() ) : $lede_query -> the_post();
 							$do_not_duplicate[] = $post->ID; ?>
 							<?php get_template_part( 'content', 'fplede' ); ?>
@@ -37,6 +41,10 @@ get_header(); ?>
 				$featured_query = new WP_Query( $args ); 
 				if ( $featured_query -> have_posts() ) : ?>
 					<div id="quote">
+						<header class="section-header">
+							<h1><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?></h1>
+							<?php echo category_description( $args['category__in'] ); ?>
+						</header><!-- section-header -->
 						<ul class="large-block-grid-1">
 							<?php while ( $featured_query -> have_posts() ) : $featured_query -> the_post();
 								if ( isset($do_not_duplicate) ) {
@@ -57,6 +65,10 @@ get_header(); ?>
 				$featured_query = new WP_Query( $args ); 
 				if ( $featured_query -> have_posts() ) : ?>
 					<div id="bleg">
+						<header class="section-header">
+							<h1><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?></h1>
+							<?php echo category_description( $args['category__in'] ); ?>
+						</header><!-- section-header -->
 						<ul class="large-block-grid-1">
 							<?php while ( $featured_query -> have_posts() ) : $featured_query -> the_post();
 								if ( isset($do_not_duplicate) ) {
@@ -83,10 +95,10 @@ get_header(); ?>
 				$beyond_query = new WP_Query( $args );
 				if ( $beyond_query -> have_posts() ) : ?>
 					<div id="beyond">
-						<header class="section-title">
+						<header class="section-header">
 							<h1><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?></h1>
 							<?php echo category_description( $args['category__in'] ); ?>
-						</header><!-- section-title -->
+						</header><!-- section-header -->
 						<ul class="large-block-grid-1">
 							<?php while ( $beyond_query -> have_posts() ) : $beyond_query -> the_post(); ?>
 								<?php get_template_part( 'content', 'fpbeyond' ); ?>
@@ -108,10 +120,10 @@ get_header(); ?>
 						/* Start the video media Loop */ 
 						$video_query = new WP_Query( $args );
 						if ( $video_query -> have_posts() ) : ?>
-						<header class="section-title">
+						<header class="section-header">
 							<h1><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?></h1>
 							<?php echo category_description( $args['category__in'] ); ?>
-						</header><!-- section-title -->
+						</header><!-- section-header -->
 							<ul class="large-block-grid-1">
 								<?php while ( $video_query -> have_posts() ) : $video_query -> the_post(); ?>
 									<?php get_template_part( 'content', 'fpcontent' ); ?>
@@ -132,10 +144,10 @@ get_header(); ?>
 						/* Start the image media Loop */ 
 						$image_query = new WP_Query( $args );
 						if ( $image_query -> have_posts() ) : ?>
-						<header class="section-title">
+						<header class="section-header">
 							<h1><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?></h1>
 							<?php echo category_description( $args['category__in'] ); ?>
-						</header><!-- section-title -->
+						</header><!-- section-header -->
 						<ul class="large-block-grid-1">
 							<?php while ( $image_query -> have_posts() ) : $image_query -> the_post(); ?>
 								<?php get_template_part( 'content', 'fpcontent' ); ?>
@@ -157,6 +169,10 @@ get_header(); ?>
 			$featured_query = new WP_Query( $args ); 
 			if ( $featured_query -> have_posts() ) : ?>
 				<div id="featured" class="posts-area large-12 columns">
+					<header class="section-header">
+						<h1>Past Features</h1>
+						<?php echo category_description( $args['category__in'] ); ?>
+					</header><!-- section-header -->
 					<ul class="large-block-grid-3">
 						<?php while ( $featured_query -> have_posts() ) : $featured_query -> the_post();
 							if ( isset($do_not_duplicate) ) {
