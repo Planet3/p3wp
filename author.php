@@ -17,7 +17,7 @@ get_header(); ?>
 
 		<div class="row">
 
-			<header class="page-header large-9 columns">
+			<header class="page-header large-9 push-3 columns">
 				<h1 class="author-name page-title">
 					<?php 
 						/* Queue the first post, that way we know
@@ -45,7 +45,7 @@ get_header(); ?>
 				</p><!-- author-bio -->
 			</header><!-- .page-header large-8 -->
 
-			<div class="large-3 columns">
+			<div class="large-3 pull-9 columns">
 				<div class="author-avatar hide-for-small">
 					<?php if ( validate_gravatar( get_the_author_meta( 'user_email' ) ) ) :
 						echo get_avatar( get_the_author_meta( 'user_email' ), 256, $default, get_the_author() ); 
