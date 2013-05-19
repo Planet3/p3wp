@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying Archive pages.
+ * The template for displaying author pages.
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
@@ -10,81 +10,82 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area row">
-		<div id="content" class="site-content large-10 large-centered columns" role="main">
+	<div id="primary" class="content-area row">
+		<div id="content" class="site-content large-12 columns" role="main">
+			<?php if ( have_posts() ) : ?>
 
-		<?php if ( have_posts() ) : ?>
+				<?php // Queue the first post, that way we know what author we're dealing with
+				the_post(); ?>
 
-		<div class="row">
+				<h1 class="author-name page-title"><?php the_author() ;?></h1>
 
-			<header class="page-header large-9 push-3 columns">
-				<h1 class="author-name page-title">
-					<?php 
-						/* Queue the first post, that way we know
-						 * what author we're dealing with (if that is the case).
-						*/
-						the_post();
-						printf( '<span class="vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( "ID" ) ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' );
-					;?>
-				</h1><!-- author-name page-title -->
-				<p class="author-bio"><?php the_author_meta('description'); ?>
-					<ul class="social-links inline-list">
-						<?php if ( get_the_author_meta( 'user_url' ) ) : ?>
-							<li><?php the_author_meta( 'user_url' ); ?></li>
-						<?php endif; ?>
-						<?php if ( get_the_author_meta( 'twitter' ) ) : ?>
-							<li><?php the_author_meta( 'twitter' ); ?></li>
-						<?php endif; ?>
-						<?php if ( get_the_author_meta( 'facebook' ) ) : ?>
-							<li><?php the_author_meta( 'facebook' ); ?></li>
-						<?php endif; ?>
-						<?php if ( get_the_author_meta( 'gplus' ) ) : ?>
-							<li><?php the_author_meta( 'gplus' ); ?></li>
-						<?php endif; ?>
-					</ul>
-				</p><!-- author-bio -->
-			</header><!-- .page-header large-8 -->
+				<div class="row">
 
-			<div class="large-3 pull-9 columns">
-				<div class="author-avatar hide-for-small">
-					<?php if ( validate_gravatar( get_the_author_meta( 'user_email' ) ) ) :
-						echo get_avatar( get_the_author_meta( 'user_email' ), 256, $default, get_the_author() ); 
-					endif; ?>
-				</div><!-- author-avatar hide-for-small-->
-			</div><!--  large-3 pull-9 -->
-		</div><!-- row -->
+					<div class="byline large-4 columns">
+
+						<div class="author-avatar hide-for-small">
+							<?php if ( validate_gravatar( get_the_author_meta( 'user_email' ) ) ) :
+								echo get_avatar( get_the_author_meta( 'user_email' ), 512, $default, get_the_author() ); 
+							endif; ?>
+						</div><!-- author-avatar hide-for-small-->
+
+						<header class="page-header">
+							<p class="author-bio"><?php the_author_meta('description'); ?>
+								<ul class="social-links inline-list">
+									<?php if ( get_the_author_meta( 'user_url' ) ) : ?>
+										<li><?php the_author_meta( 'user_url' ); ?></li>
+									<?php endif; ?>
+									<?php if ( get_the_author_meta( 'twitter' ) ) : ?>
+										<li><?php the_author_meta( 'twitter' ); ?></li>
+									<?php endif; ?>
+									<?php if ( get_the_author_meta( 'facebook' ) ) : ?>
+										<li><?php the_author_meta( 'facebook' ); ?></li>
+									<?php endif; ?>
+									<?php if ( get_the_author_meta( 'gplus' ) ) : ?>
+										<li><?php the_author_meta( 'gplus' ); ?></li>
+									<?php endif; ?>
+								</ul>
+							</p><!-- author-bio -->
+						</header><!-- .page-header -->
+
+					</div><!-- byline large-4 -->
 
 
-		<?php
-		/* Since we called the_post() above, we need to
-		 * rewind the loop back to the beginning that way
-		 * we can run the loop properly, in full.
-		 */
-		rewind_posts()
-		;?>
+					<div class="large-8 columns">
+						<?php /* Start the Loop */ ?>
+						<?php
+							/* Since we called the_post() above, we need to
+							 * rewind the loop back to the beginning that way
+							 * we can run the loop properly, in full.
+							 */
+							rewind_posts()
+						;?>
+						<?php while ( have_posts() ) : the_post(); ?>
 
-		<?php /* Start the Loop */ ?>
-		<?php while ( have_posts() ) : the_post(); ?>
+							<?php
+								/* Include the Post-Format-specific template for the content.
+								 * If you want to overload this in a child theme then include a file
+								 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+								 */
+								get_template_part( 'content', get_post_format() );
+							?>
 
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to overload this in a child theme then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-				?>
+						<?php endwhile; ?>
 
-		<?php endwhile; ?>
+							<?php planet3_0_content_nav( 'nav-below' ); ?>
 
-			<?php planet3_0_content_nav( 'nav-below' ); ?>
+					</div><!-- large-8 -->
 
-		<?php else : ?>
+				</div><!-- row -->
 
-			<?php get_template_part( 'no-results', 'archive' ); ?>
+			<?php else : ?>
 
-		<?php endif; ?>
+				<?php get_template_part( 'no-results', 'archive' ); ?>
+
+			<?php endif; ?>
+
 
 		</div><!-- #content -->
-	</section><!-- #primary -->
+	</div><!-- #primary -->
 
 <?php get_footer(); ?>

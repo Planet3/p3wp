@@ -106,7 +106,7 @@ a:hover {
 }
 
 .author-avatar {
-    padding: 1.5em 0;
+    padding: 1em 0;
 }
 
 .author-bio {
@@ -127,12 +127,17 @@ a:hover {
 .meta-above {
 }
 
+.meta-bellow {
+    padding-top: 0.5em;
+    padding-bottom: 2em;
+    border-top: 1px solid $secondary-color;
+}
+
 .entry-content {
     padding-bottom: 2em;
 }
 
 .entry-meta {
-    padding: 0 0 0em 0;
 }
 
 iframe,  

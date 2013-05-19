@@ -36,7 +36,6 @@
 				<?php the_content(); ?>
 				<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'planet3_0' ), 'after' => '</div>' ) ); ?>
 			</div><!-- .entry-content -->
-			<hr />
 			<div class="row">
 				<footer class="entry-meta meta-bellow large-12 columns" >
 					<?php planet3_0_posted_in(); ?>

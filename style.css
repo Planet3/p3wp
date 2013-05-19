@@ -643,7 +643,7 @@ h1 {
 
 /* line 196, scss/_type.scss */
 h2 {
-  font-size: 1.6875em;
+  font-size: 1.375em;
 }
 
 /* line 197, scss/_type.scss */
@@ -852,7 +852,7 @@ blockquote p {
 
   /* line 361, scss/_type.scss */
   h2 {
-    font-size: 2.3125em;
+    font-size: 2em;
   }
 
   /* line 362, scss/_type.scss */
@@ -3841,7 +3841,7 @@ a:hover {
 
 /* line 108, scss/_content.scss */
 .author-avatar {
-  padding: 1.5em 0;
+  padding: 1em 0;
 }
 
 /* =Content Styles
@@ -3852,16 +3852,18 @@ a:hover {
 }
 
 /* line 130, scss/_content.scss */
+.meta-bellow {
+  padding-top: 0.5em;
+  padding-bottom: 2em;
+  border-top: 1px solid #e9e9e9;
+}
+
+/* line 136, scss/_content.scss */
 .entry-content {
   padding-bottom: 2em;
 }
 
-/* line 134, scss/_content.scss */
-.entry-meta {
-  padding: 0 0 0em 0;
-}
-
-/* line 140, scss/_content.scss */
+/* line 145, scss/_content.scss */
 iframe,
 object,
 embed {
