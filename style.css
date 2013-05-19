@@ -2486,6 +2486,28 @@ th.hide-for-touch {
   display: table-cell !important;
 }
 
+/* Inline Lists */
+/* line 49, scss/_inline-lists.scss */
+.inline-list {
+  margin: 0 auto 1.0625em auto;
+  margin-left: -1.375em;
+  margin-right: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+/* line 36, scss/_inline-lists.scss */
+.inline-list > li {
+  list-style: none;
+  float: left;
+  margin-left: 1.375em;
+  display: block;
+}
+/* line 41, scss/_inline-lists.scss */
+.inline-list > li > * {
+  display: block;
+}
+
 /* line 168, scss/_buttons.scss */
 button, .button {
   border-style: solid;
@@ -3815,6 +3837,11 @@ a:hover {
 /* line 103, scss/_content.scss */
 .byline h1 {
   font-size: 1.2em;
+}
+
+/* line 108, scss/_content.scss */
+.author-avatar {
+  text-align: left;
 }
 
 /* =Content Styles
