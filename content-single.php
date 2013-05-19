@@ -21,9 +21,14 @@
 				endif; ?>
 			</div>
 			<h1><?php planet3_0_posted_by(); ?></h1>
+				<?php
+				// Display Author's discription if it exists
+				if ( get_the_author_meta( 'user_description' ) ) : ?>
 			<div class="author-bio hide-for-small">
-				<p><?php the_author_meta('description'); ?></p>
+				<p><?php the_author_meta( 'user_description' ); ?></p>
 			</div><!-- .author-bio -->
+			<?php endif; ?>
+
 		</div><!-- .byline -->
 
 		<div class="large-10 columns">

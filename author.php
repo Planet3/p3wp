@@ -28,11 +28,19 @@ get_header(); ?>
 					;?>
 				</h1><!-- author-name page-title -->
 				<p class="author-bio"><?php the_author_meta('description'); ?>
-					<ul class="inline-list">
-						<li>HomePage</li>
-						<li>Twitter</li>
-						<li>Facebook</li>
-						<li>Google+</li>
+					<ul class="social-links inline-list">
+						<?php if ( get_the_author_meta( 'user_url' ) ) : ?>
+							<li><?php the_author_meta( 'user_url' ); ?></li>
+						<?php endif; ?>
+						<?php if ( get_the_author_meta( 'twitter' ) ) : ?>
+							<li><?php the_author_meta( 'twitter' ); ?></li>
+						<?php endif; ?>
+						<?php if ( get_the_author_meta( 'facebook' ) ) : ?>
+							<li><?php the_author_meta( 'facebook' ); ?></li>
+						<?php endif; ?>
+						<?php if ( get_the_author_meta( 'gplus' ) ) : ?>
+							<li><?php the_author_meta( 'gplus' ); ?></li>
+						<?php endif; ?>
 					</ul>
 				</p><!-- author-bio -->
 			</header><!-- .page-header large-8 -->

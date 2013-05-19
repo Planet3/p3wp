@@ -3839,29 +3839,24 @@ a:hover {
   font-size: 1.2em;
 }
 
-/* line 108, scss/_content.scss */
-.author-avatar {
-  text-align: left;
-}
-
 /* =Content Styles
 -------------------------------------------------------------- */
-/* line 118, scss/_content.scss */
+/* line 119, scss/_content.scss */
 .content-area {
   padding: 2em 0em;
 }
 
-/* line 128, scss/_content.scss */
+/* line 129, scss/_content.scss */
 .entry-content {
   padding-bottom: 2em;
 }
 
-/* line 132, scss/_content.scss */
+/* line 133, scss/_content.scss */
 .entry-meta {
   padding: 0 0 0em 0;
 }
 
-/* line 138, scss/_content.scss */
+/* line 139, scss/_content.scss */
 iframe,
 object,
 embed {
