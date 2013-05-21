@@ -110,9 +110,17 @@ a:hover {
 }
 
 .author-bio {
+    line-height: 1.25em;
 }
 
 .social-links {
+    list-style: none;
+    line-height: 2.5em;
+    li {
+        padding-left: 0.5em;
+        border-top: 2px solid $secondary-color;
+    }
+    li:last-child { border-bottom: 2px solid $secondary-color;}
 }
 
 /* =Content Styles
@@ -129,7 +137,7 @@ a:hover {
 
 .meta-bellow {
     padding-top: 0.5em;
-    padding-bottom: 2em;
+    padding-bottom: 1em;
     border-top: 1px solid $secondary-color;
 }
 

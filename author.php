@@ -21,35 +21,31 @@ get_header(); ?>
 
 				<div class="row">
 
-					<div class="byline large-4 columns">
+					<div class="author-bio large-4 columns">
 
 						<div class="author-avatar hide-for-small">
 							<?php if ( validate_gravatar( get_the_author_meta( 'user_email' ) ) ) :
 								echo get_avatar( get_the_author_meta( 'user_email' ), 512, $default, get_the_author() ); 
 							endif; ?>
 						</div><!-- author-avatar hide-for-small-->
-
-						<header class="page-header">
-							<p class="author-bio"><?php the_author_meta('description'); ?>
-								<ul class="social-links inline-list">
-									<?php if ( get_the_author_meta( 'user_url' ) ) : ?>
-										<li><?php the_author_meta( 'user_url' ); ?></li>
-									<?php endif; ?>
-									<?php if ( get_the_author_meta( 'twitter' ) ) : ?>
-										<li><?php the_author_meta( 'twitter' ); ?></li>
-									<?php endif; ?>
-									<?php if ( get_the_author_meta( 'facebook' ) ) : ?>
-										<li><?php the_author_meta( 'facebook' ); ?></li>
-									<?php endif; ?>
-									<?php if ( get_the_author_meta( 'gplus' ) ) : ?>
-										<li><?php the_author_meta( 'gplus' ); ?></li>
-									<?php endif; ?>
-								</ul>
-							</p><!-- author-bio -->
-						</header><!-- .page-header -->
-
+						<div class="author-description">
+							<ul class="social-links">
+								<?php if ( get_the_author_meta( 'user_url' ) ) : ?>
+									<li><a href="<?php the_author_meta( 'user_url' ); ?>" rel="me" title="<?php the_author() ;?>'s HomePage"><?php the_author() ;?>'s HomePage</a></li>
+								<?php endif; ?>
+								<?php if ( get_the_author_meta( 'twitter' ) ) : ?>
+									<li><a href="<?php the_author_meta( 'twitter' ); ?>" rel="me" title="Twitter">Twitter</a></li>
+								<?php endif; ?>
+								<?php if ( get_the_author_meta( 'facebook' ) ) : ?>
+									<li><a href="<?php the_author_meta( 'facebook' ); ?>" rel="me" title="Facebook">Facebook</a></li>
+								<?php endif; ?>
+								<?php if ( get_the_author_meta( 'gplus' ) ) : ?>
+									<li><a href="<?php the_author_meta( 'gplus' ); ?>" rel="me" title="Google+">Google+</a></li>
+								<?php endif; ?>
+							</ul>
+							<p><?php the_author_meta('description'); ?></p><!-- author-bio -->
+						</div>
 					</div><!-- byline large-4 -->
-
 
 					<div class="large-8 columns">
 						<?php /* Start the Loop */ ?>
@@ -60,6 +56,7 @@ get_header(); ?>
 							 */
 							rewind_posts()
 						;?>
+						<h1 class="section-header">Recent Articles</h1>
 						<?php while ( have_posts() ) : the_post(); ?>
 
 							<?php
@@ -75,7 +72,6 @@ get_header(); ?>
 							<?php planet3_0_content_nav( 'nav-below' ); ?>
 
 					</div><!-- large-8 -->
-
 				</div><!-- row -->
 
 			<?php else : ?>
