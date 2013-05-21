@@ -34,12 +34,12 @@
 		<div class="large-10 columns">
 			<div class="entry-content">
 				<?php the_content(); ?>
-				<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'planet3_0' ), 'after' => '</div>' ) ); ?>
+				<?php wp_link_pages( array( 'before' => '<div class="page-links">' . 'Pages:', 'after' => '</div>' ) ); ?>
 			</div><!-- .entry-content -->
 			<div class="row">
 				<footer class="entry-meta meta-bellow large-12 columns" >
 					<?php planet3_0_posted_in(); ?>
-					<?php edit_post_link( __( 'Edit', 'planet3_0' ), '<span class="edit-link">', '</span>' ); ?>
+					<?php edit_post_link( 'Edit', '<span class="edit-link">', '</span>' ); ?>
 				</footer><!-- .entry-meta -->
 			</div><!-- .row -->
 		</div><!-- . large-9 columns -->

@@ -30,16 +30,16 @@
 		<?php if ( have_comments() ) : ?>
 			<h2 class="comments-title">
 				<?php
-					printf( _nx( 'One comment', '%1$s comments', get_comments_number(), 'comments title', 'planet3_0' ),
+					printf( 'One comment', '%1$s comments', get_comments_number(), 'comments title',
 						number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
 				?>
 			</h2>
 
 			<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 			<nav id="comment-nav-above" class="navigation-comment" role="navigation">
-				<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'planet3_0' ); ?></h1>
-				<div class="previous"><?php previous_comments_link( __( '&larr; Older Comments', 'planet3_0' ) ); ?></div>
-				<div class="next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'planet3_0' ) ); ?></div>
+				<h1 class="screen-reader-text">Comment navigation</h1>
+				<div class="previous"><?php previous_comments_link( '&larr; Older Comments' ); ?></div>
+				<div class="next"><?php next_comments_link( 'Newer Comments &rarr;' ); ?></div>
 			</nav><!-- #comment-nav-before -->
 			<?php endif; // check for comment navigation ?>
 
@@ -57,9 +57,9 @@
 
 			<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 			<nav id="comment-nav-below" class="navigation-comment" role="navigation">
-				<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'planet3_0' ); ?></h1>
-				<div class="previous"><?php previous_comments_link( __( '&larr; Older Comments', 'planet3_0' ) ); ?></div>
-				<div class="next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'planet3_0' ) ); ?></div>
+				<h1 class="screen-reader-text">Comment navigation</h1>
+				<div class="previous"><?php previous_comments_link( '&larr; Older Comments' ); ?></div>
+				<div class="next"><?php next_comments_link( 'Newer Comments &rarr;' ); ?></div>
 			</nav><!-- #comment-nav-below -->
 			<?php endif; // check for comment navigation ?>
 
@@ -69,7 +69,7 @@
 			// If comments are closed and there are comments, let's leave a little note, shall we?
 			if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 		?>
-			<p class="no-comments"><?php _e( 'Comments are closed.', 'planet3_0' ); ?></p>
+			<p class="no-comments">Comments are closed.</p>
 		<?php endif; ?>
 
 		<?php get_sidebar( 'comments' ); ?>

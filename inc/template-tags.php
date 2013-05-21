@@ -34,21 +34,21 @@ function planet3_0_content_nav( $nav_id ) {
 
 	?>
 	<nav role="navigation" id="<?php echo esc_attr( $nav_id ); ?>" class="<?php echo $nav_class; ?>">
-		<h1 class="assistive-text"><?php _e( 'Post navigation', 'planet3_0' ); ?></h1>
+		<h1 class="assistive-text">Post navigation</h1>
 
 	<?php if ( is_single() ) : // navigation links for single posts ?>
 
-		<?php previous_post_link( '<div class="previous">%link</div>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'planet3_0' ) . '</span> %title' ); ?>
-		<?php next_post_link( '<div class="next">%link</div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'planet3_0' ) . '</span>' ); ?>
+		<?php previous_post_link( '<div class="previous">%link</div>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link' ) . '</span> %title' ); ?>
+		<?php next_post_link( '<div class="next">%link</div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link' ) . '</span>' ); ?>
 
 	<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 
 		<?php if ( get_next_posts_link() ) : ?>
-		<div class="previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'planet3_0' ) ); ?></div>
+		<div class="previous"><?php next_posts_link( '<span class="meta-nav">&larr;</span> Older posts' ); ?></div>
 		<?php endif; ?>
 
 		<?php if ( get_previous_posts_link() ) : ?>
-		<div class="next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'planet3_0' ) ); ?></div>
+		<div class="next"><?php previous_posts_link( 'Newer posts <span class="meta-nav">&rarr;</span>' ); ?></div>
 		<?php endif; ?>
 
 	<?php endif; ?>
@@ -73,7 +73,7 @@ function planet3_0_comment( $comment, $args, $depth ) {
 		case 'trackback' :
 	?>
 	<li class="post pingback">
-		<p><?php _e( 'Pingback:', 'planet3_0' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( 'Edit', 'planet3_0' ), '<span class="edit-link">', '<span>' ); ?></p>
+		<p>Pingback: <?php comment_author_link(); ?><?php edit_comment_link( 'Edit', '<span class="edit-link">', '<span>' ); ?></p>
 	<?php
 			break;
 		default :
@@ -83,18 +83,18 @@ function planet3_0_comment( $comment, $args, $depth ) {
 			<footer>
 				<div class="comment-author vcard">
 					<?php echo get_avatar( $comment, 40 ); ?>
-					<?php printf( __( '%s <span class="says">says:</span>', 'planet3_0' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
+					<?php printf( '%s <span class="says">says:</span>', sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
 				</div><!-- .comment-author .vcard -->
 				<?php if ( $comment->comment_approved == '0' ) : ?>
-					<em><?php _e( 'Your comment is awaiting moderation.', 'planet3_0' ); ?></em>
+					<em>Your comment is awaiting moderation.</em>
 					<br />
 				<?php endif; ?>
 
 				<div class="comment-meta commentmetadata">
 					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><time datetime="<?php comment_time( 'c' ); ?>">
-					<?php printf( _x( '%1$s at %2$s', '1: date, 2: time', 'planet3_0' ), get_comment_date(), get_comment_time() ); ?>
+					<?php printf( _x( '%1$s at %2$s', '1: date, 2: time' ), get_comment_date(), get_comment_time() ); ?>
 					</time></a>
-					<?php edit_comment_link( __( 'Edit', 'planet3_0' ), '<span class="edit-link">', '<span>' ); ?>
+					<?php edit_comment_link( '| Edit', '<span class="edit-link">', '<span>' ); ?>
 				</div><!-- .comment-meta .commentmetadata -->
 			</footer>
 
@@ -118,7 +118,7 @@ if ( ! function_exists( 'planet3_0_posted_on' ) ) :
  * @since Planet3.0 3.0
  */
 function planet3_0_posted_on() {
-	printf( __( '<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s">%4$s</time></a>', 'planet3_0' ),
+	printf( '<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s">%4$s</time></a>',
 		esc_url( get_permalink() ),
 		esc_attr( get_the_time() ),
 		esc_attr( get_the_date( 'c' ) ),
@@ -134,9 +134,9 @@ if ( ! function_exists( 'planet3_0_posted_by' ) ) :
  * @since Planet3.0 3.0
  */
 function planet3_0_posted_by() {
-	printf( __( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>', 'planet3_0' ),
+	printf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>',
 		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-		esc_attr( sprintf( __( 'View all articles by %s', 'planet3_0' ), get_the_author() ) ),
+		esc_attr( sprintf( 'View all articles by %s', get_the_author() ) ),
 		get_the_author()
 	);
 }
@@ -151,24 +151,24 @@ if ( ! function_exists( 'planet3_0_posted_in' ) ) :
 function planet3_0_posted_in() {
 
 	/* translators: used between list items, there is a space after the comma */
-	$category_list = get_the_category_list( __( ', ', 'planet3_0' ) );
+	$category_list = get_the_category_list( ', ' );
 
 	/* translators: used between list items, there is a space after the comma */
-	$tag_list = get_the_tag_list( '', __( ', ', 'planet3_0' ) );
+	$tag_list = get_the_tag_list( '', ', ' );
 
 	if ( ! planet3_0_categorized_blog() ) {
 		// This blog only has 1 category so we just need to worry about tags in the meta text
 		if ( '' != $tag_list ) {
-			$meta_text = __( 'This article was tagged %2$s.', 'planet3_0' );
+			$meta_text = 'This article was tagged %2$s.';
 		} else {
 		}
 
 	} else {
 		// But this blog has loads of categories so we should probably display them here
 		if ( '' != $tag_list ) {
-			$meta_text = __( 'This article was posted in %1$s and tagged %2$s.', 'planet3_0' );
+			$meta_text = 'This article was posted in %1$s and tagged %2$s.';
 		} else {
-			$meta_text = __( 'This article was posted in %1$s.', 'planet3_0' );
+			$meta_text = 'This article was posted in %1$s.';
 		}
 
 	} // end check for categories on this blog

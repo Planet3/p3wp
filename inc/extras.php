@@ -72,7 +72,7 @@ function planet3_0_wp_title( $title, $sep ) {
 
 	// Add a page number if necessary:
 	if ( $paged >= 2 || $page >= 2 )
-		$title .= " $sep " . sprintf( __( 'Page %s', 'planet3_0' ), max( $paged, $page ) );
+		$title .= " $sep " . sprintf( 'Page %s', max( $paged, $page ) );
 
 	return $title;
 }

@@ -22,7 +22,7 @@ get_header(); ?>
 							printf( '<span>' . single_cat_title( '', false ) . '</span>' );
 
 						} elseif ( is_tag() ) {
-							printf( __( 'Tag Archives: %s', 'planet3_0' ), '<span>' . single_tag_title( '', false ) . '</span>' );
+							printf( 'Tag Archives: %s', '<span>' . single_tag_title( '', false ) . '</span>' );
 
 						} elseif ( is_author() ) {
 							/* Queue the first post, that way we know
@@ -37,16 +37,16 @@ get_header(); ?>
 							rewind_posts();
 
 						} elseif ( is_day() ) {
-							printf( __( 'Daily Archives: %s', 'planet3_0' ), '<span>' . get_the_date() . '</span>' );
+							printf( 'Daily Archives: %s', '<span>' . get_the_date() . '</span>' );
 
 						} elseif ( is_month() ) {
-							printf( __( 'Monthly Archives: %s', 'planet3_0' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
+							printf( 'Monthly Archives: %s', '<span>' . get_the_date( 'F Y' ) . '</span>' );
 
 						} elseif ( is_year() ) {
-							printf( __( 'Yearly Archives: %s', 'planet3_0' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
+							printf( 'Yearly Archives: %s', '<span>' . get_the_date( 'Y' ) . '</span>' );
 
 						} else {
-							_e( 'Archives', 'planet3_0' );
+							echo 'Archives' ;
 
 						}
 					?>

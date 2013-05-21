@@ -47,14 +47,6 @@ function planet3_0_setup() {
 	require( get_template_directory() . '/inc/customizer.php' );
 
 	/**
-	 * Make theme available for translation
-	 * Translations can be filed in the /languages/ directory
-	 * If you're building a theme based on Planet3.0, use a find and replace
-	 * to change 'planet3_0' to the name of your theme in all the template files
-	 */
-	load_theme_textdomain( 'planet3_0', get_template_directory() . '/languages' );
-
-	/**
 	 * Add default posts and comments RSS feed links to head
 	 */
 	add_theme_support( 'automatic-feed-links' );
@@ -141,7 +133,7 @@ add_action( 'after_setup_theme', 'planet3_0_setup' );
  */
 function planet3_0_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Footer Widget Area', 'planet3_0' ),
+		'name'          => 'Footer Widget Area',
 		'id'            => 'footer-widgets',
 		'before_widget' => '<li id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</li>',
@@ -150,7 +142,7 @@ function planet3_0_widgets_init() {
 	) );
 
 		register_sidebar( array(
-		'name'          => __( 'Comment Widget Area', 'planet3_0' ),
+		'name'          => 'Comment Widget Area',
 		'id'            => 'comments-widgets',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s, comment-widget">',
 		'after_widget'  => '</aside>',
