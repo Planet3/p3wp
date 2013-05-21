@@ -15,10 +15,10 @@
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-	<?php if ( is_admin_bar_showing() ) {?>
+	<!--<?php if ( is_admin_bar_showing() ) {?>
 		<style>
 			.top-bar-container { top: 28px !important; }
-		</style>
+		</style>-->
 	<?php }?>
 	<?php wp_head(); ?>
 </head>
