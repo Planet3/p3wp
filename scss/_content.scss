@@ -95,7 +95,7 @@ a:hover {
     margin-bottom: 0;
 }
 
-/* =Byline Styles
+/* =Author Styles
 -------------------------------------------------------------- */
 
 .byline {
@@ -113,16 +113,22 @@ a:hover {
     line-height: 1.25em;
 }
 
-.social-links {
-    list-style: none;
-    line-height: 2.5em;
-    li {
-        padding-left: 0.5em;
-        border-top: 2px solid $secondary-color;
-    }
-    li:last-child { border-bottom: 2px solid $secondary-color;}
+.social-links { //mobile first makes the list of social links inline
+    @include inline-list;
 }
 
+@media #{$small} { // on larger screans we no longer display the list as inline
+    .social-links {
+        list-style: none;
+        line-height: 2.5em;
+        li {
+            float: none;
+            padding-left: 0.5em;
+            border-top: 1px solid $secondary-color;
+        }
+        li:last-child { border-bottom: 1px solid $secondary-color;}
+    }
+}
 /* =Content Styles
 -------------------------------------------------------------- */
 .content-area {

@@ -2486,6 +2486,28 @@ th.hide-for-touch {
   display: table-cell !important;
 }
 
+/* Inline Lists */
+/* line 49, scss/_inline-lists.scss */
+.inline-list {
+  margin: 0 auto 1.0625em auto;
+  margin-left: -1.375em;
+  margin-right: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+/* line 36, scss/_inline-lists.scss */
+.inline-list > li {
+  list-style: none;
+  float: left;
+  margin-left: 1.375em;
+  display: block;
+}
+/* line 41, scss/_inline-lists.scss */
+.inline-list > li > * {
+  display: block;
+}
+
 /* line 168, scss/_buttons.scss */
 button, .button {
   border-style: solid;
@@ -3806,7 +3828,7 @@ a:hover {
   margin-bottom: 0;
 }
 
-/* =Byline Styles
+/* =Author Styles
 -------------------------------------------------------------- */
 /* line 101, scss/_content.scss */
 .byline {
@@ -3829,39 +3851,62 @@ a:hover {
 
 /* line 116, scss/_content.scss */
 .social-links {
+  margin: 0 auto 1.0625em auto;
+  margin-left: -1.375em;
+  margin-right: 0;
+  padding: 0;
   list-style: none;
-  line-height: 2.5em;
+  overflow: hidden;
 }
-/* line 119, scss/_content.scss */
-.social-links li {
-  padding-left: 0.5em;
-  border-top: 2px solid #e9e9e9;
+/* line 36, scss/_inline-lists.scss */
+.social-links > li {
+  list-style: none;
+  float: left;
+  margin-left: 1.375em;
+  display: block;
 }
-/* line 123, scss/_content.scss */
-.social-links li:last-child {
-  border-bottom: 2px solid #e9e9e9;
+/* line 41, scss/_inline-lists.scss */
+.social-links > li > * {
+  display: block;
 }
 
+@media only screen and (min-width: 48em) {
+  /* line 121, scss/_content.scss */
+  .social-links {
+    list-style: none;
+    line-height: 2.5em;
+  }
+  /* line 124, scss/_content.scss */
+  .social-links li {
+    float: none;
+    padding-left: 0.5em;
+    border-top: 1px solid #e9e9e9;
+  }
+  /* line 129, scss/_content.scss */
+  .social-links li:last-child {
+    border-bottom: 1px solid #e9e9e9;
+  }
+}
 /* =Content Styles
 -------------------------------------------------------------- */
-/* line 128, scss/_content.scss */
+/* line 134, scss/_content.scss */
 .content-area {
   padding: 2em 0em;
 }
 
-/* line 138, scss/_content.scss */
+/* line 144, scss/_content.scss */
 .meta-bellow {
   padding-top: 0.5em;
   padding-bottom: 1em;
   border-top: 1px solid #e9e9e9;
 }
 
-/* line 144, scss/_content.scss */
+/* line 150, scss/_content.scss */
 .entry-content {
   padding-bottom: 2em;
 }
 
-/* line 153, scss/_content.scss */
+/* line 159, scss/_content.scss */
 iframe,
 object,
 embed {
