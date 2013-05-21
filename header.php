@@ -50,20 +50,12 @@
 
 	<header id="masthead" class="row" role="banner">
 		<div class="page-header large-9 columns">
-			<?php  // if this is not a single post/page site title and description
-				if ( !is_single() && !is_page() or is_attachment() ) { ?>
 
-					<div class="site-masthead">
-						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?> <small class="hide-for-small"><span class="site-description"><?php bloginfo( 'description' ); ?></span></small></a></h1>
-						<div class="hide-for-small"><p>ENGAGE THE FUTURE: Honest, wide-ranging, scientifically informed conversation about sustainable technologies and cultures, toward a thriving future</p></div>
-					</div>
+			<div class="site-masthead">
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?> <small class="hide-for-small"><span class="site-description"><?php bloginfo( 'description' ); ?></span></small></a></h1>
+				<div class="hide-for-small"><p>ENGAGE THE FUTURE: Honest, wide-ranging, scientifically informed conversation about sustainable technologies and cultures, toward a thriving future</p></div>
+			</div><!-- .site-masthead -->
 
-				<?php } // else display post/page title
-				else { ?>
-
-					<h1 class="entry-title"><?php the_title(); ?></h1>
-
-			<?php } // endif ?>
 		</div><!-- .page-header -->
 		<div class="header-logo large-3 columns hide-for-small" itemscope itemtype="http://schema.org/Organization">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri(); ?>/logo.png" width="125" alt="Logo" itemprop="logo"></a>
