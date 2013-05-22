@@ -2,6 +2,8 @@
 Forked from the _s theme with the added goodness of Foundation
 
 ##List of things
+* style TML login form in footer
+* Nav bar admin links
 * Develop full font stack
 * Finalize thumbnail size
 * Minimize js files

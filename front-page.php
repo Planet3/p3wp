@@ -19,7 +19,7 @@ get_header(); ?>
 			$lede_query = new WP_Query( $args );
 			if ( $lede_query -> have_posts() ) : ?>
 					<div id="lede" class="large-8 columns">
-						<header class="section-header hide-for-small">
+						<header class="section-header">
 							<h1><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?></h1>
 							<?php echo category_description( $args['category__in'] ); ?>
 						</header><!-- section-header -->

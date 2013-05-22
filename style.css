@@ -3894,19 +3894,24 @@ a:hover {
   padding: 2em 0em;
 }
 
-/* line 144, scss/_content.scss */
+/* line 141, scss/_content.scss */
+.meta-above {
+  font-weight: bold;
+}
+
+/* line 145, scss/_content.scss */
 .meta-bellow {
   padding-top: 0.5em;
   padding-bottom: 1em;
   border-top: 1px solid #e9e9e9;
 }
 
-/* line 150, scss/_content.scss */
+/* line 151, scss/_content.scss */
 .entry-content {
   padding-bottom: 2em;
 }
 
-/* line 159, scss/_content.scss */
+/* line 160, scss/_content.scss */
 iframe,
 object,
 embed {
