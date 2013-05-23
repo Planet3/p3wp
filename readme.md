@@ -9,14 +9,22 @@ Forked from the _s theme with the added goodness of Foundation
 * Minimize js files
 * Minimize CSS
 
+## MT's things
+* Past featured images are too big.
+* Recent Posts by category in footer, exclude bleg and quote
+* quote of the week (only quote, no other meta including title)
+* bleg background 
+* Open thread bellow blehg
+* add Linked in social link
+
 ###List of less important things
 * Contributors page
+* Infinite scrolling recent posts feed
 * Allow admins to overwrite author meta and avatar
 * pullquote
 * https://www.subtome.com/
 * Best of Category page
 * Code clean up code
-    * removing legacy support for `planet3_0_register_custom_background()`
 * Investigate how to implement post formats
 
 ## Things to do on the live server before applying theme

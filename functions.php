@@ -52,6 +52,11 @@ function planet3_0_setup() {
 	add_theme_support( 'automatic-feed-links' );
 
 	/**
+	 * Add support for custok backgrounds
+	 */
+	add_theme_support( 'custom-background' );
+
+	/**
 	 * Enable support for Post Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
@@ -192,7 +197,7 @@ function planet3_0_thumbnail_link ( $html, $post_id, $post_image_id ) {
  */
 function planet3_0_scripts() {
 
-	wp_enqueue_style('googleFonts', 'http://fonts.googleapis.com/css?family=Roboto:400,700,400italic|Roboto+Slab:400,700|Lato:300,400,700,900,400italic');
+	wp_enqueue_style('googleFonts', 'http://fonts.googleapis.com/css?family=Vollkorn:400|Droid+Serif:400,700,400italic');
 
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 

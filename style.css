@@ -445,7 +445,7 @@ body {
   color: #222222;
   padding: 0;
   margin: 0;
-  font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Droid Serif", "Times New Roman", Serif;
   font-weight: normal;
   font-style: normal;
   line-height: 1;
@@ -620,8 +620,8 @@ p aside {
 /* Default header styles */
 /* line 178, scss/_type.scss */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-weight: bold;
+  font-family: "Vollkorn", "Times New Roman", Serif;
+  font-weight: normal;
   font-style: normal;
   color: #333332;
   text-rendering: optimizeLegibility;
@@ -3753,76 +3753,81 @@ a:hover {
   text-align: center;
 }
 
+/* line 21, scss/_content.scss */
+.site-title {
+  font-size: 3em;
+}
+
 /* =Front Page Styles
 -------------------------------------------------------------- */
-/* line 30, scss/_content.scss */
+/* line 31, scss/_content.scss */
 .top-area {
   border-bottom: 2px solid #a90000;
   margin-bottom: 1em;
   padding-bottom: 1em;
 }
 
-/* line 36, scss/_content.scss */
+/* line 37, scss/_content.scss */
 #lede {
   border-right: 2px solid #e9e9e9;
 }
-/* line 38, scss/_content.scss */
+/* line 39, scss/_content.scss */
 #lede h1 {
-  font-size: 1.5em;
+  font-size: 1.8em;
   line-height: 1em;
 }
 
-/* line 49, scss/_content.scss */
+/* line 50, scss/_content.scss */
 #bleg blockquote,
 #quote blockquote {
   border-left: 0;
   padding-left: 0;
 }
-/* line 53, scss/_content.scss */
+/* line 54, scss/_content.scss */
 #bleg h1, #bleg h2,
 #quote h1,
 #quote h2 {
-  font-size: 1.25em;
+  font-size: 1.5em;
   line-height: 1em;
 }
 
-/* line 59, scss/_content.scss */
+/* line 60, scss/_content.scss */
 #featured {
   margin: 1.5em 0 1em;
   padding-top: 1em;
 }
-/* line 63, scss/_content.scss */
+/* line 64, scss/_content.scss */
 #featured .section-header {
   text-align: left;
 }
 
-/* line 67, scss/_content.scss */
+/* line 68, scss/_content.scss */
 .entry-thumbnail {
   padding-bottom: 1em;
 }
 
-/* line 71, scss/_content.scss */
+/* line 72, scss/_content.scss */
 .posts-area {
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
-/* line 73, scss/_content.scss */
+/* line 74, scss/_content.scss */
 .posts-area h1, .posts-area h2 {
-  font-size: 1.3em;
+  font-size: 1.5em;
 }
 
-/* line 79, scss/_content.scss */
+/* line 80, scss/_content.scss */
 .section-header {
   padding: 0.2em 1em;
   margin-bottom: 1em;
   background-color: #e9e9e9;
   text-align: right;
 }
-/* line 84, scss/_content.scss */
+/* line 85, scss/_content.scss */
 .section-header p {
   text-align: left;
 }
 
-/* line 93, scss/_content.scss */
+/* line 94, scss/_content.scss */
 .archive-button {
   text-align: right;
   margin-bottom: 0;
@@ -3830,26 +3835,26 @@ a:hover {
 
 /* =Author Styles
 -------------------------------------------------------------- */
-/* line 101, scss/_content.scss */
+/* line 102, scss/_content.scss */
 .byline {
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
-/* line 103, scss/_content.scss */
+/* line 104, scss/_content.scss */
 .byline h1 {
   font-size: 1.2em;
 }
 
-/* line 108, scss/_content.scss */
+/* line 109, scss/_content.scss */
 .author-avatar {
   padding: 1em 0;
 }
 
-/* line 112, scss/_content.scss */
+/* line 113, scss/_content.scss */
 .author-bio {
   line-height: 1.25em;
 }
 
-/* line 116, scss/_content.scss */
+/* line 117, scss/_content.scss */
 .social-links {
   margin: 0 auto 1.0625em auto;
   margin-left: -1.375em;
@@ -3871,47 +3876,47 @@ a:hover {
 }
 
 @media only screen and (min-width: 48em) {
-  /* line 121, scss/_content.scss */
+  /* line 122, scss/_content.scss */
   .social-links {
     list-style: none;
     line-height: 2.5em;
   }
-  /* line 124, scss/_content.scss */
+  /* line 125, scss/_content.scss */
   .social-links li {
     float: none;
     padding-left: 0.5em;
     border-top: 1px solid #e9e9e9;
   }
-  /* line 129, scss/_content.scss */
+  /* line 130, scss/_content.scss */
   .social-links li:last-child {
     border-bottom: 1px solid #e9e9e9;
   }
 }
 /* =Content Styles
 -------------------------------------------------------------- */
-/* line 134, scss/_content.scss */
+/* line 135, scss/_content.scss */
 .content-area {
   padding: 2em 0em;
 }
 
-/* line 141, scss/_content.scss */
+/* line 142, scss/_content.scss */
 .meta-above {
   font-weight: bold;
 }
 
-/* line 145, scss/_content.scss */
+/* line 146, scss/_content.scss */
 .meta-bellow {
   padding-top: 0.5em;
   padding-bottom: 1em;
   border-top: 1px solid #e9e9e9;
 }
 
-/* line 151, scss/_content.scss */
+/* line 152, scss/_content.scss */
 .entry-content {
   padding-bottom: 2em;
 }
 
-/* line 160, scss/_content.scss */
+/* line 161, scss/_content.scss */
 iframe,
 object,
 embed {
