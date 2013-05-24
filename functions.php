@@ -191,6 +191,52 @@ function planet3_0_thumbnail_link ( $html, $post_id, $post_image_id ) {
 	return $html;
 }
 
+/**
+ * required scripts and functions for the planet3.0 lightbox login form.
+ * 
+ * @since Planet3.0 3.0
+ */
+function planet3_0_login_init(){
+
+	wp_register_script('ajax-login-script', get_template_directory_uri() . '/js/login-script.js', array('jquery') ); 
+	wp_enqueue_script('ajax-login-script');
+
+	wp_localize_script( 'ajax-login-script', 'ajax_login_object', array( 
+		'ajaxurl' => admin_url( 'admin-ajax.php' ),
+		'redirecturl' => home_url(),
+		'loadingmessage' => __('Sending user info, please wait...')
+	));
+
+	// Enable the user with no privileges to run ajax_login() in AJAX
+	add_action( 'wp_ajax_nopriv_ajaxlogin', 'ajax_login' );
+}
+
+// Execute the action only if the user isn't logged in
+if (!is_user_logged_in()) {
+	add_action('init', 'planet3_0_login_init');
+}
+
+function planet_3_0_login(){
+
+	// First check the nonce, if it fails the function will break
+	check_ajax_referer( 'planet3_0_login_nonce', 'security' );
+
+	// Nonce is checked, get the POST data and sign user on
+	$info = array();
+	$info['user_login'] = $_POST['username'];
+	$info['user_password'] = $_POST['password'];
+	$info['remember'] = true;
+
+	$user_signon = wp_signon( $info, false );
+	if ( is_wp_error($user_signon) ){
+		echo json_encode(array('loggedin'=>false, 'message'=>__('Wrong username or password.')));
+	} else {
+		echo json_encode(array('loggedin'=>true, 'message'=>__('Login successful, redirecting...')));
+	}
+
+	die();
+}
+
 
 /**
  * Enqueue scripts and styles
@@ -263,6 +309,6 @@ if (!current_user_can('edit_others_posts')) {
 	filter for the Never Moderate Registered Users plugin */
 add_filter( 'c2c_never_moderate_registered_users_caps', 'dont_moderate_contributors' );
 function dont_moderate_contributors( $caps ) {
-    $caps[] = 'contributor';
-    return $caps;
+	$caps[] = 'contributor';
+	return $caps;
 }
