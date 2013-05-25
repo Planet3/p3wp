@@ -25,7 +25,7 @@
 
 <body <?php body_class(); ?>>
 	<form id="login" action="login" method="post">
-		<h1>Planet3.0 Login</h1>
+		<h1>Site Login</h1>
 		<p class="status"></p>
 		<label for="username">Username</label>
 		<input id="username" type="text" name="username">
@@ -34,7 +34,7 @@
 		<a class="lost" href="<?php echo wp_lostpassword_url(); ?>">Lost your password?</a>
 		<input class="submit_button" type="submit" value="Login" name="submit">
 		<a class="close" href="">(close)</a>
-		<?php wp_nonce_field( 'planet3_0_login_nonce', 'security' ); ?>
+		<?php wp_nonce_field( 'ajax-login-nonce', 'security' ); ?>
 	</form>
 
 
@@ -80,7 +80,7 @@
 	<div id="main" class="site-main">
 
 <?php if (is_user_logged_in()) { ?>
-    <a class="login_button" href="<?php echo wp_logout_url( home_url() ); ?>">Logout</a>
+	<a class="login_button" href="<?php echo wp_logout_url( home_url() ); ?>">Logout</a>
 <?php } else { ?>
-    <a class="login_button" id="show_login" href="">Login</a>
+	<a class="login_button" id="show_login" href="">Login</a>
 <?php } ?>
