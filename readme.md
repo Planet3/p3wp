@@ -2,20 +2,17 @@
 Forked from the _s theme with the added goodness of Foundation
 
 ##List of things
-* style TML login form in footer
-* Nav bar admin links
-* Develop full font stack
 * Finalize thumbnail size
 * Minimize js files
 * Minimize CSS
 
 ## MT's things
+* Change order of profile page fields
 * Past featured images are too big.
 * Recent Posts by category in footer, exclude bleg and quote
 * quote of the week (only quote, no other meta including title)
 * bleg background 
 * Open thread bellow blehg
-* add Linked in social link
 
 ###List of less important things
 * Contributors page
