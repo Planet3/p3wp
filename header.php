@@ -58,13 +58,20 @@
 				<section class="top-bar-section">
 					<?php foundation_top_bar(); ?>
 					<ul class="right">
-						<li>
-							<?php if (is_user_logged_in()) { ?>
-								<a class="login_button" href="<?php echo wp_logout_url( home_url() ); ?>">Logout</a>
-							<?php } else { ?>
-								<a class="login_button" id="show_login" href="">Login</a>
-							<?php } ?>
-						</li>
+						<li class="divider"></li>
+						<?php if (is_user_logged_in()) { ?>
+							<li class="has-dropdown"><a href="#">P3 Account</a>
+								<ul class="dropdown">
+									<?php if ( current_user_can( 'edit_posts' ) ) : ?><li><a href="<?php echo admin_url( 'post-new.php' ); ?>">Write an artile</a></li><?php endif ?>
+									<li><a href="<?php echo admin_url( 'profile.php' ); ?>">Edit Profile</a></li>
+									<li><a href="https://en.gravatar.com/emails/">Edit Avatar</a></li>
+									<li class="has-form"><a class="login_button button" href="<?php echo wp_logout_url( home_url() ); ?>">Logout</a></li>
+								</ul>
+							</li>
+						<?php } else { ?>
+							<li><a class="login_button" id="show_login" href="">Login</a></li>
+						<?php } ?>
+						<li class="divider"></li>
 						<li class="has-form">
 							<form method="get" id="searchform" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
 								<input type="search" class="field" name="s" value="<?php echo esc_attr( get_search_query() ); ?>" id="s" placeholder="<?php echo esc_attr_x( 'Search &hellip;', 'placeholder' ); ?>" />
