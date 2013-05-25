@@ -31,3 +31,4 @@ Forked from the _s theme with the added goodness of Foundation
 * Create Nav bar
 * WordPress Access Control overides the custom menu walker needed for the responsive nav menu. If we want to keep this functionality we need to find a replacement
 * Disable About the Author Advanced
+* Go through every plugin and make sure that it is still needed
