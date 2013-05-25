@@ -4036,33 +4036,37 @@ form#login {
   background-color: #FFFFFF;
   position: fixed;
   top: 3.125em;
-  padding: 1.5625em;
-  width: emcalc(320px);
+  padding: 0.9375em 1.25em 1.5625em;
+  width: 100%;
   z-index: 999;
-  left: 50%;
-  margin-left: -110px;
+}
+/* line 9, scss/_login.scss */
+form#login .close {
+  float: right;
+}
+/* line 12, scss/_login.scss */
+form#login h1 {
+  clear: both;
+}
+/* line 15, scss/_login.scss */
+form#login .submit_button {
+  float: right;
 }
 
 @media only screen and (min-width: 48em) {
-  /* line 14, scss/_login.scss */
+  /* line 21, scss/_login.scss */
   form#login {
-    display: none;
-    background-color: #FFFFFF;
-    position: fixed;
-    top: 3.125em;
-    padding: 1.5625em;
-    width: emcalc(380px);
-    z-index: 999;
+    width: 21.875em;
     left: 50%;
-    margin-left: -190px;
+    margin-left: -175px;
   }
 }
-/* line 27, scss/_login.scss */
+/* line 28, scss/_login.scss */
 form#login p.status {
   display: none;
 }
 
-/* line 31, scss/_login.scss */
+/* line 32, scss/_login.scss */
 .login_overlay {
   height: 100%;
   width: 100%;

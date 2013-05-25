@@ -3,24 +3,25 @@
         background-color: #FFFFFF;
         position: fixed;
         top: emCalc(50px);
-        padding: emCalc(25px);
-        width: emcalc(320px);
+        padding: emCalc(15px) emCalc(20px) emCalc(25px);
+        width: 100%;
         z-index: 999;
-        left: 50%;
-        margin-left: -110px;
+        .close {
+            float: right;
+        }
+        h1 {
+            clear: both;
+        }
+        .submit_button {
+            float: right;
+        }
 }
 
 @media #{$small} {
     form#login{
-        display: none;
-        background-color: #FFFFFF;
-        position: fixed;
-        top: emCalc(50px);
-        padding: emCalc(25px);
-        width: emcalc(380px);
-        z-index: 999;
+        width: emCalc(350px);
         left: 50%;
-        margin-left: -190px;
+        margin-left: -175px;
     }
 }
 
