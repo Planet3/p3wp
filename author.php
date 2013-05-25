@@ -42,8 +42,16 @@ get_header(); ?>
 								<?php if ( get_the_author_meta( 'gplus' ) ) : ?>
 									<li><a href="<?php the_author_meta( 'gplus' ); ?>" rel="me" title="Google+">Google+</a></li>
 								<?php endif; ?>
+								<?php if ( get_the_author_meta( 'linkedin' ) ) : ?>
+									<li><a href="<?php the_author_meta( 'linkedin' ); ?>" rel="me" title="Google+">LinkedIn</a></li>
+								<?php endif; ?>
+								<?php if ( get_the_author_meta( 'reddit' ) ) : ?>
+									<li><a href="<?php the_author_meta( 'reddit' ); ?>" rel="me" title="Reddit">Reddit</a></li>
+								<?php endif; ?>
 							</ul>
-							<p><?php the_author_meta('description'); ?></p><!-- author-bio -->
+							<?php if ( get_the_author_meta( 'description' ) ) : ?>
+								<p><?php the_author_meta('description'); ?></p><!-- author-bio -->
+							<?php endif; ?>
 						</div>
 					</div><!-- byline large-4 -->
 

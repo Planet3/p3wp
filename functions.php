@@ -293,6 +293,10 @@ function planet3_0_custom_contact_information($contactmethods) {
 	$contactmethods['facebook'] = 'Facebook';
 	if ( !isset( $contactmethods['gplus'] ) ) 
 	$contactmethods['gplus'] = 'Google+'; 
+	if ( !isset( $contactmethods['linkedin'] ) ) 
+	$contactmethods['linkedin'] = 'LinkedIn'; 
+	if ( !isset( $contactmethods['reddit'] ) ) 
+	$contactmethods['reddit'] = 'Reddit'; 
 
 return $contactmethods;
 }
