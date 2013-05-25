@@ -24,8 +24,13 @@
 </head>
 
 <body <?php body_class(); ?>>
+	<?php if (is_user_logged_in()) { ?>
 	<form id="login" action="login" method="post">
-		<h1>Site Login</h1>
+		<a class="login_button" href="<?php echo wp_logout_url( home_url() ); ?>">Logout</a>
+	</form>
+	<?php } else { ?>
+	<form id="login" action="login" method="post">
+		<h1>Planet3.0 Login</h1>
 		<p class="status"></p>
 		<label for="username">Username</label>
 		<input id="username" type="text" name="username">
@@ -36,6 +41,7 @@
 		<a class="close" href="">(close)</a>
 		<?php wp_nonce_field( 'ajax-login-nonce', 'security' ); ?>
 	</form>
+	<?php } ?>
 
 
 <div id="page" class="hfeed site">
@@ -52,6 +58,13 @@
 				<section class="top-bar-section">
 					<?php foundation_top_bar(); ?>
 					<ul class="right">
+						<li>
+							<?php if (is_user_logged_in()) { ?>
+								<a class="login_button" href="<?php echo wp_logout_url( home_url() ); ?>">Logout</a>
+							<?php } else { ?>
+								<a class="login_button" id="show_login" href="">Login</a>
+							<?php } ?>
+						</li>
 						<li class="has-form">
 							<form method="get" id="searchform" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
 								<input type="search" class="field" name="s" value="<?php echo esc_attr( get_search_query() ); ?>" id="s" placeholder="<?php echo esc_attr_x( 'Search &hellip;', 'placeholder' ); ?>" />
@@ -79,8 +92,3 @@
 
 	<div id="main" class="site-main">
 
-<?php if (is_user_logged_in()) { ?>
-	<a class="login_button" href="<?php echo wp_logout_url( home_url() ); ?>">Logout</a>
-<?php } else { ?>
-	<a class="login_button" id="show_login" href="">Login</a>
-<?php } ?>

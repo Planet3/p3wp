@@ -203,8 +203,8 @@ function planet3_0_login_init(){
 
 	wp_localize_script( 'ajax-login-script', 'ajax_login_object', array( 
 		'ajaxurl' => admin_url( 'admin-ajax.php' ),
-		'redirecturl' => $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"],
-		'loadingmessage' => __('Sending user info, please wait...')
+		'redirecturl' => 'http://' . $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"],
+		'loadingmessage' => __('Loggin in, please wait...')
 	));
 
 	// Enable the user with no privileges to run ajax_login() in AJAX

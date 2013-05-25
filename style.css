@@ -4035,20 +4035,34 @@ form#login {
   display: none;
   background-color: #FFFFFF;
   position: fixed;
-  top: 200px;
-  padding: 40px 25px 25px 25px;
-  width: 350px;
+  top: 3.125em;
+  padding: 1.5625em;
+  width: emcalc(320px);
   z-index: 999;
   left: 50%;
-  margin-left: -200px;
+  margin-left: -110px;
 }
 
-/* line 13, scss/_login.scss */
+@media only screen and (min-width: 48em) {
+  /* line 14, scss/_login.scss */
+  form#login {
+    display: none;
+    background-color: #FFFFFF;
+    position: fixed;
+    top: 3.125em;
+    padding: 1.5625em;
+    width: emcalc(380px);
+    z-index: 999;
+    left: 50%;
+    margin-left: -190px;
+  }
+}
+/* line 27, scss/_login.scss */
 form#login p.status {
   display: none;
 }
 
-/* line 17, scss/_login.scss */
+/* line 31, scss/_login.scss */
 .login_overlay {
   height: 100%;
   width: 100%;

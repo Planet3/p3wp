@@ -1,13 +1,27 @@
-form#login{
-    display: none;
-    background-color: #FFFFFF;
-    position: fixed;
-    top: 200px;
-    padding: 40px 25px 25px 25px;
-    width: 350px;
-    z-index: 999;
-    left: 50%;
-    margin-left: -200px;
+    form#login{
+        display: none;
+        background-color: #FFFFFF;
+        position: fixed;
+        top: emCalc(50px);
+        padding: emCalc(25px);
+        width: emcalc(320px);
+        z-index: 999;
+        left: 50%;
+        margin-left: -110px;
+}
+
+@media #{$small} {
+    form#login{
+        display: none;
+        background-color: #FFFFFF;
+        position: fixed;
+        top: emCalc(50px);
+        padding: emCalc(25px);
+        width: emcalc(380px);
+        z-index: 999;
+        left: 50%;
+        margin-left: -190px;
+    }
 }
 
 form#login p.status{
