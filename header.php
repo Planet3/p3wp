@@ -64,7 +64,6 @@
 								<ul class="dropdown">
 									<?php if ( current_user_can( 'edit_posts' ) ) : ?><li><a href="<?php echo admin_url( 'post-new.php' ); ?>">Write an artile</a></li><?php endif ?>
 									<li><a href="<?php echo admin_url( 'profile.php' ); ?>">Edit Profile</a></li>
-									<li><a href="https://en.gravatar.com/emails/">Edit Avatar</a></li>
 									<li class="has-form"><a class="login_button button" href="<?php echo wp_logout_url( home_url() ); ?>">Logout</a></li>
 								</ul>
 							</li>
