@@ -35,7 +35,6 @@ a:hover {
 }
 
 #lede {
-    border-right: 2px solid $secondary-color;
     h1 {
         font-size: 1.8em;
         line-height: 1em;
@@ -45,20 +44,41 @@ a:hover {
 #bleg {
 }
 
+
+#quote,
 #bleg,
-#quote {
-    blockquote {
-        border-left: 0;
-        padding-left: 0;
-    }
+#open-thread {
     h1, h2 {
+        text-align: right;
         font-size: 1.5em;
         line-height: 1em;
     }
+    .meta-bellow {
+        border-top: 0;
+    }
+}
+
+#quote {
+    text-align: center;
+    blockquote,
+    blockquote p {
+        border-left: 0;
+        padding-left: 0;
+        margin-bottom: 0em;
+        color: $body-font-color;
+    }
+}
+
+#bleg {
+    padding: 1em 1em 0 1em;
+    background-color: $secondary-color;
+}
+
+#open-thread {
+    margin-top: 1em;
 }
 
 #featured {
-    //border-top: 2px solid $primary-color;
     margin: 1.5em 0 1em;
     padding-top: 1em;
     .section-header {

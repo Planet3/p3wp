@@ -38,22 +38,22 @@ get_header(); ?>
 					'posts_per_page' => 1
 					);
 				/* Start the quote Loop */ 
-				$featured_query = new WP_Query( $args ); 
-				if ( $featured_query -> have_posts() ) : ?>
+				$quote_query = new WP_Query( $args ); 
+				if ( $quote_query -> have_posts() ) : ?>
 					<div id="quote">
-						<header class="section-header">
+						<header class="section-header assistive-text">
 							<h1><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?></h1>
 							<?php echo category_description( $args['category__in'] ); ?>
 						</header><!-- section-header -->
 						<ul class="large-block-grid-1">
-							<?php while ( $featured_query -> have_posts() ) : $featured_query -> the_post();
+							<?php while ( $quote_query -> have_posts() ) : $quote_query -> the_post();
 								if ( isset($do_not_duplicate) ) {
 									if (in_array($post->ID, $do_not_duplicate)) continue; 
 								} ?>
-								<?php get_template_part( 'content', 'fpcontent' ); ?>
+								<?php get_template_part( 'content', 'fpquote' ); ?>
 							<?php endwhile; ?>
 						</ul><!-- large-block-grid-3 -->
-					</div><!-- #featured -->
+					</div><!-- #quote -->
 					<?php wp_reset_postdata(); ?>
 				<?php endif; ?>
 
@@ -62,24 +62,51 @@ get_header(); ?>
 					'posts_per_page' => 1
 					);
 				/* Start the bleg Loop */ 
-				$featured_query = new WP_Query( $args ); 
-				if ( $featured_query -> have_posts() ) : ?>
+				$bleg_query = new WP_Query( $args ); 
+				if ( $bleg_query -> have_posts() ) : ?>
 					<div id="bleg">
-						<header class="section-header">
+						<header class="section-header assistive-text">
 							<h1><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?></h1>
 							<?php echo category_description( $args['category__in'] ); ?>
 						</header><!-- section-header -->
 						<ul class="large-block-grid-1">
-							<?php while ( $featured_query -> have_posts() ) : $featured_query -> the_post();
+							<?php while ( $bleg_query -> have_posts() ) : $bleg_query -> the_post();
 								if ( isset($do_not_duplicate) ) {
 									if (in_array($post->ID, $do_not_duplicate)) continue; 
 								} ?>
-								<?php get_template_part( 'content', 'fpcontent' ); ?>
+								<?php get_template_part( 'content', 'fpexcerpt' ); ?>
 							<?php endwhile; ?>
 						</ul><!-- large-block-grid-3 -->
-					</div><!-- #featured -->
+					</div><!-- #bleg -->
 					<?php wp_reset_postdata(); ?>
 				<?php endif; ?>
+
+
+
+				<?php $args = array(
+					'category__in' => planet3_0_cat_slug_to_id('open-thread'),
+					'posts_per_page' => 1
+					);
+				/* Start the open thread Loop */ 
+				$open_thread_query = new WP_Query( $args ); 
+				if ( $open_thread_query -> have_posts() ) : ?>
+					<div id="open-thread">
+						<header class="section-header assistive-text">
+							<h1><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?></h1>
+							<?php echo category_description( $args['category__in'] ); ?>
+						</header><!-- section-header -->
+						<ul class="large-block-grid-1">
+							<?php while ( $open_thread_query -> have_posts() ) : $open_thread_query -> the_post();
+								if ( isset($do_not_duplicate) ) {
+									if (in_array($post->ID, $do_not_duplicate)) continue; 
+								} ?>
+								<?php get_template_part( 'content', 'fpexcerpt' ); ?>
+							<?php endwhile; ?>
+						</ul><!-- large-block-grid-3 -->
+					</div><!-- #bleg -->
+					<?php wp_reset_postdata(); ?>
+				<?php endif; ?>
+
 
 			</div><!-- large-4 -->
 		</div><!-- row -->
@@ -101,7 +128,7 @@ get_header(); ?>
 						</header><!-- section-header -->
 						<ul class="large-block-grid-1">
 							<?php while ( $beyond_query -> have_posts() ) : $beyond_query -> the_post(); ?>
-								<?php get_template_part( 'content', 'fpbeyond' ); ?>
+								<?php get_template_part( 'content', 'fpexcerpt' ); ?>
 							<?php endwhile; ?>
 						</ul><!-- .large-block-grid-3 -->
 						<p class="archive-button"><a class="radius small button" href="<?php echo get_category_link( $args['category__in'] ); ?>"><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?> Archives</a></p>
