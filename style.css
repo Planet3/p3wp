@@ -3847,45 +3847,49 @@ a:hover {
   #featured .entry-title {
     font-size: 1em;
   }
+  /* line 107, scss/_content.scss */
+  #featured .entry-meta {
+    font-size: 0.8em;
+  }
 }
-/* line 110, scss/_content.scss */
+/* line 113, scss/_content.scss */
 .entry-thumbnail {
   padding-bottom: 1em;
 }
 
-/* line 114, scss/_content.scss */
+/* line 117, scss/_content.scss */
 .posts-area {
   font-size: 0.9em;
 }
-/* line 116, scss/_content.scss */
+/* line 119, scss/_content.scss */
 .posts-area h1, .posts-area h2 {
   font-size: 1.5em;
 }
 
-/* line 122, scss/_content.scss */
+/* line 125, scss/_content.scss */
 .section-header {
   padding: 0.2em 1em;
   margin-bottom: 1em;
   background-color: #e9e9e9;
   text-align: right;
 }
-/* line 127, scss/_content.scss */
+/* line 130, scss/_content.scss */
 .section-header p {
   text-align: left;
 }
 
-/* line 134, scss/_content.scss */
+/* line 137, scss/_content.scss */
 #beyond img, #media img {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-/* line 139, scss/_content.scss */
+/* line 142, scss/_content.scss */
 #beyond li, #media li {
   width: 100%;
 }
 
-/* line 145, scss/_content.scss */
+/* line 148, scss/_content.scss */
 .archive-button {
   text-align: right;
   margin-bottom: 0;
@@ -3893,26 +3897,26 @@ a:hover {
 
 /* =Author Styles
 -------------------------------------------------------------- */
-/* line 153, scss/_content.scss */
+/* line 156, scss/_content.scss */
 .byline {
   font-size: 0.9em;
 }
-/* line 155, scss/_content.scss */
+/* line 158, scss/_content.scss */
 .byline h1 {
   font-size: 1.2em;
 }
 
-/* line 160, scss/_content.scss */
+/* line 163, scss/_content.scss */
 .author-avatar {
   padding: 1em 0;
 }
 
-/* line 164, scss/_content.scss */
+/* line 167, scss/_content.scss */
 .author-bio {
   line-height: 1.25em;
 }
 
-/* line 168, scss/_content.scss */
+/* line 171, scss/_content.scss */
 .social-links {
   margin: 0 auto 1.0625em auto;
   margin-left: -1.375em;
@@ -3934,47 +3938,47 @@ a:hover {
 }
 
 @media only screen and (min-width: 48em) {
-  /* line 173, scss/_content.scss */
+  /* line 176, scss/_content.scss */
   .social-links {
     list-style: none;
     line-height: 2.5em;
   }
-  /* line 176, scss/_content.scss */
+  /* line 179, scss/_content.scss */
   .social-links li {
     float: none;
     padding-left: 0.5em;
     border-top: 1px solid #e9e9e9;
   }
-  /* line 181, scss/_content.scss */
+  /* line 184, scss/_content.scss */
   .social-links li:last-child {
     border-bottom: 1px solid #e9e9e9;
   }
 }
 /* =Content Styles
 -------------------------------------------------------------- */
-/* line 186, scss/_content.scss */
+/* line 189, scss/_content.scss */
 .content-area {
   padding: 2em 0em;
 }
 
-/* line 193, scss/_content.scss */
+/* line 196, scss/_content.scss */
 .meta-above {
   font-weight: bold;
 }
 
-/* line 197, scss/_content.scss */
+/* line 200, scss/_content.scss */
 .meta-bellow {
   padding-top: 0.5em;
   padding-bottom: 1em;
   border-top: 1px solid #e9e9e9;
 }
 
-/* line 203, scss/_content.scss */
+/* line 206, scss/_content.scss */
 .entry-content {
   padding-bottom: 2em;
 }
 
-/* line 212, scss/_content.scss */
+/* line 215, scss/_content.scss */
 iframe,
 object,
 embed {
