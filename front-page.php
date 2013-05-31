@@ -81,8 +81,6 @@ get_header(); ?>
 					<?php wp_reset_postdata(); ?>
 				<?php endif; ?>
 
-
-
 				<?php $args = array(
 					'category__in' => planet3_0_cat_slug_to_id('open-thread'),
 					'posts_per_page' => 1
@@ -106,7 +104,6 @@ get_header(); ?>
 					</div><!-- #bleg -->
 					<?php wp_reset_postdata(); ?>
 				<?php endif; ?>
-
 
 			</div><!-- large-4 -->
 		</div><!-- row -->

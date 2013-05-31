@@ -39,6 +39,11 @@ a:hover {
         font-size: 1.8em;
         line-height: 1em;
     }
+    img {
+        display: block;
+        margin-left:auto;
+        margin-right:auto;
+    }
 }
 
 #bleg {
@@ -56,6 +61,11 @@ a:hover {
     .meta-bellow {
         border-top: 0;
     }
+    img {
+        display: block;
+        margin-left:auto;
+        margin-right:auto;
+    }
 }
 
 #quote {
@@ -64,7 +74,7 @@ a:hover {
     blockquote p {
         border-left: 0;
         padding-left: 0;
-        margin-bottom: 0em;
+        margin-bottom: 0;
         color: $body-font-color;
     }
 }
@@ -85,6 +95,18 @@ a:hover {
         text-align: left;
     }
 }
+
+@media (max-width: $small-screen) {
+    #featured {
+        .section-header {
+            text-align: right;
+        }
+        .entry-title {
+            font-size: 1em;
+        }
+    }
+}
+
 .entry-thumbnail {
     padding-bottom: 1em;
 }
@@ -97,7 +119,7 @@ a:hover {
 }
 
 
-.section-header{
+.section-header {
     padding: 0.2em 1em;
     margin-bottom: 1em;
     background-color: $secondary-color;
@@ -109,7 +131,16 @@ a:hover {
 
 
 #beyond, #media {
+    img {
+        display: block;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    li {
+        width: 100%;
+    }
 }
+
 
 .archive-button {
     text-align: right;
