@@ -3,11 +3,11 @@ Forked from the _s theme with the added goodness of Foundation
 
 ##List of things
 * Finalize thumbnail size
+* create smaller thumbnails
 * Minimize js files
 * Minimize CSS
 
 ## MT's things
-* Past featured images are too big.
 * Recent Posts by category in footer, exclude bleg and quote
 
 ###List of less important things
