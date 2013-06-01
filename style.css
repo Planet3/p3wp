@@ -3845,11 +3845,11 @@ a:hover {
   }
   /* line 103, scss/_content.scss */
   #featured .entry-title {
-    font-size: 1em;
+    font-size: 1.25em;
   }
   /* line 106, scss/_content.scss */
   #featured .entry-meta {
-    font-size: 0.8em;
+    font-size: 1em;
   }
 }
 /* line 112, scss/_content.scss */

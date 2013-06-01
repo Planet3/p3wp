@@ -12,7 +12,7 @@
 			<div class="large-12 small-4 columns">
 				<?php if ( has_post_thumbnail() ) : ?>
 				<div class="entry-thumbnail">
-					 <?php the_post_thumbnail(); ?> 
+					 <?php the_post_thumbnail( 'small-thumbnail' ); ?> 
 				</div><!-- entry-thumbnail -->
 				<?php endif; ?>
 			</div><!-- large-12 small-3 columns -->
