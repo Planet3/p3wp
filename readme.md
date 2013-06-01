@@ -2,6 +2,7 @@
 Forked from the _s theme with the added goodness of Foundation
 
 ##List of things
+* add 4ball to 404 page
 * create smaller thumbnails
 * Minimize js files
 * Minimize CSS
