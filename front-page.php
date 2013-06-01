@@ -18,7 +18,7 @@ get_header(); ?>
 			/* Start the lede Loop */ 
 			$lede_query = new WP_Query( $args );
 			if ( $lede_query -> have_posts() ) : ?>
-					<div id="lede" class="large-8 columns">
+					<div id="lede" class="large-7 columns">
 						<header class="section-header">
 							<h1><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?></h1>
 							<?php echo category_description( $args['category__in'] ); ?>
@@ -31,7 +31,7 @@ get_header(); ?>
 				<?php wp_reset_postdata(); ?>
 			<?php endif; ?>
 
-			<div class="large-4 columns hide-for-small">
+			<div class="large-5 columns hide-for-small">
 
 				<?php $args = array(
 					'category__in' => planet3_0_cat_slug_to_id('quote'),
