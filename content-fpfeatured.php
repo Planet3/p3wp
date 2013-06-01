@@ -9,13 +9,13 @@
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<div class="row">
 
-			<div class="large-12 small-4 columns">
-				<?php if ( has_post_thumbnail() ) : ?>
-				<div class="entry-thumbnail">
-					 <?php the_post_thumbnail( 'small-thumbnail' ); ?> 
-				</div><!-- entry-thumbnail -->
-				<?php endif; ?>
-			</div><!-- large-12 small-3 columns -->
+			<?php if ( has_post_thumbnail() ) : ?>
+				<div class="large-12 small-4 columns">
+					<div class="entry-thumbnail">
+						 <?php the_post_thumbnail(); ?> 
+					</div><!-- entry-thumbnail -->
+				</div><!-- large-12 small-3 columns -->
+			<?php endif; ?>
 
 			<div class="large-12 small-8 columns">
 				<header class="entry-header">

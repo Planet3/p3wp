@@ -2,7 +2,6 @@
 Forked from the _s theme with the added goodness of Foundation
 
 ##List of things
-* Finalize thumbnail size
 * create smaller thumbnails
 * Minimize js files
 * Minimize CSS
