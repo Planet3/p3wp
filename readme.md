@@ -21,6 +21,7 @@ Forked from the _s theme with the added goodness of Foundation
 * Investigate how to implement post formats
 
 ## Things to do on the live server before applying theme
+* enable jetpack photon
 * Create quote, bleg and open thread categories
 * Split featured media category into images and video
 * regenerate thumbnails
