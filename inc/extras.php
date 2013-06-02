@@ -90,3 +90,19 @@ function planet3_0_cat_slug_to_id( $slug ) {
 
 	return $cat_id;
 }
+
+function planet3_0_is_subcategory($category = null) {
+	if (is_category()) {
+		if (null != $category){
+			$cat = get_category($category);
+		}else{
+			$cat = get_category(get_query_var('cat'),false);
+		}
+		if ($cat->parent == 0 ){
+			return false;
+		}else{
+			return true;
+		}
+	}
+	return false;
+}
