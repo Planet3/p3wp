@@ -79,7 +79,7 @@ function planet3_0_wp_title( $title, $sep ) {
 add_filter( 'wp_title', 'planet3_0_wp_title', 10, 2 );
 
 /**
- * Get category ID when from the slug
+ * Get category ID from the slug
  *
  * @since Planet3.0 3.0
  */
@@ -90,6 +90,18 @@ function planet3_0_cat_slug_to_id( $slug ) {
 
 	return $cat_id;
 }
+
+
+function planet3_0_check_category_exists($catslug){
+	$cat_to_check = get_term_by( 'slug', $catslug, 'category');
+	if ($cat_to_check) {
+		return true;
+	}
+	else{
+		return false;
+	}
+}
+
 
 
 /**
