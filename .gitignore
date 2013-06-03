@@ -7,7 +7,10 @@
 *.sublime-workspace
 *.cache
 
-
+#################
+## CodeKit
+#################
+codekit-config.json
 
 #################
 ## SaSS
