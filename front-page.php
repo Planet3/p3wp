@@ -9,17 +9,17 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area" role="main">
-
 		<div class="top-area row">
-			<?php if (planet3_0_check_category_exists('lede')) : ?>
-				<?php $args = array(
-					'category__in' => planet3_0_cat_slug_to_id('lede'),
-					'posts_per_page' => 1
-					);
-				/* Start the lede Loop */ 
-				$lede_query = new WP_Query( $args );
-				if ( $lede_query -> have_posts() ) : ?>
-						<div id="lede" class="large-7 columns">
+
+			<div id="lede" class="large-7 columns">
+				<?php if (planet3_0_check_category_exists('lede')) : ?>
+					<?php $args = array(
+						'category__in' => planet3_0_cat_slug_to_id('lede'),
+						'posts_per_page' => 1
+						);
+					/* Start the lede Loop */ 
+					$lede_query = new WP_Query( $args );
+					if ( $lede_query -> have_posts() ) : ?>
 							<header class="section-header">
 								<h1><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?></h1>
 								<?php echo category_description( $args['category__in'] ); ?>
@@ -28,15 +28,14 @@ get_header(); ?>
 								$do_not_duplicate[] = $post->ID; ?>
 								<?php get_template_part( 'content', 'fplede' ); ?>
 							<?php endwhile; ?>
-						</div><!-- #lede -->
-					<?php wp_reset_postdata(); ?>
+						<?php wp_reset_postdata(); ?>
+					<?php endif; ?>
+				<?php else : ?>
+					<p>The lede category goes here</p>
 				<?php endif; ?>
-			<?php else : ?>
-				<p>&nbsp;</p>
-			<?php endif; ?>
+			</div><!-- #lede -->
 
 			<div class="large-5 columns hide-for-small">
-
 				<?php if (planet3_0_check_category_exists('quote')) : ?>
 					<?php $args = array(
 						'category__in' => planet3_0_cat_slug_to_id('quote'),
@@ -62,7 +61,7 @@ get_header(); ?>
 						<?php wp_reset_postdata(); ?>
 					<?php endif; ?>
 				<?php else : ?>
-					<p>&nbsp;</p>
+					<p>The quote category goes here</p>
 				<?php endif; ?>
 
 				<?php if (planet3_0_check_category_exists('bleg')) : ?>
@@ -90,7 +89,7 @@ get_header(); ?>
 						<?php wp_reset_postdata(); ?>
 					<?php endif; ?>
 				<?php else : ?>
-					<p>&nbsp;</p>
+					<p>The bleg category goes here</p>
 				<?php endif; ?>
 
 				<?php if (planet3_0_check_category_exists('open-thread')) : ?>
@@ -118,15 +117,14 @@ get_header(); ?>
 						<?php wp_reset_postdata(); ?>
 					<?php endif; ?>
 				<?php else : ?>
-					<p>&nbsp;</p>
+					<p>The open-thread goes here</p>
 				<?php endif; ?>
-
 			</div><!-- large-4 -->
+
 		</div><!-- row -->
-
 		<div class="row">
-			<div class="posts-area push-6 large-6 columns">
 
+			<div class="posts-area push-6 large-6 columns">
 				<?php if (planet3_0_check_category_exists('beyond-planet-three')) : ?>
 					<?php $args = array(
 						'category__in' => planet3_0_cat_slug_to_id('beyond-planet-three'),
@@ -150,15 +148,14 @@ get_header(); ?>
 						<?php wp_reset_postdata(); ?>
 					<?php endif; ?>
 				<?php else : ?>
-					<p>&nbsp;</p>
+					<p>The beyond category goes here</p>
 				<?php endif; ?>
-
 			</div><!-- posts-area large-6 columns -->
 
 			<div class="posts-area large-6 pull-6 columns">
 				<div id="media">
-					<div class="video">
 
+					<div class="video">
 						<?php if (planet3_0_check_category_exists('video')) : ?>
 							<?php $args = array(
 								'category__in' => planet3_0_cat_slug_to_id('video'),
@@ -182,12 +179,11 @@ get_header(); ?>
 								<?php wp_reset_postdata(); ?>
 							<?php endif; ?>
 						<?php else : ?>
-							<p>&nbsp;</p>
+							<p>The video category goes here</p>
 						<?php endif; ?>
-
 					</div><!-- .video -->
-					<div class="image">
 
+					<div class="image">
 						<?php if (planet3_0_check_category_exists('image')) : ?>
 							<?php $args = array(
 								'category__in' => planet3_0_cat_slug_to_id('image'),
@@ -209,13 +205,14 @@ get_header(); ?>
 							<?php wp_reset_postdata(); ?>
 							<?php endif; ?>
 						<?php else : ?>
-							<p>&nbsp;</p>
+							<p>The image category goes here</p>
 						<?php endif; ?>
-
 					</div><!-- .image -->
 				</div><!-- #media -->
+
 			</div><!-- posts-area large-6 -->
 
+		<div id="featured" class="posts-area large-12 columns">
 			<?php if (planet3_0_check_category_exists('featured')) : ?>
 				<?php $args = array(
 					'category__in' => planet3_0_cat_slug_to_id('featured'),
@@ -225,28 +222,25 @@ get_header(); ?>
 				/* Start the featured Loop */ 
 				$featured_query = new WP_Query( $args ); 
 				if ( $featured_query -> have_posts() ) : ?>
-					<div id="featured" class="posts-area large-12 columns">
-						<header class="section-header">
-							<h1>Past Features</h1>
-							<?php echo category_description( $args['category__in'] ); ?>
-						</header><!-- section-header -->
-						<ul class="large-block-grid-3">
-							<?php while ( $featured_query -> have_posts() ) : $featured_query -> the_post();
-								if ( isset($do_not_duplicate) ) {
-									if (in_array($post->ID, $do_not_duplicate)) continue; 
-								} ?>
-								<?php get_template_part( 'content', 'fpfeatured' ); ?>
-							<?php endwhile; ?>
-						</ul><!-- large-block-grid-3 -->
-						<p class="archive-button"><a class="radius small button" href="<?php echo get_category_link( $args['category__in'] ); ?>"><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?> Archives</a></p>
-					</div><!-- #featured -->
+					<header class="section-header">
+						<h1>Past Features</h1>
+						<?php echo category_description( $args['category__in'] ); ?>
+					</header><!-- section-header -->
+					<ul class="large-block-grid-3">
+						<?php while ( $featured_query -> have_posts() ) : $featured_query -> the_post();
+							if ( isset($do_not_duplicate) ) {
+								if (in_array($post->ID, $do_not_duplicate)) continue; 
+							} ?>
+							<?php get_template_part( 'content', 'fpfeatured' ); ?>
+						<?php endwhile; ?>
+					</ul><!-- large-block-grid-3 -->
+					<p class="archive-button"><a class="radius small button" href="<?php echo get_category_link( $args['category__in'] ); ?>"><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?> Archives</a></p>
 					<?php wp_reset_postdata(); ?>
 				<?php endif; ?>
 			<?php else : ?>
-				<p>&nbsp;</p>
+				<p>The featured category goes here</p>
 			<?php endif; ?>
-
-		</div><!-- row -->
+		</div><!-- #featured row -->
 
 	</div><!-- #primary -->
 
