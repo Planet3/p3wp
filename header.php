@@ -60,7 +60,7 @@
 					<ul class="right">
 						<li class="divider"></li>
 					<?php if (is_user_logged_in()) { 
-						switch_to_blog(1); ?>
+						if ( is_multisite() ) { switch_to_blog(1); } ?>
 							<li class="has-dropdown"><a href="#">P3 Account</a>
 								<ul class="dropdown">
 									<?php if ( current_user_can( 'edit_posts' ) ) : ?><li><a href="<?php echo admin_url( 'post-new.php' ); ?>">Write an artile</a></li><?php endif ?>
@@ -68,7 +68,7 @@
 									<li class="has-form"><a class="login_button button" href="<?php echo wp_logout_url( home_url() ); ?>">Logout</a></li>
 								</ul>
 							</li>
-							<?php restore_current_blog();
+							<?php if ( is_multisite() ) {restore_current_blog(); }
 						} else { ?>
 							<li><a class="login_button" id="show_login" href="">Login</a></li>
 						<?php } ?>
