@@ -61,7 +61,8 @@ function planet3_0_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 	// and now register custom sizes
-	set_post_thumbnail_size( 600, 400, true );
+	set_post_thumbnail_size( 640, 360, true );
+	add_image_size( 'small_thumbnail', 320, 180, true );
 
 	/**
 	 * This theme uses wp_nav_menu() in one location.
