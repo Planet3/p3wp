@@ -16,7 +16,7 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php if ( ! in_category( planet3_0_cat_slug_to_id('media') ) && ! planet3_0_post_is_in_descendant_category( planet3_0_cat_slug_to_id('media') ) && is_archive() || is_search() || is_author()  ) : // Only display Excerpts for Search and Author pages?>
+	<?php if ( ! in_category( planet3_0_cat_slug_to_id('media') ) && ! planet3_0_post_is_in_descendant_category( planet3_0_cat_slug_to_id('media') ) ) : ?>
 	<div class="entry-summary">
 		<?php if ( has_post_thumbnail() ) : ?>
 			<div class="entry-thumbnail entry-thumbnail-list">
