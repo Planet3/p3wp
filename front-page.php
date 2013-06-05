@@ -29,9 +29,11 @@ get_header(); ?>
 								<?php get_template_part( 'content', 'fplede' ); ?>
 							<?php endwhile; ?>
 						<?php wp_reset_postdata(); ?>
+					<?php else : ?>
+						<p>There are no posts in the lede category to display.</p>
 					<?php endif; ?>
 				<?php else : ?>
-					<p>The lede category goes here</p>
+					<p>The lede category would go here but it has not been created yet.</p>
 				<?php endif; ?>
 			</div><!-- #lede -->
 
@@ -59,9 +61,11 @@ get_header(); ?>
 							</ul><!-- large-block-grid-3 -->
 						</div><!-- #quote -->
 						<?php wp_reset_postdata(); ?>
+					<?php else : ?>
+						<p>There are no posts in the quote category to display.</p>
 					<?php endif; ?>
 				<?php else : ?>
-					<p>The quote category goes here</p>
+					<p>The quote would go here but it has not been created yet.</p>
 				<?php endif; ?>
 
 				<?php if (planet3_0_check_category_exists('bleg')) : ?>
@@ -87,9 +91,11 @@ get_header(); ?>
 							</ul><!-- large-block-grid-3 -->
 						</div><!-- #bleg -->
 						<?php wp_reset_postdata(); ?>
+					<?php else : ?>
+						<p>There are no posts in the bleg category to display.</p>
 					<?php endif; ?>
 				<?php else : ?>
-					<p>The bleg category goes here</p>
+					<p>The bleg category would go here but it has not been created yet.</p>
 				<?php endif; ?>
 
 				<?php if (planet3_0_check_category_exists('open-thread')) : ?>
@@ -113,11 +119,13 @@ get_header(); ?>
 									<?php get_template_part( 'content', 'fpexcerpt' ); ?>
 								<?php endwhile; ?>
 							</ul><!-- large-block-grid-3 -->
-						</div><!-- #bleg -->
+						</div><!-- #open-thread -->
 						<?php wp_reset_postdata(); ?>
+					<?php else : ?>
+						<p>There are no posts in the open-thread category to display.</p>
 					<?php endif; ?>
 				<?php else : ?>
-					<p>The open-thread goes here</p>
+					<p>The open-thread category would go here but it has not been created yet.</p>
 				<?php endif; ?>
 			</div><!-- large-4 -->
 
@@ -146,9 +154,11 @@ get_header(); ?>
 							<p class="archive-button"><a class="radius small button" href="<?php echo get_category_link( $args['category__in'] ); ?>"><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?> Archives</a></p>
 						</div><!-- #beyond -->
 						<?php wp_reset_postdata(); ?>
+					<?php else : ?>
+						<p>There are no posts in the beyond category to display.</p>
 					<?php endif; ?>
 				<?php else : ?>
-					<p>The beyond category goes here</p>
+					<p>The beyond category would go here but it has not been created yet.</p>
 				<?php endif; ?>
 			</div><!-- posts-area large-6 columns -->
 
@@ -177,9 +187,11 @@ get_header(); ?>
 								<p class="archive-button"><a class="radius small button" href="<?php echo get_category_link( $args['category__in'] ); ?>"><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?> Archives</a></p>
 								</div>
 								<?php wp_reset_postdata(); ?>
+							<?php else : ?>
+								<p>There are no posts in the video category to display.</p>
 							<?php endif; ?>
 						<?php else : ?>
-							<p>The video category goes here</p>
+							<p>The video category would go here but it has not been created yet.</p>
 						<?php endif; ?>
 					</div><!-- .video -->
 
@@ -203,10 +215,12 @@ get_header(); ?>
 							</ul><!-- .large-block-grid-1 -->
 							<p class="archive-button"><a class="radius small button" href="<?php echo get_category_link( $args['category__in'] ); ?>"><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?> Archives</a></p>
 							<?php wp_reset_postdata(); ?>
-							<?php endif; ?>
 						<?php else : ?>
-							<p>The image category goes here</p>
+							<p>There are no posts in the image category to display.</p>
 						<?php endif; ?>
+					<?php else : ?>
+						<p>The image category would go here but it has not been created yet.</p>
+					<?php endif; ?>
 					</div><!-- .image -->
 				</div><!-- #media -->
 
@@ -236,9 +250,11 @@ get_header(); ?>
 					</ul><!-- large-block-grid-3 -->
 					<p class="archive-button"><a class="radius small button" href="<?php echo get_category_link( $args['category__in'] ); ?>"><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?> Archives</a></p>
 					<?php wp_reset_postdata(); ?>
+				<?php else : ?>
+					<p>There are no posts in the featured category to display.</p>
 				<?php endif; ?>
 			<?php else : ?>
-				<p>The featured category goes here</p>
+				<p>The featured category would go here but it has not been created yet.</p>
 			<?php endif; ?>
 		</div><!-- #featured row -->
 
