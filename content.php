@@ -17,19 +17,13 @@
 	</header><!-- .entry-header -->
 
 	<?php if ( ! in_category( planet3_0_cat_slug_to_id('media') ) && ! planet3_0_post_is_in_descendant_category( planet3_0_cat_slug_to_id('media') ) && is_archive() || is_search() || is_author()  ) : // Only display Excerpts for Search and Author pages?>
-	<div class="entry-summary row">
+	<div class="entry-summary">
 		<?php if ( has_post_thumbnail() ) : ?>
-			<div class="entry-thumbnail small-4 columns">
-				<?php the_post_thumbnail( 'small_thumbnail' ); ?>
-			</div><!-- entry-thumbnail small-4 columns -->
+			<div class="entry-thumbnail entry-thumbnail-list">
+				<?php the_post_thumbnail(); ?>
+			</div><!-- entry-thumbnail -->
 		<?php endif; ?>
-		<?php if ( has_post_thumbnail() ) : ?>
-			<div class="small-8 columns">
-		<?php else : ?>
-			<div class="small-12 columns">
-		<?php endif; ?>
-				<?php the_excerpt(); ?>
-			</div><!-- small-8 columns-->
+		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
 	<?php else : ?>
 	<div class="entry-content">

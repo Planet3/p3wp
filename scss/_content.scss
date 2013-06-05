@@ -186,6 +186,18 @@ a:hover {
         li:last-child { border-bottom: 1px solid $secondary-color;}
     }
 }
+
+/* =Archive Styles
+-------------------------------------------------------------- */
+.entry-thumbnail-list,{
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
 /* =Content Styles
 -------------------------------------------------------------- */
 .content-area {
