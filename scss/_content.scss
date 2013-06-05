@@ -106,11 +106,14 @@ a:hover {
         .entry-meta {
             font-size: 1em;
         }
+        li {
+            width: 100%;
+        }
     }
 }
 
 .entry-thumbnail {
-    padding-bottom: 1em;
+    margin-bottom: 1em;
 }
 
 .posts-area {
