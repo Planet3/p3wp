@@ -3,7 +3,6 @@ Forked from the _s theme with the added goodness of Foundation
 
 ##List of things
 * add 4ball to 404 page
-* create smaller thumbnails
 
 ## MT's things
 * Recent Posts by category in footer, exclude bleg and quote
@@ -20,6 +19,8 @@ Forked from the _s theme with the added goodness of Foundation
 
 ## Things to do on the live server before applying theme
 * enable jetpack photon, or other CDN
+* Enable caching
+* enable advanced excerpts on blogs site
 * Create quote, bleg and open thread categories
 * Split featured media category into images and video
 * regenerate thumbnails

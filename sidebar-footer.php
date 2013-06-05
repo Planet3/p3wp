@@ -1,6 +1,6 @@
 <?php
 /**
- * The Sidebar containing the main widget areas.
+ * The Sidebar containing the footer widget area.
  *
  * @package Planet3.0
  * @since Planet3.0 3.0
