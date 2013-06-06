@@ -272,11 +272,6 @@ add_action( 'wp_enqueue_scripts', 'planet3_0_scripts' );
  */
 require( get_template_directory() . '/inc/gravitar.php' );
 
-/**
- * Implement the Custom Header feature
- */
-//require( get_template_directory() . '/inc/custom-header.php' );
-
 
 function planet3_0_custom_contact_information($contactmethods) {
 	// Remove these fields

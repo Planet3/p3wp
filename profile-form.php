@@ -29,31 +29,31 @@
 			</div><!-- large-6 push-6 -->
 
 			<div class="large-6 pull-6 columns">
-				<h3><?php _e( 'Name' ); ?></h3>
+				<h3>Name</h3>
 
 				<table class="form-table">
 				<tr>
-					<th><label for="user_login"><?php _e( 'Username' ); ?></label></th>
-					<td><input type="text" name="user_login" id="user_login" value="<?php echo esc_attr( $profileuser->user_login ); ?>" disabled="disabled" class="regular-text" /> <span class="description"><?php _e( 'Your username cannot be changed.', 'theme-my-login' ); ?></span></td>
+					<th><label for="user_login">Username</label></th>
+					<td><input type="text" name="user_login" id="user_login" value="<?php echo esc_attr( $profileuser->user_login ); ?>" disabled="disabled" class="regular-text" /> <span class="description">Your username cannot be changed.</span></td>
 				</tr>
 
 				<tr>
-					<th><label for="first_name"><?php _e( 'First Name' ); ?></label></th>
+					<th><label for="first_name">First Name</label></th>
 					<td><input type="text" name="first_name" id="first_name" value="<?php echo esc_attr( $profileuser->first_name ); ?>" class="regular-text" /></td>
 				</tr>
 
 				<tr>
-					<th><label for="last_name"><?php _e( 'Last Name' ); ?></label></th>
+					<th><label for="last_name">Last Name</label></th>
 					<td><input type="text" name="last_name" id="last_name" value="<?php echo esc_attr( $profileuser->last_name ); ?>" class="regular-text" /></td>
 				</tr>
 
 				<tr>
-					<th><label for="nickname"><?php _e( 'Nickname' ); ?> <span class="description"><?php _e( '(required)' ); ?></span></label></th>
+					<th><label for="nickname">Nickname <span class="description">required</span></label></th>
 					<td><input type="text" name="nickname" id="nickname" value="<?php echo esc_attr( $profileuser->nickname ); ?>" class="regular-text" /></td>
 				</tr>
 
 				<tr>
-					<th><label for="display_name"><?php _e( 'Display name publicly as' ); ?></label></th>
+					<th><label for="display_name">Display name publicly as</label></th>
 					<td>
 						<select name="display_name" id="display_name">
 						<?php
@@ -89,16 +89,16 @@
 				</tr>
 				</table>
 
-				<h3><?php _e( 'Contact Info' ); ?></h3>
+				<h3>Contact Info</h3>
 
 				<table class="form-table">
 				<tr>
-					<th><label for="email"><?php _e( 'E-mail' ); ?> <span class="description"><?php _e( '(required)' ); ?></span></label></th>
+					<th><label for="email">E-mail <span class="description">required</span></label></th>
 					<td><input type="text" name="email" id="email" value="<?php echo esc_attr( $profileuser->user_email ); ?>" class="regular-text" /></td>
 				</tr>
 
 				<tr>
-					<th><label for="url"><?php _e( 'Website' ); ?></label></th>
+					<th><label for="url">Website</label></th>
 					<td><input type="text" name="url" id="url" value="<?php echo esc_attr( $profileuser->user_url ); ?>" class="regular-text code" /></td>
 				</tr>
 
@@ -117,13 +117,13 @@
 			</table>
 		</div><!-- .row -->
 
-		<h3><?php _e( 'About Yourself' ); ?></h3>
+		<h3>About Yourself</h3>
 
 		<table class="form-table">
 		<tr>
-			<th><label for="description"><?php _e( 'Biographical Info' ); ?></label></th>
+			<th><label for="description">Biographical Info</label></th>
 			<td><textarea name="description" id="description" rows="10" cols="30"><?php echo esc_html( $profileuser->description ); ?></textarea><br />
-			<span class="description"><?php _e( 'Share a little biographical information to fill out your profile.' ); ?></span></td>
+			<span class="description">Share a little biographical information to fill out your profile.</span></td>
 		</tr>
 
 		<?php
@@ -131,11 +131,11 @@
 		if ( $show_password_fields ) :
 		?>
 		<tr id="password">
-			<th><label for="pass1"><?php _e( 'New Password' ); ?></label></th>
-			<td><input type="password" name="pass1" id="pass1" size="16" value="" autocomplete="off" /> <span class="description"><?php _e( 'If you would like to change the password type a new one. Otherwise leave this blank.' ); ?></span><br />
-				<input type="password" name="pass2" id="pass2" size="16" value="" autocomplete="off" /> <span class="description"><?php _e( 'Type your new password again.' ); ?></span><br />
-				<!--<div id="pass-strength-result"><?php _e( 'Strength indicator', 'theme-my-login' ); ?></div>-->
-				<p class="description indicator-hint"><?php _e( 'Hint: The password should be at least seven characters long. To make it stronger, use upper and lower case letters, numbers and symbols like ! " ? $ % ^ &amp; ).' ); ?></p>
+			<th><label for="pass1">New Password</label></th>
+			<td><input type="password" name="pass1" id="pass1" size="16" value="" autocomplete="off" /> <span class="description">If you would like to change the password type a new one. Otherwise leave this blank.</span><br />
+				<input type="password" name="pass2" id="pass2" size="16" value="" autocomplete="off" /> <span class="description">Type your new password again.</span><br />
+				<!--<div id="pass-strength-result">Strength indicator</div>-->
+				<p class="description indicator-hint">Hint: The password should be at least seven characters long. To make it stronger, use upper and lower case letters, numbers and symbols like ! " ? $ % ^ &amp; ).</p>
 			</td>
 		</tr>
 		<?php endif; ?>
@@ -148,7 +148,7 @@
 			<input type="hidden" name="instance" value="<?php $template->the_instance(); ?>" />
 			<input type="hidden" name="user_id" id="user_id" value="<?php echo esc_attr( $current_user->ID ); ?>" />
 			<input class="hide" name="admin_bar_front" type="checkbox" id="admin_bar_front" value="1" checked />
-			<input type="submit" class="button-primary" value="<?php esc_attr_e( 'Update Profile' ); ?>" name="submit" />
+			<input type="submit" class="button-primary" value="Update Profile" name="submit" />
 		</p>
 	</form>
 </div>
