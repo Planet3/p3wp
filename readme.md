@@ -4,7 +4,6 @@ Forked from the _s theme with the added goodness of Foundation
 ##List of things
 
 ## MT's things
-* Recent Posts by category in footer, exclude bleg and quote
 
 ###List of less important things
 * Contributors page
@@ -28,3 +27,6 @@ Forked from the _s theme with the added goodness of Foundation
 * WordPress Access Control overides the custom menu walker needed for the responsive nav menu. If we want to keep this functionality we need to find a replacement
 * Disable About the Author Advanced
 * Go through every plugin and make sure that it is still needed
+* add Enchanced Recent Posts plugin
+* add a static front page and posts page
+* set category slug to archive
