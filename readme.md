@@ -20,6 +20,7 @@ Forked from the _s theme with the added goodness of Foundation
 * enable jetpack photon, or other CDN
 * Enable caching
 * enable advanced excerpts on blogs site
+* set number of posts to be displayed to 30 on blogs site
 * Create quote, bleg and open thread categories
 * Split featured media category into images and video
 * regenerate thumbnails
