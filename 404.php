@@ -12,8 +12,9 @@ get_header(); ?>
 		<div id="content" class="site-content large-10 large-centered columns" role="main">
 
 			<article id="post-0" class="post error404 not-found">
+				<p><img src="<?php echo get_template_directory_uri(); ?>/404ball.jpg" width="447" height="447" alt="404 error" title="Wrong Number!" class="aligncenter"></p>
 				<header class="entry-header">
-					<h1 class="entry-title">Oops! That page can&rsquo;t be found.</h1>
+					<h1 class="entry-title">404! That page can&rsquo;t be found.</h1>
 				</header><!-- .entry-header -->
 
 				<div class="entry-content">
