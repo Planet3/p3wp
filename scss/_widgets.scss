@@ -48,6 +48,9 @@
     }
     li {
         border-bottom: 0 !important;
+        ul li {
+            margin-left: -1em;
+        }
     }
 }
 

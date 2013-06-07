@@ -13,7 +13,7 @@
 
 	<div class="byline large-2 columns">
 		<div class="entry-meta meta-above">
-			<?php planet3_0_posted_on(); ?> <?php edit_post_link( 'Edit', '<span class="edit-link">', '</span>' ); ?>
+			<?php planet3_0_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<div class="author-avatar hide-for-small">
 			<?php if ( validate_gravatar( get_the_author_meta( 'user_email' ) ) ) :
@@ -36,7 +36,7 @@
 			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . 'Pages:', 'after' => '</div>' ) ); ?>
 		</div><!-- .entry-content -->
 		<footer class="entry-meta meta-bellow large-12 columns" >
-			<?php planet3_0_posted_in(); ?>
+			<?php planet3_0_posted_in(); ?> <?php edit_post_link( 'Edit', '| <span class="edit-link">', '</span>' ); ?>
 		</footer><!-- .entry-meta -->
 	</div><!-- . large-9 columns -->
 </article><!-- #post-## -->
