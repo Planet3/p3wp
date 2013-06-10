@@ -20,7 +20,7 @@
 			</div><!-- .entry-content -->
 			<?php edit_post_link( 'Edit', '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
 			<hr />
-		</div><!-- large-10 large-offset-2 -->
+		</div><!-- large-10 large-centered -->
 
 	</div><!-- .row -->
 </article><!-- #post-## -->

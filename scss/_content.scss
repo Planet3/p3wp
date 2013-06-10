@@ -168,6 +168,7 @@ img#wpstats {
 -------------------------------------------------------------- */
 
 .byline {
+    padding-left: 0;
     font-size: 0.9em;
     h1 {
         font-size: 1.2em;
@@ -227,6 +228,13 @@ img#wpstats {
     padding-top: 0.5em;
     padding-bottom: 1em;
     border-top: 1px solid $secondary-color;
+}
+
+@media (max-width: $small-screen) {
+    .article {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 .entry-content {

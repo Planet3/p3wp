@@ -30,7 +30,7 @@
 		<?php endif; ?>
 	</div><!-- .byline -->
 
-	<div class="large-10 columns">
+	<div class="article large-10 columns">
 		<div class="entry-content">
 			<?php the_content(); ?>
 			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . 'Pages:', 'after' => '</div>' ) ); ?>

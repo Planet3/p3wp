@@ -1,5 +1,17 @@
 /* =Comment Styles
 -------------------------------------------------------------- */
+#comments {
+    float: right;
+}
+
+@media (max-width: $small-screen) {
+    #comments {
+    padding-left: 0;
+    padding-right: 0;
+    }
+}
+
+
 .comment-list li {
     list-style-type: none;
     padding-left: 0.2em;
@@ -12,8 +24,4 @@
 
 .reply {
     padding-bottom: 1em;
-}
-
-#comment {
-    height: 16em;
 }
