@@ -30,3 +30,4 @@ Forked from the _s theme with the added goodness of Foundation
 * add Enchanced Recent Posts plugin
 * add a static front page and posts page
 * set category slug to archive
+* remove theme my login from article page and use the same login link from navbar
