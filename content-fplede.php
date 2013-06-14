@@ -26,6 +26,5 @@
 		<span class="comments-link"><?php comments_popup_link( 'Leave a comment', '1 Comment', '% Comments' ); ?></span>
 		<?php endif; ?>
 		<?php edit_post_link( 'Edit', '<span class="sep"> | </span><span class="edit-link">', '</span>' ); ?>
-		<a class="right radius small button" href="#featured">Recent Features</a>
 	</footer><!-- .entry-meta -->
 </article><!-- #post-## -->

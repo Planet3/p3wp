@@ -27,6 +27,7 @@ get_header(); ?>
 							<?php while ( $lede_query -> have_posts() ) : $lede_query -> the_post(); ?>
 								<?php get_template_part( 'content', 'fplede' ); ?>
 							<?php endwhile; ?>
+							<a class="right radius small button" href="#featured">Recent Features</a>
 						<?php wp_reset_postdata(); ?>
 					<?php else : ?>
 						<p>There are no posts in the article category to display.</p>
