@@ -73,6 +73,15 @@
     }
 }
 
+.widget_rss {
+    cite{
+        display: block;
+    }
+    cite:before {
+        content: "\2014";
+        }
+}
+
 .rsswidget {
     img {
         display: none;
