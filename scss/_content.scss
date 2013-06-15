@@ -112,7 +112,7 @@ img#wpstats {
     }
 }
 
-@media (max-width: $small-screen) {
+@media (only screen and max-width: $small-screen) {
     #featured {
         .section-header {
             text-align: right;
