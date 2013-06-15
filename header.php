@@ -43,7 +43,6 @@
 			<?php wp_nonce_field( 'ajax-login-nonce', 'security' ); ?>
 		</form>
 		<?php } ?>
-
 	<div id="page" class="hfeed site">
 		<?php do_action( 'before' ); ?>
 
@@ -64,11 +63,12 @@
 								<ul class="dropdown">
 									<?php if ( current_user_can( 'edit_posts' ) ) : ?><li><a href="<?php echo admin_url( 'post-new.php' ); ?>">Write an artile</a></li><?php endif ?>
 									<li><a href="<?php echo admin_url( 'profile.php' ); ?>">Edit Profile</a></li>
-	<?php if ( is_multisite() ) {restore_current_blog(); } ?>
+	<?php if ( is_multisite() ) { restore_current_blog(); } ?>
 									<li class="has-form"><a class="login_button button" href="<?php echo wp_logout_url( home_url() ); ?>">Logout</a></li>
 								</ul>
 							</li>
 						<?php } else { ?>
+	<?php if ( is_multisite() ) { restore_current_blog(); } ?>
 							<li><a class="login_button" id="show_login" href="">Login</a></li>
 						<?php } ?>
 							<li class="divider"></li>
