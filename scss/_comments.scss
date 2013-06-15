@@ -4,7 +4,7 @@
     float: right;
 }
 
-@media (max-width: $small-screen) {
+@media (only screen and max-width: $small-screen) {
     #comments {
     padding-left: 0;
     padding-right: 0;

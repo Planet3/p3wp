@@ -235,7 +235,7 @@ img#wpstats {
     border-top: 1px solid $secondary-color;
 }
 
-@media (max-width: $small-screen) {
+@media (only screen and max-width: $small-screen) {
     .article {
         padding-left: 0;
         padding-right: 0;
