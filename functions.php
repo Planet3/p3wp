@@ -244,12 +244,12 @@ function planet3_0_login(){
  * 
  * @since Planet3.0 3.0
  */
-function planet3_0_remove_share() {
-	remove_filter( 'the_content', 'sharing_display',19 );
-	remove_filter( 'the_excerpt', 'sharing_display',19 );
-}
+//function planet3_0_remove_share() {
+//	remove_filter( 'the_content', 'sharing_display',19 );
+//	remove_filter( 'the_excerpt', 'sharing_display',19 );
+//}
 
-add_action( 'loop_end', 'planet3_0_remove_share' );
+//add_action( 'loop_end', 'planet3_0_remove_share' );
 
 /**
  * Enqueue scripts and styles

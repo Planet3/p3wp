@@ -32,8 +32,8 @@
 
 	<div class="article large-10 columns">
 		<div class="entry-content">
-			<?php if ( function_exists( 'sharing_display' ) )
-				sharing_display( '', true ); ?>
+			<!-- <?php if ( function_exists( 'sharing_display' ) )
+				sharing_display( '', true ); ?> -->
 			<?php the_content(); ?>
 			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . 'Pages:', 'after' => '</div>' ) ); ?>
 		</div><!-- .entry-content -->
