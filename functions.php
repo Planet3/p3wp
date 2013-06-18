@@ -317,8 +317,10 @@ if (!current_user_can('edit_others_posts')) {
  add_filter('show_admin_bar', '__return_false');
 }
 
-/* Moderate subscribers
-	filter for the Never Moderate Registered Users plugin */
+/**
+ *  Moderate subscribers
+ *	filter for the Never Moderate Registered Users plugin 
+ */
 add_filter( 'c2c_never_moderate_registered_users_caps', 'dont_moderate_contributors' );
 function dont_moderate_contributors( $caps ) {
 	$caps[] = 'contributor';
