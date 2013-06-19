@@ -318,11 +318,17 @@ if (!current_user_can('edit_others_posts')) {
 }
 
 /**
- *  Moderate subscribers
- *	filter for the Never Moderate Registered Users plugin 
+ * Moderate subscribers
+ * filter for the Never Moderate Registered Users plugin 
  */
 add_filter( 'c2c_never_moderate_registered_users_caps', 'dont_moderate_contributors' );
 function dont_moderate_contributors( $caps ) {
 	$caps[] = 'contributor';
 	return $caps;
 }
+
+/**
+ * Reduce the default refresh time of the RSS widget to 600 seconds
+ */
+add_filter( 'wp_feed_cache_transient_lifetime', 
+	create_function('$a', 'return 600;') );
