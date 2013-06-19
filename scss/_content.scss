@@ -148,6 +148,18 @@ img#wpstats {
     text-align: right;
 }
 
+@media #{$small} { 
+    #media, #beyond {
+        border: 2px $secondary-color solid;
+        .entry-title,
+        .entry-summary,
+        .entry-meta,
+        .archive-button {
+            padding-left: 0.25em;
+            padding-right: 0.25em;
+        }
+    }
+}
 
 #beyond, #media {
     img {
