@@ -50,7 +50,7 @@
 				<nav id="site-navigation" class="navigation-main top-bar" role="navivation">
 					<ul class="title-area">
 						<li class="name">
-							<h1><a href="<?php echo home_url('/'); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri(); ?>/logo.png" width="25" alt="Logo"></a></h1>
+							<h1><a href="<?php echo home_url('/'); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri(); ?>/logo.png" width="25" alt="Logo">&nbsp;&nbsp;Home</a></h1>
 						</li><!-- .name -->
 						<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
 					</ul><!-- .title-area -->

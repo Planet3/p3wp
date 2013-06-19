@@ -1,0 +1,10 @@
+.ninja-forms-field-error{
+    background: $secondary-color;
+    margin-top: 0;
+    padding: 0 0.5em;
+    font-size: 1.25em;
+    :before, :after {
+        content: " \2191  ";
+        font-size: 1.5em;
+    }
+}
