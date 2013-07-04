@@ -232,6 +232,19 @@ img#wpstats {
 -------------------------------------------------------------- */
 .content-area {
     padding: 2em 0em;
+    ul {
+        list-style-type: disc;
+        padding-left: 3em;
+    }
+    ol {
+        list-style-type: decimal;
+        padding-left: 3em;
+    }
+    li {
+        padding-bottom: 0em;
+        margin-bottom: 0em;
+        border-bottom: 0px;
+    }
 }
 
 .entry-title {
