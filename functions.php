@@ -159,13 +159,45 @@ function planet3_0_widgets_init() {
 }
 add_action( 'widgets_init', 'planet3_0_widgets_init' );
 
+
+/**
+ * Creates and autogeneted excerpt if no custom excerpt exists.
+ * Replaces the wpcore fuction wp_tim_excerpt()
+ */
+
+function planet3_0_trim_excerpt($text) {
+global $post;
+if ( '' == $text ) {
+	$text = get_the_content('');
+	$text = apply_filters('the_content', $text);
+	$text = str_replace('\]\]\>', ']]&gt;', $text);
+	$text = preg_replace('@<script[^>]*?>.*?</script>@si', '', $text);
+	$text = strip_tags($text, '<p> <br> <a> <em> <strong> <blockquote>');
+	$excerpt_length = 3;
+	$sentences = explode('. ', $text, $excerpt_length + 1);
+	$excerpt_more = ' <a class="moretag" href="'. get_permalink($post->ID) . '">[more]</a>';
+	if (count($sentences)> $excerpt_length) {
+		array_pop($sentences);
+		array_push($sentences, '.', $excerpt_more);
+		$text = implode('', $sentences);
+		$text = force_balance_tags( $text );
+	}
+}
+return $text;
+}
+
+remove_filter('get_the_excerpt', 'wp_trim_excerpt');
+add_filter('get_the_excerpt', 'planet3_0_trim_excerpt');
+
+
 /**
  * Replaces the auto-generated excerpt "more" text by a link
+ * Not needed if we use planet3_0_trim_excerpt()
  */
-function planet3_0_excerpt_more($more) {
-	return ' <a class="moretag" href="'. get_permalink($post->ID) . '">[more]</a>';
-}
-add_filter( 'excerpt_more', 'planet3_0_excerpt_more' );
+//function planet3_0_excerpt_more($more) {
+//	return ' <a class="moretag" href="'. get_permalink($post->ID) . '">[more]</a>';
+//}
+//add_filter( 'excerpt_more', 'planet3_0_excerpt_more' );
 
 /**
  * Adds a "more link to the custom excerpts
