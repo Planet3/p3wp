@@ -80,7 +80,7 @@ get_header(); ?>
 							</header><!-- section-header -->
 							<ul class="large-block-grid-1">
 								<?php while ( $bleg_query -> have_posts() ) : $bleg_query -> the_post(); ?>
-									<?php get_template_part( 'content', 'fpexcerpt' ); ?>
+									<?php get_template_part( 'content', 'fpbleg' ); ?>
 								<?php endwhile; ?>
 							</ul><!-- large-block-grid-3 -->
 						</div><!-- #bleg -->
