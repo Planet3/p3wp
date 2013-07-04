@@ -84,6 +84,9 @@ img#wpstats {
         padding-left: 0;
         margin-bottom: 0;
         color: $body-font-color;
+        a {
+            color: $primary-color;
+        }
     }
 }
 
