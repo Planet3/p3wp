@@ -163,9 +163,11 @@ add_action( 'widgets_init', 'planet3_0_widgets_init' );
 /**
  * Creates and autogeneted excerpt if no custom excerpt exists.
  * Replaces the wpcore fuction wp_tim_excerpt()
+ *
+ * @since Planet3.0 3.0
  */
 
-function planet3_0_trim_excerpt($text) {
+function planet3_0_trim_excerpt( $text ) {
 	global $post;
 	if ( '' == $text ) {
 		$text = get_the_content('');
@@ -174,43 +176,47 @@ function planet3_0_trim_excerpt($text) {
 		$text = str_replace('\]\]\>', ']]&gt;', $text);
 		$text = preg_replace('@<script[^>]*?>.*?</script>@si', '', $text);
 		$text = strip_tags($text, '<p> <br> <a> <em> <strong> <blockquote>');
+
+		// The text to be displayed at the end of the excerpt
 		$excerpt_end = ' <a class="moretag" href="'. get_permalink($post->ID) . '">[more]</a>';
 
-		//Word length of the excerpt. This is exact or NOT depending on your '$finish_sentence' variable.
+		// Word length of the excerpt. This is exact or NOT depending on the $finish_sentence variable.
 		$length = 55; 
 
-		//Set to 1 if you want the excerpt to cut off at the end of the sentence rather than after $length words. Might result in longer excerpts
+		// Set to 1 if you want the excerpt to cut off at the end of the sentence rather than after $length words. Might result in longer excerpts
 		$finish_sentence = 1; 
 
 		$tokens = array();
 		$word = 0;
 
-		//Divide the string into tokens; HTML tags, or words, followed by any whitespace.
+		// Divide the string into tokens; HTML tags, or words, followed by any whitespace.
 		$regex = '/(<[^>]+>|[^<>\s]+)\s*/u';
 		preg_match_all( $regex, $text, $tokens );
 		foreach ( $tokens[0] as $t ) {
-			//Parse each token
+			// Parse each token
 			if ( $word >= $length && !$finish_sentence ) {
-				//Limit reached
+				// Limit reached
 				break;
 			}
 			if ( $t[0] != '<' ) {
-				//Token is not a tag. 
-				//Regular expression that checks for the end of the sentence: '.', '?' or '!'
+				// Token is not a tag. 
+				// Regular expression that checks for the end of the sentence: '.', '?' or '!'
 				$regex1 = '/[\?\.\!]\s*$/uS';
 				if ( $word >= $length && $finish_sentence && preg_match( $regex1, $t ) == 1) {
-					//Limit reached, continue until ? . or ! occur to reach the end of the sentence.
+					// Limit reached, continue until ? . or ! occur to reach the end of the sentence.
 					$out .= trim($t);
 					break;
 				}
 				$word++;
 			}
-			//Append what's left of the token.
+			// Append what's left of the token.
 			$out .= $t;
 		}
 
-	//Append the excerpt ending to the token. 
-	$out .= $excerpt_end;
+	// Append the excerpt ending to the token. 
+	if ( $text != $out ) {
+		$out .= $excerpt_end;
+	}
 
 	$text = trim( force_balance_tags( $out ) );
 
@@ -234,6 +240,8 @@ add_filter('get_the_excerpt', 'planet3_0_trim_excerpt');
 
 /**
  * Adds a "more link to the custom excerpts
+ *
+ * @since  Planet3.0 3.0
  */
 function planet3_0_custom_excerpt_more( $output ) {
 	if ( has_excerpt() && ! is_attachment() ) {
