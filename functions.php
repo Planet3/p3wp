@@ -181,7 +181,7 @@ function planet3_0_trim_excerpt( $text ) {
 		$excerpt_end = ' <a class="moretag" href="'. get_permalink($post->ID) . '">[more]</a>';
 
 		// Word length of the excerpt. This is exact or NOT depending on the $finish_sentence variable.
-		$length = 55; 
+		$length = 50; 
 
 		// Set to 1 if you want the excerpt to cut off at the end of the sentence rather than after $length words. Might result in longer excerpts
 		$finish_sentence = 1; 
