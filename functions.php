@@ -166,7 +166,6 @@ add_action( 'widgets_init', 'planet3_0_widgets_init' );
  *
  * @since Planet3.0 3.0
  */
-
 function planet3_0_trim_excerpt( $text ) {
 	global $post;
 	if ( '' == $text ) {
@@ -214,7 +213,7 @@ function planet3_0_trim_excerpt( $text ) {
 		}
 
 	// Append the excerpt ending to the token. 
-	if ( $text != $out ) {
+	if ( trim( force_balance_tags( $text ) ) != trim( force_balance_tags( $out ) ) ) {
 		$out .= $excerpt_end;
 	}
 
