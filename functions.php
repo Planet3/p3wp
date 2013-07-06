@@ -166,24 +166,57 @@ add_action( 'widgets_init', 'planet3_0_widgets_init' );
  */
 
 function planet3_0_trim_excerpt($text) {
-global $post;
-if ( '' == $text ) {
-	$text = get_the_content('');
-	$text = apply_filters('the_content', $text);
-	$text = str_replace('\]\]\>', ']]&gt;', $text);
-	$text = preg_replace('@<script[^>]*?>.*?</script>@si', '', $text);
-	$text = strip_tags($text, '<p> <br> <a> <em> <strong> <blockquote>');
-	$excerpt_length = 3;
-	$sentences = explode('. ', $text, $excerpt_length + 1);
-	$excerpt_more = ' <a class="moretag" href="'. get_permalink($post->ID) . '">[more]</a>';
-	if (count($sentences)> $excerpt_length) {
-		array_pop($sentences);
-		array_push($sentences, '.', $excerpt_more);
-		$text = implode('', $sentences);
-		$text = force_balance_tags( $text );
+	global $post;
+	if ( '' == $text ) {
+		$text = get_the_content('');
+		$text = strip_shortcodes( $text );
+		$text = apply_filters('the_content', $text);
+		$text = str_replace('\]\]\>', ']]&gt;', $text);
+		$text = preg_replace('@<script[^>]*?>.*?</script>@si', '', $text);
+		$text = strip_tags($text, '<p> <br> <a> <em> <strong> <blockquote>');
+		$excerpt_end = ' <a class="moretag" href="'. get_permalink($post->ID) . '">[more]</a>';
+
+		//Word length of the excerpt. This is exact or NOT depending on your '$finish_sentence' variable.
+		$length = 55; 
+
+		//Set to 1 if you want the excerpt to cut off at the end of the sentence rather than after $length words. Might result in longer excerpts
+		$finish_sentence = 1; 
+
+		$tokens = array();
+		$word = 0;
+
+		//Divide the string into tokens; HTML tags, or words, followed by any whitespace.
+		$regex = '/(<[^>]+>|[^<>\s]+)\s*/u';
+		preg_match_all( $regex, $text, $tokens );
+		foreach ( $tokens[0] as $t ) {
+			//Parse each token
+			if ( $word >= $length && !$finish_sentence ) {
+				//Limit reached
+				break;
+			}
+			if ( $t[0] != '<' ) {
+				//Token is not a tag. 
+				//Regular expression that checks for the end of the sentence: '.', '?' or '!'
+				$regex1 = '/[\?\.\!]\s*$/uS';
+				if ( $word >= $length && $finish_sentence && preg_match( $regex1, $t ) == 1) {
+					//Limit reached, continue until ? . or ! occur to reach the end of the sentence.
+					$out .= trim($t);
+					break;
+				}
+				$word++;
+			}
+			//Append what's left of the token.
+			$out .= $t;
+		}
+
+	//Append the excerpt ending to the token. 
+	$out .= $excerpt_end;
+
+	$text = trim( force_balance_tags( $out ) );
+
 	}
-}
-return $text;
+
+	return $text;
 }
 
 remove_filter('get_the_excerpt', 'wp_trim_excerpt');
