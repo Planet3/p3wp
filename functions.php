@@ -47,6 +47,11 @@ function planet3_0_setup() {
 	require( get_template_directory() . '/inc/customizer.php' );
 
 	/**
+	 * Custom widgets
+	 */
+	require( get_template_directory() . '/inc/widgets.php' );
+
+	/**
 	 * Add default posts and comments RSS feed links to head
 	 */
 	add_theme_support( 'automatic-feed-links' );
@@ -277,7 +282,7 @@ function planet3_0_login_init(){
 	wp_localize_script( 'ajax-login-script', 'ajax_login_object', array( 
 		'ajaxurl' => admin_url( 'admin-ajax.php' ),
 		'redirecturl' => 'http://' . $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"],
-		'loadingmessage' => __('Loggin in, please wait...')
+		'loadingmessage' => __('Logging in, please wait...')
 	));
 
 	// Enable the user with no privileges to run ajax_login() in AJAX
