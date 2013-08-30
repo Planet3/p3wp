@@ -49,7 +49,7 @@ function planet3_0_setup() {
 	/**
 	 * Custom widgets
 	 */
-	require( get_template_directory() . '/inc/widgets.php' );
+	// require( get_template_directory() . '/inc/widgets.php' );
 
 	/**
 	 * Add default posts and comments RSS feed links to head
