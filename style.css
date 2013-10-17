@@ -4120,6 +4120,21 @@ embed {
   height: 16em;
 }
 
+/* line 45, scss/_comments.scss */
+.shadow-comments-header {
+  font-size: 1.2em;
+}
+
+/* line 49, scss/_comments.scss */
+#shadow-comments {
+  display: none;
+}
+
+/* line 53, scss/_comments.scss */
+#shadow-comments:target {
+  display: block;
+}
+
 /* =Sidebar styles
 -------------------------------------------------------------- */
 /* line 4, scss/_widgets.scss */

@@ -71,8 +71,12 @@
 				wp_list_comments( array( 'callback' => 'planet3_0_comment' ), $comments );
 			?>
 		</ol><!-- .comment-list -->
-		<h1>Shadow comments!!!</h1>
-		<ol class="comment-list shadow-comments">
+		<hr />
+
+
+		<h3 class="shadow-comments-header">Click <a href="#shadow-comments">here</a> to show comments that that do not meet out comment policy</h3>
+
+		<ol id="shadow-comments" class="comment-list">
 			<?php
 				$comments = get_comments( array( 
 					'order' => 'ASC',

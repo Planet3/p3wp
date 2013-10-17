@@ -41,3 +41,15 @@
 #comment {
     height: 16em;
 }
+
+.shadow-comments-header {
+    font-size: 1.2em;
+}
+
+#shadow-comments {
+    display: none;
+}
+
+#shadow-comments:target {
+    display: block;
+}
