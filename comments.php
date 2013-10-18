@@ -74,8 +74,7 @@
 		<hr />
 
 
-		<h3 id="shadow-comments-hide" class="shadow-comments-header">Click <a href="#shadow-comments">here</a> to show comments that that do not meet out comment policy</h3>
-
+		<h3 class="shadow-comments-header">Click <a href="#shadow-comments">here</a> to show comments that that do not meet out comment policy</h3>
 		<div id="shadow-comments" >
 			<ol class="comment-list">
 				<?php
@@ -103,7 +102,6 @@
 					$comments );
 				?>
 			</ol><!-- .comment-list -->
-			<h3 class="shadow-comments-header">Click <a href="#shadow-comments-hide">here</a> to hide comments that that do not meet out comment policy</h3>
 		</div><!-- #shadow-comments -->
 
 

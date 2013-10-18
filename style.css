@@ -4127,18 +4127,26 @@ embed {
 
 /* line 49, scss/_comments.scss */
 #shadow-comments {
-  background: #e9e9e9;
-  padding: 0.5em;
   opacity: 0;
   height: 0;
   overflow: hidden;
-  transition: opacity 3s ease-out;
+  transition: opacity 2s ease-out;
+}
+/* line 50, scss/_comments.scss */
+#shadow-comments .comment-list {
+  background: #e9e9e9;
+  padding: 1em;
 }
 
-/* line 58, scss/_comments.scss */
+/* line 60, scss/_comments.scss */
 #shadow-comments:target {
-  opacity: 1;
+  opacity: 0.6;
   height: auto;
+}
+/* line 63, scss/_comments.scss */
+#shadow-comments:target .shadow-comments-header {
+  position: relative;
+  opacity: 1;
 }
 
 /* =Sidebar styles
