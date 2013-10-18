@@ -47,9 +47,15 @@
 }
 
 #shadow-comments {
-    display: none;
+    background: $secondary-color;
+    padding: 0.5em;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 3s ease-out;
 }
 
 #shadow-comments:target {
-    display: block;
+    opacity: 1;
+    height: auto;
 }

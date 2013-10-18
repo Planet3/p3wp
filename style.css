@@ -4127,12 +4127,18 @@ embed {
 
 /* line 49, scss/_comments.scss */
 #shadow-comments {
-  display: none;
+  background: #e9e9e9;
+  padding: 0.5em;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 3s ease-out;
 }
 
-/* line 53, scss/_comments.scss */
+/* line 58, scss/_comments.scss */
 #shadow-comments:target {
-  display: block;
+  opacity: 1;
+  height: auto;
 }
 
 /* =Sidebar styles
