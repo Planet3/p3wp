@@ -166,29 +166,48 @@ add_action( 'widgets_init', 'planet3_0_widgets_init' );
 
 
 /**
- * Creates and autogeneted excerpt if no custom excerpt exists.
+ * Creates an autogeneted excerpt if no custom excerpt exists.
  * Replaces the wpcore fuction wp_tim_excerpt()
  *
  * @since Planet3.0 3.0
  */
 function planet3_0_trim_excerpt( $text ) {
 	global $post;
+	// Setting the global $more variable to 0 forces the content to be truncated at the <!--more--> tag
+	global $more;
+	$more = 0;
+
 	if ( '' == $text ) {
-		$text = get_the_content('');
-		$text = strip_shortcodes( $text );
-		$text = apply_filters('the_content', $text);
-		$text = str_replace('\]\]\>', ']]&gt;', $text);
-		$text = preg_replace('@<script[^>]*?>.*?</script>@si', '', $text);
-		$text = strip_tags($text, '<p> <br> <a> <em> <strong> <blockquote>');
 
 		// The text to be displayed at the end of the excerpt
 		$excerpt_end = ' <a class="moretag" href="'. get_permalink($post->ID) . '">[more]</a>';
+
 
 		// Word length of the excerpt. This is exact or NOT depending on the $finish_sentence variable.
 		$length = 50; 
 
 		// Set to 1 if you want the excerpt to cut off at the end of the sentence rather than after $length words. Might result in longer excerpts
 		$finish_sentence = 1; 
+
+		$text = get_the_content( $excerpt_end );
+		$text = strip_shortcodes( $text );
+		$text = apply_filters('the_content', $text);
+		$text = str_replace('\]\]\>', ']]&gt;', $text);
+		$text = preg_replace('@<script[^>]*?>.*?</script>@si', '', $text);
+
+		$allowed_tags = array(
+			'p' => array(),
+			'br' => array(),
+			'a' => array(
+				'href' => array(),
+				'title' => array()
+			),
+			'em' => array(),
+			'strong' => array(),
+			'blockquote' => array()
+		);
+		$text = wp_kses( $text, $allowed_tags );
+
 
 		$tokens = array();
 		$word = 0;
