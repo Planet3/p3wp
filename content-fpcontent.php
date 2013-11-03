@@ -15,9 +15,11 @@
 			<?php if( $post->post_excerpt ) {
 				the_excerpt();
 			} else {
-				// Setting the global $more variable to 0 forces the content to be truncated at the <!--more--> tag
-				global $more;
-				$more = 0;
+				if ( ! is_feed() ) {
+					// Setting the global $more variable to 0 forces the content to be truncated at the <!--more--> tag
+					global $more;
+					$more = 0;
+				}
 				the_content( '<a class="moretag" href="'. get_permalink($post->ID) . '">[more]</a>' );
 			} ?>
 		</div><!-- .entry-summary -->

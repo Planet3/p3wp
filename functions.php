@@ -173,9 +173,11 @@ add_action( 'widgets_init', 'planet3_0_widgets_init' );
  */
 function planet3_0_trim_excerpt( $text ) {
 	global $post;
-	// Setting the global $more variable to 0 forces the content to be truncated at the <!--more--> tag
-	global $more;
-	$more = 0;
+	if ( ! is_feed() ) {
+		// Setting the global $more variable to 0 forces the content to be truncated at the <!--more--> tag
+		global $more;
+		$more = 0;
+	}
 
 	if ( '' == $text ) {
 
