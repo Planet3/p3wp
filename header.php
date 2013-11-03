@@ -92,7 +92,7 @@
 
 		</div><!-- .page-header -->
 		<div class="header-logo large-3 columns hide-for-small" itemscope itemtype="http://schema.org/Organization">
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri(); ?>/logo.png" width="125" alt="Logo" itemprop="logo"></a>
+			<a itemprop="url" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri(); ?>/logo.png" width="125" alt="Logo" itemprop="logo"></a>
 		</div><!-- .header-logo .small-3 -->
 	</header><!-- #masthead -->
 
