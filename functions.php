@@ -391,18 +391,24 @@ function planet3_0_custom_contact_information($contactmethods) {
 	unset( $contactmethods['aim'] ); 
 	if ( isset( $contactmethods['jabber'] ) ) 
 	unset( $contactmethods['jabber'] ); 
+	if ( isset( $contactmethods['twitter'] ) ) 
+	unset( $contactmethods['twitter'] ); 
+	if ( isset( $contactmethods['facebook'] ) ) 
+	unset( $contactmethods['facebook'] ); 
+	if ( isset( $contactmethods['googleplus'] ) ) 
+	unset( $contactmethods['googleplus'] ); 
 
 	// Add these fields
 	if ( !isset( $contactmethods['twitter'] ) ) 
-	$contactmethods['twitter'] = 'Twitter'; 
+	$contactmethods['twitter'] = 'Twitter Profile URL'; 
 	if ( !isset( $contactmethods['facebook'] ) ) 
-	$contactmethods['facebook'] = 'Facebook';
-	if ( !isset( $contactmethods['gplus'] ) ) 
-	$contactmethods['gplus'] = 'Google+'; 
+	$contactmethods['facebook'] = 'Facebook Profile URL'; 
+	if ( !isset( $contactmethods['googleplus'] ) ) 
+	$contactmethods['googleplus'] = 'Google+ Profile URL'; 
 	if ( !isset( $contactmethods['linkedin'] ) ) 
-	$contactmethods['linkedin'] = 'LinkedIn'; 
+	$contactmethods['linkedin'] = 'LinkedIn Profile URL'; 
 	if ( !isset( $contactmethods['reddit'] ) ) 
-	$contactmethods['reddit'] = 'Reddit'; 
+	$contactmethods['reddit'] = 'Reddit Profile URL'; 
 
 return $contactmethods;
 }

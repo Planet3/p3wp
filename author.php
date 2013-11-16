@@ -39,11 +39,11 @@ get_header(); ?>
 								<?php if ( get_the_author_meta( 'facebook' ) ) : ?>
 									<li><a href="<?php esc_url( the_author_meta( 'facebook' ) ); ?>" rel="me" title="Facebook">Facebook</a></li>
 								<?php endif; ?>
-								<?php if ( get_the_author_meta( 'gplus' ) ) : ?>
-									<li><a href="<?php esc_url( the_author_meta( 'gplus' ) ); ?>" rel="me" title="Google+">Google+</a></li>
+								<?php if ( get_the_author_meta( 'googleplus' ) ) : ?>
+									<li><a href="<?php esc_url( the_author_meta( 'googleplus' ) ); ?>" rel="me" title="Google+">Google+</a></li>
 								<?php endif; ?>
 								<?php if ( get_the_author_meta( 'linkedin' ) ) : ?>
-									<li><a href="<?php esc_url( the_author_meta( 'linkedin' ) ); ?>" rel="me" title="Google+">LinkedIn</a></li>
+									<li><a href="<?php esc_url( the_author_meta( 'linkedin' ) ); ?>" rel="me" title="LinkedIn">LinkedIn</a></li>
 								<?php endif; ?>
 								<?php if ( get_the_author_meta( 'reddit' ) ) : ?>
 									<li><a href="<?php esc_url( the_author_meta( 'reddit' ) ); ?>" rel="me" title="Reddit">Reddit</a></li>
