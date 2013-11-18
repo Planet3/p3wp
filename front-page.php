@@ -216,35 +216,39 @@ get_header(); ?>
 				</div><!-- #media -->
 
 			</div><!-- posts-area large-6 -->
+		</div><!-- row -->
 
-		<div id="featured" class="posts-area large-12 columns">
-			<?php if (planet3_0_check_category_exists('article')) : ?>
-				<?php $args = array(
-					'category__in' => planet3_0_cat_slug_to_id('article'),
-					'posts_per_page' => 3,
-					'offset' => 1
-					);
-				/* Start the featured Loop */ 
-				$featured_query = new WP_Query( $args ); 
-				if ( $featured_query -> have_posts() ) : ?>
-					<header class="section-header">
-						<h1>Recent Features</h1>
-						<?php echo category_description( $args['category__in'] ); ?>
-					</header><!-- section-header -->
-					<ul class="large-block-grid-3">
-						<?php while ( $featured_query -> have_posts() ) : $featured_query -> the_post(); ?>
-							<?php get_template_part( 'content', 'fpfeatured' ); ?>
-						<?php endwhile; ?>
-					</ul><!-- large-block-grid-3 -->
-					<p class="archive-button"><a class="radius small button" href="<?php echo get_category_link( $args['category__in'] ); ?>"><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?> Archives</a></p>
-					<?php wp_reset_postdata(); ?>
+		<div class="row">
+			<div id="featured" class="posts-area large-12 columns">
+				<?php if (planet3_0_check_category_exists('article')) : ?>
+					<?php $args = array(
+						'category__in' => planet3_0_cat_slug_to_id('article'),
+						'posts_per_page' => 3,
+						'offset' => 1
+						);
+					/* Start the featured Loop */ 
+					$featured_query = new WP_Query( $args ); 
+					if ( $featured_query -> have_posts() ) : ?>
+						<header class="section-header">
+							<h1>Recent Features</h1>
+							<?php echo category_description( $args['category__in'] ); ?>
+						</header><!-- section-header -->
+						<ul class="large-block-grid-3">
+							<?php while ( $featured_query -> have_posts() ) : $featured_query -> the_post(); ?>
+								<?php get_template_part( 'content', 'fpfeatured' ); ?>
+							<?php endwhile; ?>
+						</ul><!-- large-block-grid-3 -->
+						<p class="archive-button"><a class="radius small button" href="<?php echo get_category_link( $args['category__in'] ); ?>"><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?> Archives</a></p>
+						<?php wp_reset_postdata(); ?>
+					<?php else : ?>
+						<p>There are no posts in the article category to display.</p>
+					<?php endif; ?>
 				<?php else : ?>
-					<p>There are no posts in the article category to display.</p>
+					<p>The article category would go here but it has not been created yet.</p>
 				<?php endif; ?>
-			<?php else : ?>
-				<p>The article category would go here but it has not been created yet.</p>
-			<?php endif; ?>
-		</div><!-- #featured row -->
+			</div><!-- #featured .posts-area large-12 columns -->
+		</div><!-- row -->
+
 
 	</div><!-- #primary -->
 
