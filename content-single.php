@@ -57,7 +57,7 @@
 				echo get_avatar( get_the_author_meta( 'user_email' ), 256, $default, get_the_author() ); 
 			endif; ?>
 		</div>
-		<h1><?php planet3_0_posted_by(); ?></h1>
+		<h1 itemprop="author" ><?php planet3_0_posted_by(); ?></h1>
 			<?php
 			// Display Author's discription if it exists
 			if ( get_the_author_meta( 'user_description' ) ) : ?>
