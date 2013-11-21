@@ -20,6 +20,14 @@
 			.top-bar-container { top: 28px !important; }
 		</style>
 	<?php }?> -->
+
+	<?php if ( ! is_single() ) : ?>
+		<meta property="og:title" content="<?php bloginfo( 'name' ); ?> | <?php bloginfo( 'description' ); ?>" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="<?php the_permalink(); ?>" />
+		<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/logo.png" />
+	<?php endif; ?>
+
 	<?php wp_head(); ?>
 </head>
 

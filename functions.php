@@ -176,6 +176,7 @@ function planet3_0_trim_excerpt( $text ) {
 	if ( ! is_feed() ) {
 		// Setting the global $more variable to 0 forces the content to be truncated at the <!--more--> tag
 		global $more;
+		$original_more = $more;
 		$more = 0;
 	}
 
@@ -245,6 +246,11 @@ function planet3_0_trim_excerpt( $text ) {
 
 	$text = trim( force_balance_tags( $out ) );
 
+	}
+
+	if ( ! is_feed() ) {
+		// reset the global $more 
+		$more = $original_more;
 	}
 
 	return $text;
