@@ -31,7 +31,7 @@
 		<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/logo.png" />
 	<?php } ?>
 
-	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:site" content="@planet3org" />
 	<meta name="twitter:title" content="<?php the_title(); ?>" />
 	<meta name="twitter:description" content="<?php echo wp_kses( get_the_excerpt(), array() ); ?>" />
