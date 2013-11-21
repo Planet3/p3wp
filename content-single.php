@@ -5,15 +5,26 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<h1 class="entry-title"><?php the_title(); ?></h1>
-	</header><!-- .entry-header -->
+<?php if ( has_post_thumbnail() ) {
+	$thumb_id = get_post_thumbnail_id();
+	$thumb_url = wp_get_attachment_image_src( $thumb_id, 'post-thumbnail', true ); ?>
+	<meta itemprop="image" content="<?php echo $thumb_url[0] ?>" />
+<?php } else { ?>
+	<meta itemprop="image" content="<?php echo get_template_directory_uri(); ?>/logo.png" />
+<?php }
+$allowed_html = array();
+?>
+<meta itemprop="description" content="<?php echo wp_kses( get_the_excerpt(), $allowed_html ); ?>" />
+<meta itemprop="interactionCount" content="UserComments:<?php echo $post->comment_count; ?>"/>
 
+<article itemscope itemtype="http://schema.org/Article" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<header class="entry-header">
+		<h1 itemprop="headline" class="entry-title"><?php the_title(); ?></h1>
+	</header><!-- .entry-header -->
 
 	<div class="byline large-2 columns">
 		<div class="entry-meta meta-above">
-			<?php planet3_0_posted_on(); ?>
+			<span itemprop="datePublished" ><?php planet3_0_posted_on(); ?></span>
 		</div><!-- .entry-meta -->
 		<div class="author-avatar hide-for-small">
 			<?php if ( validate_gravatar( get_the_author_meta( 'user_email' ) ) ) :
@@ -34,7 +45,7 @@
 		<div class="entry-content">
 			<!-- <?php if ( function_exists( 'sharing_display' ) )
 				sharing_display( '', true ); ?> -->
-			<?php the_content(); ?>
+			<span itemprop="articleBody"><?php the_content(); ?></span>
 			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . 'Pages:', 'after' => '</div>' ) ); ?>
 		</div><!-- .entry-content -->
 		<footer class="entry-meta meta-bellow large-12 columns" >
