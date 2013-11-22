@@ -442,3 +442,8 @@ function dont_moderate_contributors( $caps ) {
  */
 add_filter( 'wp_feed_cache_transient_lifetime', 
 	create_function('$a', 'return 600;') );
+
+/**
+ * Remove Open Graph and Twitter Card meta tags insterted by jetpack
+ */
+remove_action( 'wp_head','jetpack_og_tags' );
