@@ -44,15 +44,66 @@
 
 		<ol class="comment-list">
 			<?php
-				/* Loop through and list the comments. Tell wp_list_comments()
+				$comments = get_comments( array( 
+					'order' => 'ASC',
+					'post_id' => get_the_ID(),
+					'meta_query' => array(
+						'relation' => 'OR',
+						array( // Select comments that don't have the 'shadow' p3_comment_status meta
+							'key' => 'p3_comment_status',
+							'value' => 'shadow',
+							'compare' => '!='
+						),
+						array( // Select comments that don't have the p3_comment_status set
+							'key' => 'p3_comment_status',
+							'compare' => 'NOT EXISTS',
+							'value' => ''
+						)
+					)
+				) );
+
+				/* Loop through and list the non shadow comments. Tell wp_list_comments()
 				 * to use planet3_0_comment() to format the comments.
 				 * If you want to overload this in a child theme then you can
 				 * define planet3_0_comment() and that will be used instead.
 				 * See planet3_0_comment() in inc/template-tags.php for more.
 				 */
-				wp_list_comments( array( 'callback' => 'planet3_0_comment' ) );
+				wp_list_comments( array( 'callback' => 'planet3_0_comment' ), $comments );
 			?>
 		</ol><!-- .comment-list -->
+		<hr />
+
+
+		<h3 class="shadow-comments-header">Click <a href="#shadow-comments">here</a> to show comments that that do not meet out comment policy</h3>
+		<div id="shadow-comments" >
+			<ol class="comment-list">
+				<?php
+					$comments = get_comments( array( 
+						'order' => 'ASC',
+						'post_id' => get_the_ID(),
+						'meta_query' => array(
+							array( // Select comments that don't have the 'shadow' p3_comment_status meta
+								'key' => 'p3_comment_status',
+								'value' => 'shadow',
+								'compare' => '='
+							)
+						)
+					) );
+
+					/* Loop through and list the shadow comments. Tell wp_list_comments()
+					 * to use planet3_0_comment() to format the comments.
+					 * If you want to overload this in a child theme then you can
+					 * define planet3_0_comment() and that will be used instead.
+					 * See planet3_0_comment() in inc/template-tags.php for more.
+					 */
+					wp_list_comments( array( 
+										'callback' => 'planet3_0_comment',
+										 'reply_text' => ''), 
+					$comments );
+				?>
+			</ol><!-- .comment-list -->
+		</div><!-- #shadow-comments -->
+
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-below" class="navigation-comment" role="navigation">
