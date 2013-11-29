@@ -380,6 +380,11 @@ function planet3_0_scripts() {
 	if ( is_singular() && wp_attachment_is_image() ) {
 		wp_enqueue_script( 'keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
 	}
+
+	wp_enqueue_script('fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array('jquery'), '', TRUE); 
+
+	wp_enqueue_script('fitvids-xtra', get_template_directory_uri() . '/js/fitvids.js', array(), '', TRUE);
+
 }
 add_action( 'wp_enqueue_scripts', 'planet3_0_scripts' );
 
