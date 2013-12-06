@@ -28,10 +28,11 @@
 
 	<?php if ( have_comments() ) : ?>
 		<h2 class="comments-title">
-			<?php
+			Comments:
+			<!--<?php
 				printf( _nx( 'One comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title' ),
 					number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
-			?>
+			?>-->
 		</h2>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
@@ -98,7 +99,7 @@
 					 */
 					wp_list_comments( array( 
 										'callback' => 'planet3_0_comment',
-										 'reply_text' => ''), 
+										'reply_text' => ''), 
 					$comments );
 				?>
 			</ol><!-- .comment-list -->
@@ -125,5 +126,28 @@
 	<?php get_sidebar( 'comments' ); ?>
 
 	<?php comment_form(); ?>
+
+	<div id="modderated-comments" >
+		<ol class="comment-list">
+			<?php
+				$comments = get_comments( array( 
+					'order' => 'ASC',
+					'post_id' => get_the_ID(),
+					'status' => 'hold'
+				) );
+
+				/* Loop through and list moderated comments. Tell wp_list_comments()
+				 * to use planet3_0_comment() to format the comments.
+				 * If you want to overload this in a child theme then you can
+				 * define planet3_0_comment() and that will be used instead.
+				 * See planet3_0_comment() in inc/template-tags.php for more.
+				 */
+				wp_list_comments( array( 
+									'callback' => 'planet3_0_comment',
+									'reply_text' => ''), 
+				$comments );
+			?>
+		</ol><!-- .comment-list -->
+	</div><!-- #moderated-comments -->
 
 </div><!-- #comments -->
