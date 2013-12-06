@@ -86,7 +86,7 @@ function planet3_0_comment( $comment, $args, $depth ) {
 					<?php printf( '%s <span class="says">says:</span>', sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
 				</div><!-- .comment-author .vcard -->
 				<?php if ( $comment->comment_approved == '0' ) : ?>
-					<em>Your comment is awaiting moderation.</em>
+					<em>Awaiting moderation.</em>
 					<br />
 				<?php endif; ?>
 

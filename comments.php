@@ -48,6 +48,7 @@
 				$comments = get_comments( array( 
 					'order' => 'ASC',
 					'post_id' => get_the_ID(),
+					'status' => 'approve',
 					'meta_query' => array(
 						'relation' => 'OR',
 						array( // Select comments that don't have the 'shadow' p3_comment_status meta
@@ -82,6 +83,7 @@
 					$comments = get_comments( array( 
 						'order' => 'ASC',
 						'post_id' => get_the_ID(),
+						'status' => 'approve',
 						'meta_query' => array(
 							array( // Select comments that don't have the 'shadow' p3_comment_status meta
 								'key' => 'p3_comment_status',
