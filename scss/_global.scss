@@ -223,7 +223,7 @@ $portrait: "only screen and (orientation: portrait)" !default;
     font-weight: $body-font-weight;
     font-style: $body-font-style;
     line-height: 1; // Set to $base-line-height to take on browser default of 150%
-    position: relative;
+    //position: relative; // This needs to be commented out to avoid conflicts with the wordpress amdin bar on screens smaller than 600px wide
   }
 
   // Override outline from normalize, we don't like it
