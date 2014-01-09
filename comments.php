@@ -153,6 +153,6 @@
 				?>
 			</ol><!-- .comment-list -->
 		</div><!-- #moderated-comments -->
-	<?php endif ?>
+	<?php endif; ?>
 
 </div><!-- #comments -->
