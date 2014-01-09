@@ -129,27 +129,30 @@
 
 	<?php comment_form(); ?>
 
-	<div id="modderated-comments" >
-		<ol class="comment-list">
-			<?php
-				$comments = get_comments( array( 
-					'order' => 'ASC',
-					'post_id' => get_the_ID(),
-					'status' => 'hold'
-				) );
+	<?php if ( ( get_the_author_meta( 'ID' ) == get_current_user_id() ) || current_user_can( 'moderate_comments' ) ) :?>
+		<h2 class="comments-title">Comments awaiting moderation</h2>
+		<div id="modderated-comments" >
+			<ol class="comment-list">
+				<?php
+					$comments = get_comments( array( 
+						'order' => 'ASC',
+						'post_id' => get_the_ID(),
+						'status' => 'hold'
+					) );
 
-				/* Loop through and list moderated comments. Tell wp_list_comments()
-				 * to use planet3_0_comment() to format the comments.
-				 * If you want to overload this in a child theme then you can
-				 * define planet3_0_comment() and that will be used instead.
-				 * See planet3_0_comment() in inc/template-tags.php for more.
-				 */
-				wp_list_comments( array( 
-									'callback' => 'planet3_0_comment',
-									'reply_text' => ''), 
-				$comments );
-			?>
-		</ol><!-- .comment-list -->
-	</div><!-- #moderated-comments -->
+					/* Loop through and list moderated comments. Tell wp_list_comments()
+					 * to use planet3_0_comment() to format the comments.
+					 * If you want to overload this in a child theme then you can
+					 * define planet3_0_comment() and that will be used instead.
+					 * See planet3_0_comment() in inc/template-tags.php for more.
+					 */
+					wp_list_comments( array( 
+										'callback' => 'planet3_0_comment',
+										'reply_text' => ''), 
+					$comments );
+				?>
+			</ol><!-- .comment-list -->
+		</div><!-- #moderated-comments -->
+	<?php endif ?>
 
 </div><!-- #comments -->
