@@ -214,6 +214,7 @@ function planet3_0_trim_excerpt( $text ) {
 
 		$tokens = array();
 		$word = 0;
+		$out = '';
 
 		// Divide the string into tokens; HTML tags, or words, followed by any whitespace.
 		$regex = '/(<[^>]+>|[^<>\s]+)\s*/u';
