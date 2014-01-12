@@ -54,7 +54,7 @@
 		</div><!-- .entry-meta -->
 		<div class="author-avatar hide-for-small">
 			<?php if ( validate_gravatar( get_the_author_meta( 'user_email' ) ) ) :
-				echo get_avatar( get_the_author_meta( 'user_email' ), 256, $default, get_the_author() ); 
+				echo get_avatar( get_the_author_meta( 'user_email' ), 256, '', get_the_author() ); 
 			endif; ?>
 		</div>
 		<h1 itemprop="author" ><?php planet3_0_posted_by(); ?></h1>
