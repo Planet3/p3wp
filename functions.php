@@ -276,6 +276,7 @@ add_filter('get_the_excerpt', 'planet3_0_trim_excerpt');
  * @since  Planet3.0 3.0
  */
 function planet3_0_custom_excerpt_more( $output ) {
+	global $post;
 	if ( has_excerpt() && ! is_attachment() ) {
 		$output .= ' <a class="moretag" href="'. get_permalink($post->ID) . '">[more]</a>';
 	}
