@@ -146,7 +146,7 @@
 
 	<?php comment_form(); ?>
 
-	<?php if ( ( get_the_author_meta( 'ID' ) == get_current_user_id() ) || current_user_can( 'moderate_comments' ) ) :?>
+	<?php if ( function_exists('p3_comment_moderation_show') && p3_comment_moderation_show() ) :?>
 		<h2 class="comments-title">Comments awaiting moderation:</h2>
 		<div class="moderated-comments" >
 			<ol class="comment-list">
