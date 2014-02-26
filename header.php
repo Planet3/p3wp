@@ -22,6 +22,33 @@
 	<?php }?> -->
 
 	<?php if ( ! is_single() ) : ?>
+		<meta property="og:title" content="<?php the_title(); ?>" />
+		<meta property="og:type" content="article" />
+		<meta property="og:url" content="<?php the_permalink(); ?>" />
+		<meta property="og:site_name" content="<?php bloginfo( 'name' ); ?>" />
+		<meta property="og:description" content="<?php echo wp_kses( get_the_excerpt(), array() ); ?>" />
+		<?php if ( has_post_thumbnail() ) {
+			$thumb_id = get_post_thumbnail_id();
+			$thumb_url = wp_get_attachment_image_src( $thumb_id, 'post-thumbnail', true ); ?>
+			<meta property="og:image" content="<?php echo $thumb_url[0] ?>" />
+		<?php } else { ?>
+			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/logo.png" />
+		<?php } ?>
+
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@planet3org" />
+		<meta name="twitter:title" content="<?php the_title(); ?>" />
+		<meta name="twitter:description" content="<?php echo wp_kses( get_the_excerpt(), array() ); ?>" />
+		<?php if ( has_post_thumbnail() ) {
+			$thumb_id = get_post_thumbnail_id();
+			$thumb_url = wp_get_attachment_image_src( $thumb_id, 'post-thumbnail', true ); ?>
+			<meta name="twitter:image:src" content="<?php echo $thumb_url[0] ?>" />
+		<?php } else { ?>
+			<meta name="twitter:image:src" content="<?php echo get_template_directory_uri(); ?>/logo.png" />
+		<?php } ?>
+	<?php endif; ?>
+
+	<?php if ( ! is_single() ) : ?>
 		<meta property="og:title" content="<?php bloginfo( 'name' ); ?> | <?php bloginfo( 'description' ); ?>" />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="<?php the_permalink(); ?>" />
