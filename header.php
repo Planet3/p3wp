@@ -23,10 +23,10 @@
 
 
 	<?php if ( is_single() ) : ?>
-		<meta property="og:title" content="<?php the_title(); ?>" />
 		<meta property="og:type" content="article" />
-		<meta property="og:url" content="<?php the_permalink(); ?>" />
 		<meta property="og:site_name" content="<?php bloginfo( 'name' ); ?>" />
+		<meta property="og:title" content="<?php the_title(); ?>" />
+		<meta property="og:url" content="<?php the_permalink(); ?>" />
 		<meta property="og:description" content="<?php echo planet3_0_meta_experpt(); ?>" />
 		<?php if ( has_post_thumbnail() ) {
 			$thumb_id = get_post_thumbnail_id();
