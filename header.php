@@ -8,7 +8,7 @@
  * @since Planet3.0 3.0
  */
 ?><!DOCTYPE html>
-<html prefix="og: http://ogp.me/ns#" <?php language_attributes(); ?>>
+<html prefix="og: http://ogp.me/ns#<?php if ( is_single() ) echo " article: http://ogp.me/ns/article#" ; ?>" <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width" />
