@@ -8,7 +8,7 @@
  * @since Planet3.0 3.0
  */
 ?><!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html prefix="og: http://ogp.me/ns#" <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width" />
@@ -21,7 +21,8 @@
 		</style>
 	<?php }?> -->
 
-	<?php if ( ! is_single() ) : ?>
+
+	<?php if ( is_single() ) : ?>
 		<meta property="og:title" content="<?php the_title(); ?>" />
 		<meta property="og:type" content="article" />
 		<meta property="og:url" content="<?php the_permalink(); ?>" />
