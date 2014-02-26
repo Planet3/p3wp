@@ -15,7 +15,7 @@
 	<?php } else { ?>
 		<meta itemprop="image" content="<?php echo get_template_directory_uri(); ?>/logo.png" />
 	<?php } ?>
-	<meta itemprop="description" content="<?php echo wp_kses( get_the_excerpt(), array() ); ?>" />
+	<meta itemprop="description" content="<?php echo planet3_0_meta_experpt(); ?>" />
 	<meta itemprop="interactionCount" content="UserComments:<?php echo $post->comment_count; ?>"/>
 
 	<header class="entry-header">

@@ -284,6 +284,14 @@ function planet3_0_custom_excerpt_more( $output ) {
 }
 add_filter( 'get_the_excerpt', 'planet3_0_custom_excerpt_more' );
 
+/**
+ * Sanitize the excerpt for use in meta tags like Open Graph Twitter Cards and scheema.org
+ */
+function planet3_0_meta_experpt() {
+	$metaexcerpt = wp_kses( get_the_excerpt(), array() );
+	$metaexcerpt = str_replace("\"", "&quot;", $metaexcerpt );
+	return $metaexcerpt;
+}
 
 
 /**

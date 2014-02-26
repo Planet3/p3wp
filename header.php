@@ -27,7 +27,7 @@
 		<meta property="og:type" content="article" />
 		<meta property="og:url" content="<?php the_permalink(); ?>" />
 		<meta property="og:site_name" content="<?php bloginfo( 'name' ); ?>" />
-		<meta property="og:description" content="<?php echo wp_kses( get_the_excerpt(), array() ); ?>" />
+		<meta property="og:description" content="<?php echo planet3_0_meta_experpt(); ?>" />
 		<?php if ( has_post_thumbnail() ) {
 			$thumb_id = get_post_thumbnail_id();
 			$thumb_url = wp_get_attachment_image_src( $thumb_id, 'post-thumbnail', true ); ?>
@@ -39,7 +39,7 @@
 		<meta name="twitter:card" content="summary" />
 		<meta name="twitter:site" content="@planet3org" />
 		<meta name="twitter:title" content="<?php the_title(); ?>" />
-		<meta name="twitter:description" content="<?php echo wp_kses( get_the_excerpt(), array() ); ?>" />
+		<meta name="twitter:description" content="<?php echo planet3_0_meta_experpt(); ?>" />
 		<?php if ( has_post_thumbnail() ) {
 			$thumb_id = get_post_thumbnail_id();
 			$thumb_url = wp_get_attachment_image_src( $thumb_id, 'post-thumbnail', true ); ?>
