@@ -35,7 +35,11 @@
 			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/logo.png" />
 		<?php } ?>
 
-		<meta name="twitter:card" content="summary" />
+		<?php if (has_post_thumbnail() ) : ?>
+			<meta name="twitter:card" content="summary_large_image" />
+		<?php else : ?>
+			<meta name="twitter:card" content="summary" />
+		<?php endif; ?>
 		<meta name="twitter:site" content="@planet3org" />
 		<meta name="twitter:title" content="<?php the_title(); ?>" />
 		<meta name="twitter:description" content="<?php echo planet3_0_meta_experpt(); ?>" />
