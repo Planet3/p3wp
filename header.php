@@ -32,7 +32,7 @@
 		<meta property="og:description" content="<?php echo planet3_0_meta_experpt(); ?>" />
 		<?php if ( has_post_thumbnail() ) {
 			$thumb_id = get_post_thumbnail_id();
-			$thumb_url = wp_get_attachment_image_src( $thumb_id, 'full', true ); ?>
+			$thumb_url = wp_get_attachment_image_src( $thumb_id, 'large', true ); ?>
 			<meta property="og:image" content="<?php echo $thumb_url[0] ?>" />
 		<?php } else { ?>
 			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/logo.png" />
@@ -48,7 +48,7 @@
 		<meta name="twitter:description" content="<?php echo planet3_0_meta_experpt(); ?>" />
 		<?php if ( has_post_thumbnail() ) {
 			$thumb_id = get_post_thumbnail_id();
-			$thumb_url = wp_get_attachment_image_src( $thumb_id, 'full', true ); ?>
+			$thumb_url = wp_get_attachment_image_src( $thumb_id, 'large', true ); ?>
 			<meta name="twitter:image:src" content="<?php echo $thumb_url[0] ?>" />
 		<?php } else { ?>
 			<meta name="twitter:image:src" content="<?php echo get_template_directory_uri(); ?>/logo.png" />
