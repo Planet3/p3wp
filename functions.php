@@ -69,6 +69,17 @@ function planet3_0_setup() {
 	set_post_thumbnail_size( 640, 360, true );
 	add_image_size( 'small_thumbnail', 320, 180, true );
 
+	add_filter('image_size_names_choose', 'planet3_0_image_sizes');
+	function planet3_0_image_sizes($sizes) {
+		$addsizes = array(
+		'post-thumbnail' => 'Featured',
+		'small_thumbnail' => 'Small Featured'
+		);
+		$newsizes = array_merge($sizes, $addsizes);
+		return $newsizes;
+	}
+
+
 	/**
 	 * This theme uses wp_nav_menu() in one location.
 	 */
