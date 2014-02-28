@@ -21,7 +21,6 @@
 		</style>
 	<?php }?> -->
 
-
 	<?php if ( is_single() ) : ?>
 		<meta property="og:type" content="article" />
 		<meta property="og:site_name" content="<?php bloginfo( 'name' ); ?>" />
