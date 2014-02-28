@@ -21,6 +21,9 @@
 		</style>
 	<?php }?> -->
 
+	<!-- Needed to claim this domain on facebook -->
+	<meta property="fb:admins" content="794860037" />
+
 	<?php if ( is_single() ) : ?>
 		<meta property="og:type" content="article" />
 		<meta property="og:site_name" content="<?php bloginfo( 'name' ); ?>" />
