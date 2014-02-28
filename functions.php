@@ -472,4 +472,5 @@ add_filter( 'wp_feed_cache_transient_lifetime',
 /**
  * Remove Open Graph and Twitter Card meta tags insterted by jetpack
  */
+add_filter( 'jetpack_enable_opengraph', '__return_false', 99 );
 remove_action( 'wp_head','jetpack_og_tags' );
