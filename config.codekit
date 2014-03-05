@@ -219,7 +219,7 @@
 		"inputAbbreviatedPath": "\/js\/custom.modernizr.js",
 		"outputAbbreviatedPath": "\/js\/custom.modernizr.min.js",
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 2,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/custom.modernizr.min.js": {
@@ -229,7 +229,7 @@
 		"inputAbbreviatedPath": "\/js\/custom.modernizr.min.js",
 		"outputAbbreviatedPath": "\/js\/custom.modernizr.min.min.js",
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 2,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/customizer.js": {
@@ -239,7 +239,7 @@
 		"inputAbbreviatedPath": "\/js\/customizer.js",
 		"outputAbbreviatedPath": "\/js\/customizer.min.js",
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 2,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/customizer.min.js": {
@@ -249,7 +249,7 @@
 		"inputAbbreviatedPath": "\/js\/customizer.min.js",
 		"outputAbbreviatedPath": "\/js\/customizer.min.min.js",
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 2,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/fitvids.js": {
@@ -259,7 +259,7 @@
 		"inputAbbreviatedPath": "\/js\/fitvids.js",
 		"outputAbbreviatedPath": "\/js\/fitvids.min.js",
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 2,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/fitvids.min.js": {
@@ -269,7 +269,7 @@
 		"inputAbbreviatedPath": "\/js\/fitvids.min.js",
 		"outputAbbreviatedPath": "\/js\/fitvids.min.min.js",
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 2,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/foundation.js": {
@@ -279,7 +279,7 @@
 		"inputAbbreviatedPath": "\/js\/foundation.js",
 		"outputAbbreviatedPath": "\/js\/foundation.min.js",
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 2,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/foundation.min.js": {
@@ -289,7 +289,7 @@
 		"inputAbbreviatedPath": "\/js\/foundation.min.js",
 		"outputAbbreviatedPath": "\/js\/foundation.min.min.js",
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 2,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/foundation.topbar.js": {
@@ -299,7 +299,7 @@
 		"inputAbbreviatedPath": "\/js\/foundation.topbar.js",
 		"outputAbbreviatedPath": "\/js\/foundation.topbar.min.js",
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 2,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/foundation.topbar.min.js": {
@@ -309,7 +309,7 @@
 		"inputAbbreviatedPath": "\/js\/foundation.topbar.min.js",
 		"outputAbbreviatedPath": "\/js\/foundation.topbar.min.min.js",
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 2,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/jquery.fitvids.js": {
@@ -319,7 +319,7 @@
 		"inputAbbreviatedPath": "\/js\/jquery.fitvids.js",
 		"outputAbbreviatedPath": "\/js\/jquery.fitvids.min.js",
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 2,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/jquery.fitvids.min.js": {
@@ -329,7 +329,7 @@
 		"inputAbbreviatedPath": "\/js\/jquery.fitvids.min.js",
 		"outputAbbreviatedPath": "\/js\/jquery.fitvids.min.min.js",
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 2,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/keyboard-image-navigation.js": {
@@ -339,7 +339,7 @@
 		"inputAbbreviatedPath": "\/js\/keyboard-image-navigation.js",
 		"outputAbbreviatedPath": "\/js\/keyboard-image-navigation.min.js",
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 2,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/keyboard-image-navigation.min.js": {
@@ -349,7 +349,7 @@
 		"inputAbbreviatedPath": "\/js\/keyboard-image-navigation.min.js",
 		"outputAbbreviatedPath": "\/js\/keyboard-image-navigation.min.min.js",
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 2,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/login-script.js": {
@@ -359,7 +359,7 @@
 		"inputAbbreviatedPath": "\/js\/login-script.js",
 		"outputAbbreviatedPath": "\/js\/login-script.min.js",
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 2,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/login-script.min.js": {
@@ -369,7 +369,7 @@
 		"inputAbbreviatedPath": "\/js\/login-script.min.js",
 		"outputAbbreviatedPath": "\/js\/login-script.min.min.js",
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 2,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/skip-link-focus-fix.js": {
@@ -379,7 +379,7 @@
 		"inputAbbreviatedPath": "\/js\/skip-link-focus-fix.js",
 		"outputAbbreviatedPath": "\/js\/skip-link-focus-fix.min.js",
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 2,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/skip-link-focus-fix.min.js": {
@@ -389,7 +389,7 @@
 		"inputAbbreviatedPath": "\/js\/skip-link-focus-fix.min.js",
 		"outputAbbreviatedPath": "\/js\/skip-link-focus-fix.min.min.js",
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 2,
 		"syntaxCheckerStyle": 1
 		},
 	"\/logo.png": {
@@ -938,7 +938,7 @@
 	"javascriptAutoOutputPathReplace2": "",
 	"javascriptAutoOutputPathStyle": 0,
 	"javascriptCreateSourceMap": 1,
-	"javascriptOutputStyle": 1,
+	"javascriptOutputStyle": 2,
 	"javascriptOutputSuffix": ".min",
 	"javascriptSyntaxCheckerStyle": 1,
 	"jsCheckerReservedNamesString": "",
