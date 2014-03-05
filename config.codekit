@@ -18,7 +18,7 @@
 		"inputAbbreviatedPath": "\/404ball.jpg",
 		"outputAbbreviatedPath": "\/404ball.jpg",
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/archive.php": {
 		"fileType": 8192,
@@ -225,17 +225,17 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/custom.modernizr.js",
-		"outputAbbreviatedPath": "\/js\/custom.modernizr-ck.js",
+		"outputAbbreviatedPath": "\/js\/custom.modernizr.min.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
 	"\/js\/custom.modernizr.min.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/custom.modernizr.min.js",
-		"outputAbbreviatedPath": "\/js\/custom.modernizr.min-ck.js",
+		"outputAbbreviatedPath": "\/js\/custom.modernizr.min.min.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
@@ -245,17 +245,17 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/customizer.js",
-		"outputAbbreviatedPath": "\/js\/customizer-ck.js",
+		"outputAbbreviatedPath": "\/js\/customizer.min.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
 	"\/js\/customizer.min.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/customizer.min.js",
-		"outputAbbreviatedPath": "\/js\/customizer.min-ck.js",
+		"outputAbbreviatedPath": "\/js\/customizer.min.min.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
@@ -265,17 +265,17 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/fitvids.js",
-		"outputAbbreviatedPath": "\/js\/fitvids-ck.js",
+		"outputAbbreviatedPath": "\/js\/fitvids.min.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
 	"\/js\/fitvids.min.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/fitvids.min.js",
-		"outputAbbreviatedPath": "\/js\/fitvids.min-ck.js",
+		"outputAbbreviatedPath": "\/js\/fitvids.min.min.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
@@ -285,17 +285,17 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/foundation.js",
-		"outputAbbreviatedPath": "\/js\/foundation-ck.js",
+		"outputAbbreviatedPath": "\/js\/foundation.min.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
 	"\/js\/foundation.min.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/foundation.min.js",
-		"outputAbbreviatedPath": "\/js\/foundation.min-ck.js",
+		"outputAbbreviatedPath": "\/js\/foundation.min.min.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
@@ -305,17 +305,17 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/foundation.topbar.js",
-		"outputAbbreviatedPath": "\/js\/foundation.topbar-ck.js",
+		"outputAbbreviatedPath": "\/js\/foundation.topbar.min.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
 	"\/js\/foundation.topbar.min.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/foundation.topbar.min.js",
-		"outputAbbreviatedPath": "\/js\/foundation.topbar.min-ck.js",
+		"outputAbbreviatedPath": "\/js\/foundation.topbar.min.min.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
@@ -325,17 +325,17 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/jquery.fitvids.js",
-		"outputAbbreviatedPath": "\/js\/jquery.fitvids-ck.js",
+		"outputAbbreviatedPath": "\/js\/jquery.fitvids.min.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
 	"\/js\/jquery.fitvids.min.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/jquery.fitvids.min.js",
-		"outputAbbreviatedPath": "\/js\/jquery.fitvids.min-ck.js",
+		"outputAbbreviatedPath": "\/js\/jquery.fitvids.min.min.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
@@ -345,17 +345,17 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/keyboard-image-navigation.js",
-		"outputAbbreviatedPath": "\/js\/keyboard-image-navigation-ck.js",
+		"outputAbbreviatedPath": "\/js\/keyboard-image-navigation.min.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
 	"\/js\/keyboard-image-navigation.min.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/keyboard-image-navigation.min.js",
-		"outputAbbreviatedPath": "\/js\/keyboard-image-navigation.min-ck.js",
+		"outputAbbreviatedPath": "\/js\/keyboard-image-navigation.min.min.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
@@ -365,17 +365,17 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/login-script.js",
-		"outputAbbreviatedPath": "\/js\/login-script-ck.js",
+		"outputAbbreviatedPath": "\/js\/login-script.min.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
 	"\/js\/login-script.min.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/login-script.min.js",
-		"outputAbbreviatedPath": "\/js\/login-script.min-ck.js",
+		"outputAbbreviatedPath": "\/js\/login-script.min.min.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
@@ -385,17 +385,17 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/skip-link-focus-fix.js",
-		"outputAbbreviatedPath": "\/js\/skip-link-focus-fix-ck.js",
+		"outputAbbreviatedPath": "\/js\/skip-link-focus-fix.min.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
 	"\/js\/skip-link-focus-fix.min.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/skip-link-focus-fix.min.js",
-		"outputAbbreviatedPath": "\/js\/skip-link-focus-fix.min-ck.js",
+		"outputAbbreviatedPath": "\/js\/skip-link-focus-fix.min.min.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
@@ -408,7 +408,7 @@
 		"inputAbbreviatedPath": "\/logo.png",
 		"outputAbbreviatedPath": "\/logo.png",
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/no-results.php": {
 		"fileType": 8192,
@@ -453,7 +453,7 @@
 		"inputAbbreviatedPath": "\/screenshot.png",
 		"outputAbbreviatedPath": "\/screenshot.png",
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/scss\/_block-grid.scss": {
 		"createSourceMap": 0,
@@ -947,7 +947,7 @@
 	"javascriptAutoOutputPathStyle": 0,
 	"javascriptCreateSourceMap": 1,
 	"javascriptOutputStyle": 1,
-	"javascriptOutputSuffix": "-ck",
+	"javascriptOutputSuffix": ".min",
 	"javascriptSyntaxCheckerStyle": 0,
 	"jsCheckerReservedNamesString": "",
 	"jsHintFlags2": {
