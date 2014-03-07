@@ -22,7 +22,7 @@
 
 			<div class="large-6 push-6 columns">
 				<h3>Your Avatar</h3>
-				<p>Planet3.0 uses the <a href="http://en.gravatar.com/">Gravitar</a> service to display a user avatar.</p>
+				<p>Planet3.0 uses the <a href="http://en.gravatar.com/">Gravatar</a> service to display a user avatar.</p>
 				<?php echo get_avatar( get_the_author_meta( 'user_email' ), 512, $default, get_the_author() ); ?>
 				<p><br />Edit your Avatar <a href="http://en.gravatar.com/emails/">here</a></p>
 				<hr class="show-for-small" />

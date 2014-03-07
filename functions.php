@@ -69,6 +69,17 @@ function planet3_0_setup() {
 	set_post_thumbnail_size( 640, 360, true );
 	add_image_size( 'small_thumbnail', 320, 180, true );
 
+	add_filter('image_size_names_choose', 'planet3_0_image_sizes');
+	function planet3_0_image_sizes($sizes) {
+		$addsizes = array(
+		'post-thumbnail' => 'Featured',
+		'small_thumbnail' => 'Small Featured'
+		);
+		$newsizes = array_merge($sizes, $addsizes);
+		return $newsizes;
+	}
+
+
 	/**
 	 * This theme uses wp_nav_menu() in one location.
 	 */
@@ -214,6 +225,7 @@ function planet3_0_trim_excerpt( $text ) {
 
 		$tokens = array();
 		$word = 0;
+		$out = '';
 
 		// Divide the string into tokens; HTML tags, or words, followed by any whitespace.
 		$regex = '/(<[^>]+>|[^<>\s]+)\s*/u';
@@ -275,6 +287,7 @@ add_filter('get_the_excerpt', 'planet3_0_trim_excerpt');
  * @since  Planet3.0 3.0
  */
 function planet3_0_custom_excerpt_more( $output ) {
+	global $post;
 	if ( has_excerpt() && ! is_attachment() ) {
 		$output .= ' <a class="moretag" href="'. get_permalink($post->ID) . '">[more]</a>';
 	}
@@ -282,6 +295,14 @@ function planet3_0_custom_excerpt_more( $output ) {
 }
 add_filter( 'get_the_excerpt', 'planet3_0_custom_excerpt_more' );
 
+/**
+ * Sanitize the excerpt for use in meta tags like Open Graph Twitter Cards and scheema.org
+ */
+function planet3_0_meta_experpt() {
+	$metaexcerpt = wp_kses( get_the_excerpt(), array() );
+	$metaexcerpt = str_replace("\"", "&quot;", $metaexcerpt );
+	return $metaexcerpt;
+}
 
 
 /**
@@ -451,4 +472,5 @@ add_filter( 'wp_feed_cache_transient_lifetime',
 /**
  * Remove Open Graph and Twitter Card meta tags insterted by jetpack
  */
+add_filter( 'jetpack_enable_opengraph', '__return_false', 99 );
 remove_action( 'wp_head','jetpack_og_tags' );

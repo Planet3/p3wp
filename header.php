@@ -8,7 +8,7 @@
  * @since Planet3.0 3.0
  */
 ?><!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html prefix="og: http://ogp.me/ns#<?php if ( is_single() ) echo " article: http://ogp.me/ns/article#" ; ?>" <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width" />
@@ -20,6 +20,40 @@
 			.top-bar-container { top: 28px !important; }
 		</style>
 	<?php }?> -->
+
+	<!-- Needed to claim this domain on facebook -->
+	<meta property="fb:admins" content="794860037" />
+
+	<?php if ( is_single() ) : ?>
+		<meta property="og:type" content="article" />
+		<meta property="og:site_name" content="<?php bloginfo( 'name' ); ?>" />
+		<meta property="og:title" content="<?php the_title(); ?>" />
+		<meta property="og:url" content="<?php the_permalink(); ?>" />
+		<meta property="og:description" content="<?php echo planet3_0_meta_experpt(); ?>" />
+		<?php if ( has_post_thumbnail() ) {
+			$thumb_id = get_post_thumbnail_id();
+			$thumb_url = wp_get_attachment_image_src( $thumb_id, 'large', true ); ?>
+			<meta property="og:image" content="<?php echo $thumb_url[0] ?>" />
+		<?php } else { ?>
+			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/logo.png" />
+		<?php } ?>
+
+		<?php if (has_post_thumbnail() ) : ?>
+			<meta name="twitter:card" content="summary_large_image" />
+		<?php else : ?>
+			<meta name="twitter:card" content="summary" />
+		<?php endif; ?>
+		<meta name="twitter:site" content="@planet3org" />
+		<meta name="twitter:title" content="<?php the_title(); ?>" />
+		<meta name="twitter:description" content="<?php echo planet3_0_meta_experpt(); ?>" />
+		<?php if ( has_post_thumbnail() ) {
+			$thumb_id = get_post_thumbnail_id();
+			$thumb_url = wp_get_attachment_image_src( $thumb_id, 'large', true ); ?>
+			<meta name="twitter:image:src" content="<?php echo $thumb_url[0] ?>" />
+		<?php } else { ?>
+			<meta name="twitter:image:src" content="<?php echo get_template_directory_uri(); ?>/logo.png" />
+		<?php } ?>
+	<?php endif; ?>
 
 	<?php if ( ! is_single() ) : ?>
 		<meta property="og:title" content="<?php bloginfo( 'name' ); ?> | <?php bloginfo( 'description' ); ?>" />
