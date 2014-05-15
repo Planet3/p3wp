@@ -55,3 +55,17 @@ function validate_gravatar($id_or_email) {
         return false;
     }
 }
+
+/**
+ * Utility function to retreive just a gravatar URL instead of an functioning img tag for a given email or id
+ * via https://gist.github.com/justinph/5197810
+ * @param int|string|object $id_or_email A user ID,  email address, or comment object
+ * @return bool if the gravatar exists or not
+ *
+ * @since Planet3.0 3.0
+ */
+
+function get_avatar_url($get_avatar){
+    preg_match("/src='(.*?)'/i", $get_avatar, $matches);
+    return $matches[1];
+}

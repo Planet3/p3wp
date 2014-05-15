@@ -8,13 +8,15 @@
 
 <article itemscope itemtype="http://schema.org/Article" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php if ( has_post_thumbnail() ) {
-		$thumb_id = get_post_thumbnail_id();
+	<?php if ( has_post_thumbnail() ) : ?>
+		<?php $thumb_id = get_post_thumbnail_id();
 		$thumb_url = wp_get_attachment_image_src( $thumb_id, 'post-thumbnail', true ); ?>
 		<meta itemprop="image" content="<?php echo $thumb_url[0] ?>" />
-	<?php } else { ?>
-		<meta itemprop="image" content="<?php echo get_template_directory_uri(); ?>/logo.png" />
-	<?php } ?>
+	<?php elseif ( validate_gravatar( get_post_field( 'post_author', $post_id ) ) ) : ?>
+		<meta itemprop="image" content="<?php echo get_avatar_url( get_avatar( get_post_field( 'post_author', $post_id ), 200 ) ) ?>" />
+	<?php else : ?>
+		<meta itemprop="image" content="<?php echo get_template_directory_uri(); ?>/logo-200.png" />
+	<?php endif; ?>
 	<meta itemprop="description" content="<?php echo planet3_0_meta_experpt(); ?>" />
 	<meta itemprop="interactionCount" content="UserComments:<?php echo $post->comment_count; ?>"/>
 
