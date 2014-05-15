@@ -35,6 +35,34 @@ get_header(); ?>
 				<?php else : ?>
 					<p>The article category would go here but it has not been created yet.</p>
 				<?php endif; ?>
+
+				<?php if (planet3_0_check_category_exists('open-thread')) : ?>
+					<?php $args = array(
+						'category__in' => planet3_0_cat_slug_to_id('open-thread'),
+						'posts_per_page' => 1
+						);
+					/* Start the open thread Loop */ 
+					$open_thread_query = new WP_Query( $args ); 
+					if ( $open_thread_query -> have_posts() ) : ?>
+						<div id="open-thread">
+							<header class="section-header assistive-text">
+								<h1><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?></h1>
+								<?php echo category_description( $args['category__in'] ); ?>
+							</header><!-- section-header -->
+							<ul class="large-block-grid-1">
+								<?php while ( $open_thread_query -> have_posts() ) : $open_thread_query -> the_post(); ?>
+									<?php get_template_part( 'content', 'fpexcerpt' ); ?>
+								<?php endwhile; ?>
+							</ul><!-- large-block-grid-3 -->
+						</div><!-- #open-thread -->
+						<?php wp_reset_postdata(); ?>
+					<?php else : ?>
+						<p>There are no posts in the open-thread category to display.</p>
+					<?php endif; ?>
+				<?php else : ?>
+					<p>The open-thread category would go here but it has not been created yet.</p>
+				<?php endif; ?>
+
 			</div><!-- #lede -->
 
 			<div class="large-5 columns hide-for-small">
@@ -92,32 +120,6 @@ get_header(); ?>
 					<p>The bleg category would go here but it has not been created yet.</p>
 				<?php endif; ?>
 
-				<?php if (planet3_0_check_category_exists('open-thread')) : ?>
-					<?php $args = array(
-						'category__in' => planet3_0_cat_slug_to_id('open-thread'),
-						'posts_per_page' => 1
-						);
-					/* Start the open thread Loop */ 
-					$open_thread_query = new WP_Query( $args ); 
-					if ( $open_thread_query -> have_posts() ) : ?>
-						<div id="open-thread">
-							<header class="section-header assistive-text">
-								<h1><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?></h1>
-								<?php echo category_description( $args['category__in'] ); ?>
-							</header><!-- section-header -->
-							<ul class="large-block-grid-1">
-								<?php while ( $open_thread_query -> have_posts() ) : $open_thread_query -> the_post(); ?>
-									<?php get_template_part( 'content', 'fpexcerpt' ); ?>
-								<?php endwhile; ?>
-							</ul><!-- large-block-grid-3 -->
-						</div><!-- #open-thread -->
-						<?php wp_reset_postdata(); ?>
-					<?php else : ?>
-						<p>There are no posts in the open-thread category to display.</p>
-					<?php endif; ?>
-				<?php else : ?>
-					<p>The open-thread category would go here but it has not been created yet.</p>
-				<?php endif; ?>
 			</div><!-- large-4 -->
 
 		</div><!-- row -->
