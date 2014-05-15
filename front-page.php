@@ -11,7 +11,7 @@ get_header(); ?>
 	<div id="primary" class="content-area" role="main">
 		<div class="top-area row">
 
-			<div id="lede" class="large-7 columns">
+			<div class="large-7 columns">
 				<?php if (planet3_0_check_category_exists('article')) : ?>
 					<?php $args = array(
 						'category__in' => planet3_0_cat_slug_to_id('article'),
@@ -20,6 +20,7 @@ get_header(); ?>
 					/* Start the lede Loop */ 
 					$lede_query = new WP_Query( $args );
 					if ( $lede_query -> have_posts() ) : ?>
+						<div id="lede" >
 							<header class="section-header">
 								<h1><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?></h1>
 								<?php echo category_description( $args['category__in'] ); ?>
@@ -28,6 +29,7 @@ get_header(); ?>
 								<?php get_template_part( 'content', 'fplede' ); ?>
 							<?php endwhile; ?>
 							<a class="right radius small button" href="#featured">Recent Features</a>
+						</div><!-- lede -->
 						<?php wp_reset_postdata(); ?>
 					<?php else : ?>
 						<p>There are no posts in the article category to display.</p>
@@ -63,7 +65,7 @@ get_header(); ?>
 					<p>The open-thread category would go here but it has not been created yet.</p>
 				<?php endif; ?>
 
-			</div><!-- #lede -->
+			</div><!-- .large-7 .columns -->
 
 			<div class="large-5 columns hide-for-small">
 				<?php if (planet3_0_check_category_exists('quote')) : ?>
