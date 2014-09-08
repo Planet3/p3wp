@@ -118,7 +118,7 @@
 										</ul>
 									</li>
 								<?php } else { ?>
-									<li><a class="login_button" id="show_login" href="">Login</a></li>
+									<li><a href="http://planet3.org/login/">Login</a></li>
 								<?php } ?>
 							<?php } ?>
 							<li class="divider"></li>
