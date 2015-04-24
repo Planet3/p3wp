@@ -65,7 +65,7 @@ function validate_gravatar($id_or_email) {
  * @since Planet3.0 3.0
  */
 
-function get_avatar_url($get_avatar){
+function p3_get_avatar_url($get_avatar){
     preg_match("/src='(.*?)'/i", $get_avatar, $matches);
     return $matches[1];
 }
