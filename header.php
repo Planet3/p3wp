@@ -70,27 +70,6 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<?php if ( is_main_site() ) { ?>
-		<?php if (is_user_logged_in()) { ?>
-			<form id="login" action="login" method="post">
-				<a class="login_button" href="<?php echo wp_logout_url( home_url() ); ?>">Logout</a>
-			</form>
-		<?php } else { ?>
-			<form id="login" action="login" method="post">
-				<a class="close" href="">[close]</a>
-				<h1>Planet3.0 Login</h1>
-				<p class="status"></p>
-				<label for="username">Username</label>
-				<input id="username" type="text" name="username">
-				<label for="password">Password</label>
-				<input id="password" type="password" name="password">
-				<a class="lost" href="<?php echo wp_lostpassword_url(); ?>">Lost your password?</a>
-				<input class="submit_button" type="submit" value="Login" name="submit">
-				<?php wp_nonce_field( 'ajax-login-nonce', 'security' ); ?>
-			</form>
-		<?php } ?>
-	<?php } ?>
-
 	<div id="page" class="hfeed site">
 		<?php do_action( 'before' ); ?>
 
