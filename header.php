@@ -35,9 +35,6 @@
 			$thumb_url = wp_get_attachment_image_src( $thumb_id, 'large', true ); ?>
 			<meta property="og:image" content="<?php echo $thumb_url[0] ?>" />
 
-		<?php elseif ( validate_gravatar( get_post_field( 'post_author', $post_id ) ) ) : ?>
-			<meta property="og:image" content="<?php echo get_avatar_url( get_avatar( get_post_field( 'post_author', $post_id ), 200 ) ) ?>" />
-
 		<?php  else : ?>
 			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/logo-200.png" />
 		<?php endif; ?>
