@@ -38,34 +38,6 @@ get_header(); ?>
 				<?php else : ?>
 					<p>The quote would go here but it has not been created yet.</p>
 				<?php endif; ?>
-
-				<?php if (planet3_0_check_category_exists('bleg')) : ?>
-					<?php $args = array(
-						'category__in' => planet3_0_cat_slug_to_id('bleg'),
-						'posts_per_page' => 1
-						);
-					/* Start the bleg Loop */ 
-					$bleg_query = new WP_Query( $args ); 
-					if ( $bleg_query -> have_posts() ) : ?>
-						<div id="bleg">
-							<header class="section-header assistive-text">
-								<h1><?php echo esc_html( get_the_category_by_ID( $args['category__in'] ) ); ?></h1>
-								<?php echo category_description( $args['category__in'] ); ?>
-							</header><!-- section-header -->
-							<ul class="large-block-grid-1">
-								<?php while ( $bleg_query -> have_posts() ) : $bleg_query -> the_post(); ?>
-									<?php get_template_part( 'content', 'fpbleg' ); ?>
-								<?php endwhile; ?>
-							</ul><!-- large-block-grid-3 -->
-						</div><!-- #bleg -->
-						<?php wp_reset_postdata(); ?>
-					<?php else : ?>
-						<p>There are no posts in the bleg category to display.</p>
-					<?php endif; ?>
-				<?php else : ?>
-					<p>The bleg category would go here but it has not been created yet.</p>
-				<?php endif; ?>
-
 			</div><!-- large-12 -->
 
 		</div><!-- row -->
